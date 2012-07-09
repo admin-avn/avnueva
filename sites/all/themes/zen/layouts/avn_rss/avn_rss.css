@@ -1,0 +1,38 @@
+.wrapper-rss {
+        position: relative;
+        width: 100%;
+	background-color: white;
+	margin: 0 23px 0 27px;
+	width: 926px;
+}
+
+.panel-left, .panel-right {
+	margin-bottom: .5em;
+}
+
+.header,
+.panel-left,
+.panel-right {
+	margin-bottom: 10px;
+	margin-top: 0em;
+}
+
+.panel-left {
+	border-right: 1px solid #e2e2e2;
+	float: left;
+	margin-top: 0em;
+	width: 66%;
+}
+
+.panel-right {
+	float: right;
+	width: 33%;
+}
+
+/*.right .inside {
+	padding-left: 10px;
+}*/
+
+.clear-float {
+	clear: both;
+}

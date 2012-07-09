@@ -1,0 +1,123 @@
+.pane-vista-fotografia {
+	margin-left: 10px;
+}
+
+.pane-vista-galeria .view-content::after {
+	clear: none !important;
+}
+
+.fotografia-destacados {
+	background: url("../images/background-fotografia-destacados.png") repeat-x;
+	height: 107px;
+	margin-bottom: 12px;
+	width: 340px;
+	-webkit-box-shadow: 0px 3px 3px #444;
+	-moz-box-shadow: 0px 3px 3px #444;
+	-o-box-shadow: 0px 3px 3px #444;
+	box-shadow: 0px 3px 3px #444;
+}
+
+.fotografia-destacados .descripcion {
+	padding-top: 20px;
+}
+
+.fotografia-destacados .termino,
+.mas-recientes .termino {
+	color: #8d8d8d;
+	text-transform: uppercase;
+}
+
+.fotografia-destacados .titulo,
+.mas-recientes .titulo {
+	color: white;
+}
+
+.fotografia-destacados .cantidad,
+.mas-recientes .cantidad {
+	color: #8d8d8d;
+}
+
+.fotografia-destacados img {
+	float: left;
+	margin-right: 20px;
+}
+
+.gv-panel-overlay p {
+	margin: 0;
+	padding: 0;
+}
+
+.panel-left .pane-vista-fotografia h2,
+.panel-right .pane-vista-fotografia h2 {
+	color: white;
+	border-top: 1px solid #7d7d7d;
+	font-family: serif;
+	font-size: 1em;
+	padding-top: 5px;
+}
+
+.panel-left .pane-vista-fotografia h2 {
+	width: 530px;
+}
+
+.panel-right .pane-vista-fotografia h2 {
+	width: 340px;
+}
+
+.mas-recientes {
+	float: left;
+	width: 135px;
+}
+
+/* Galeria */
+
+.wrapper-galeria .middle {
+	padding-top: 20px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#242424), to(#515151));
+}
+
+.pane-vista-galeria h2 {
+	color: white;
+	font-family: serif;
+	font-size: 1em;
+	text-transform: uppercase;
+	border-bottom: 2px solid #5b595a;
+}
+
+.galeria-listado {
+	float: left;
+	width: 171px;
+	margin: 0 8px;
+	min-height: 210px;
+	padding-top: 10px;
+}
+
+.galeria-listado a {
+	display: block;
+	width: 171px;
+	height: 111px;
+}
+
+.galeria-listado img {
+	border: 3px solid #5b595a;
+	width: 165px;
+	height: 105px;
+}
+
+.galeria-listado .termino {
+	color: #aeaeae;
+	font-size: .8em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.galeria-listado .titulo {
+	color: white;
+	font-size: .9em;
+	font-weight: bold;
+}
+
+.galeria-listado .cantidad {
+	color: #aeaeae;
+	font-size: .8em;
+}

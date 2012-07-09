@@ -1,0 +1,591 @@
+<?php
+/**
+ * @file Advanced Form
+ * A UI tweak to hide certain features or the form interface from normal use,
+ * but still have them available on the page for validation and quick access.
+ * 
+ * Written with reference to formfilter.module which does a similar job through
+ * access restrictions, whereas I want to trust my users, but avoid confusing
+ * them. And clean up my own admin edit interface.
+ * 
+ * This is more useful for in-house development with a set of trusted content
+ * editors. It was built for tutoring, where I needed to be able to demonstrate
+ * the functionality of the site as editors would see it, yet still have access
+ * to admin functions without messing around with switchuser etc.
+ * So I switched off the clutter.
+ * Collapsed fieldsets are a good start, but there's still too many of them by
+ * the time we start with ecommerce products etc.
+ * 
+ * Note this 'permission' isn't actually secure - the full form is still
+ * available to browser hacks - like disable css or js
+ *
+ * CSS-hide trick for context-sensitive forms developed by dman 2006
+ * 
+ * @author dman dan@coders.co.nz 2010
+ */
+
+/**
+ * Implementation of hook_menu().
+ */
+function advancedform_menu() {
+  $items = array();
+  $items['admin/settings/advancedform'] = array(
+    'title' => t('Advanced Form'),
+    'description' => t('Conditionally hide some form fields to tidy up the UI.'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('advancedform_admin_settings'),
+    'access arguments' => array('administer site configuration'),
+  );
+  // This callback returns some css on-the-fly.
+  // It's the css that does the hiding of fields, not FAPI or jquery.
+  $items['advancedform_css'] = array(
+    'page callback' => 'advancedform_css',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+
+/**
+ * Implementation of hook_help().
+ */
+function advancedform_help($path, $arg) {
+  $output = '';
+  switch ($path) {
+    case 'admin/settings/advancedform':
+      return t('
+When advancedform is enabled, selected form fields (defined below) 
+will be temporarily removed from form interfaces. 
+They can be revealed again by selecting a button discretely added to the form. 
+Note that <strong>the fields are just "hidden" for convenience, and not removed, 
+so this module should not be used as a security layer</strong>');
+    case 'admin/modules#description':
+      return t('Adds an "Advanced" selector to selected forms to unclutter the UI');
+  }
+}
+
+
+/**
+ * Menu callback for module settings.
+ */
+function advancedform_admin_settings() {
+  $form = array();
+  
+  $form['instructions'] = array(
+    '#type' => 'markup',
+    '#value' => t('
+<p>
+Enter a new line for each form ID, 
+followed by a JSON-style, bracketed comma-separated list
+of form element ids 
+or css selectors that may be found within it.
+</p>
+'));
+
+  $form['advancedform_rules_global'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Rules for everybody'),
+    '#default_value' => variable_get('advancedform_rules_global', 'node-form:[#revision-information,#edit-date]'),
+    '#description' => t('Define the rules that will apply to all users.'),
+  );
+
+  $rules = advancedform_rules(NULL, TRUE);
+
+  $summary = '<h4>Ruleset summary:</h4>';
+  foreach ((array)$rules as $form_id => $fields) {
+    $summary .= "<dt>When viewing <strong>$form_id</strong>, hide:</dt>";
+    foreach ((array)$fields as $ix => $field_id) {
+      if (! is_array($field_id)) {
+        $summary .= "<dd>$field_id</dd>";
+      } 
+      else {
+        foreach ($field_id as $nested_field_ix => $nested_field_id) {
+          $summary .= "<dd>$ix $nested_field_id</dd>";
+        }
+      }
+    }
+  }
+  $summary = "<dl>$summary</dl>";
+  
+  $form['summary'] = array(
+    '#type' => 'markup',
+    '#value' => $summary,
+  );
+
+
+  $form['examples'] = array(
+    '#type' => 'markup',
+    '#weight' => 11,
+    '#value' => t('
+<h2>Examples</h2>
+<p>
+Internally, the hiding is done via CSS on the client-side, and CSS syntax and 
+selectors are used to identify the elements to remove.
+<p>
+You often want to hide the form elements "wrapper" div, so "-wrapper" 
+will also automatically be added to the id of the field to hide.
+Inspect the source of any form on your site to see the new classes that have 
+been added to the form element to assist this utility.
+</p>
+<pre>node-form:[#revision-information, #edit-date]</pre> 
+<p>
+will demote the revision log box and date editor from the interface. 
+</p>
+<pre>node-form:[#edit-log, #edit-date, #input-format, #authoring-information, #publishing-options]</pre> 
+<p>
+is quite aggressive, but makes your interface really clean by removing most admin UI elements.
+</p><p>
+If you want, you can also enter arbitrary css-selectors. Hiding :
+</p>
+<pre>node-form:[.description,label]</pre> 
+... will make your form really hard to use by removing the labels. 
+Hiding :
+<pre>node-form:fieldset.collapsed</pre> 
+<p>
+will doubly-hide unused (normally collapsed) things. 
+<h4>Syntax</h4>
+<p>The [] array syntax is optional if only setting one value.</p>
+<pre>node-form:#revision-information
+node-form:#url</pre> 
+and
+<pre>node-form:[#revision-information, #url]</pre> 
+are equivalent, both will work.
+</p>
+<h3>Per-content-type rules</h3>
+<p>
+Node forms are treated as a special case. 
+You may want to hide some fields 
+on only one <em>content-type</em> or for some roles.
+The <em>type</em> of the node is inserted as an extra <em>class</em>
+on the form.
+We address the a form like this by <em>nesting</em> the 
+IDs inside a new modifying selector, using JSON object format, eg<br/>
+<pre>
+node-form:#revision-information
+node-form:{.node-type-page:[#edit-date]}
+node-form:{.node-type-story:[#menu, #url]}
+node-form:{.node-type-page:[#book-outline]}
+      </pre> 
+This will: <ul><li>
+Hide revision info on all nodes,
+</li><li>
+Hide date on all "Page" nodes, (CSS selector <code>#node-form.node-type-page</code>)
+</li><li>
+Hide URL alias and menu settings on all "Story" nodes, (CSS selector <code>#node-form.node-type-story</code>)
+</li><li>
+Remove the "book outline" widget from "page" types.<sup>*</sup>
+</li></ul>
+<small>True JSON would want all those values quoted, don\'t do that, the quotes will be added automatically for you</small>
+<p>
+[*] The Book module permissions allow admins to add <em>any</em> content type 
+to books, which is nice, but you can\'t turn that feature off if it\'s unwanted.
+There are a few user permissions like that throughout Drupal, because admins
+or UID-1 bypass most of the access checks. 
+This presents us with too many widgets onscreen a lot of the time.
+Rather than hack the core permissions system, we just remove these options from 
+normal use.
+</p>
+<h4>New Nodes</h4>
+<p>An additional class (<code>.node-new</code>) is added to "new" nodes 
+being created. This allows us to hide even more fields if they are decided 
+to be irrelevant when first making a node, and really clean up the first edit 
+page.
+</p>
+<pre>
+node-form:{.node-new:[#revision-information,#flag-for-archiving]}
+</pre>
+<p>This will make the named form elements unavailable on brand-new nodes.
+<p>
+The class to use is always the string <code>node-type-</code> followed by a 
+css-safe version of the type name.
+</p>
+<h3>Per-role rules</h3>
+<pre>
+node-form:{.user-role-authenticated-user[#comment-settings]}
+node-form:{.user-role-content-editor[#file-attachments]}
+</pre> 
+This will: <ul><li>
+Hide comment settings on nodes for all authenticated users.
+</li><li>
+Hide attachments on nodes for content editors.
+</li></ul>
+<p>The rules define the things to be <em>excluded</em> and they match cumulatively (an OR rule)
+so take care with per-role settings. Using a rule for .user-role-authenticated-user
+will also apply to admins and UID-1, as they are authenticated.
+Using a rule for .user-role-content-editor will apply to admins <em>if that user is also a content editor</em>
+</p>
+<p>
+Per-role rules are available to all forms, not just node forms.
+The class to use is always the string <code>user-role-</code> followed by a 
+css-safe version of the role name.
+</p>
+
+<h3>Combining selectors</h3>
+<p>The rules are created using CSS syntax, keyed by the classes that are
+added to the node form. You can inspect the DOM on the edit page to see which classes have been added for you.
+Combine the selectors with a "." and no space to create specific restrictions.
+</p>
+<code>
+node-form:{.node-type-<b>page</b>.user-role-<b>content-editor</b>:[#comment-settings]}
+</code>
+<p>
+This will: <ul><li>
+Hide comment settings on "page" nodes for all content editors.
+</li></ul>
+</p>
+<p>
+With this sort of rule in place, you can allow content editors to control things
+on other node types (like story or blog) but remove that option from static 
+"page" types.
+This works around the limitation of Drupal permissions that only enable or 
+disable this feature on a global level.
+</p>
+<em>This is not a substitute for real permissions</em> as the user can choose to
+expose and use that feature if they really want to. It just removes the clutter
+from the form for everyday use.
+
+<h3>Other forms</h3>
+<p>Are your users scared of complexity, 
+but you still need to give them access to some Drupal internals?
+</p>
+<pre>
+block-admin-configure:{.user-role-content-editor:[#user-specific-visibility-settings,#role-specific-visibility-settings]}
+</pre>
+This will remove some advanced elements from the block edit form, but still 
+leave it usable for everyday administration.
+<h2>Developer</h2>
+<p>
+If you want to inspect the CSS rules that are created by this utility, 
+you can check out the URL /advancedform_css/node-form , where "node-form"
+is any form id.
+You will see that and "advancedform-filtered" instance of that form will
+have the named form elements hidden, and if the form is switched 
+(to no longer have the "advancedform-filtered" class), then the hidden elements 
+will show up again.
+<br/>This utility works client-side with javascript,
+and has no effect with javascript off (all fields dispaly as normal)
+</p>
+    '),
+  );
+  
+  if (module_exists('vertical_tabs')) {
+    drupal_set_message(t('
+      AdvancedForm is not compatible with vertical_tabs (which is enabled). 
+      It doesn\'t conflict, but it does not apply these advanced options to node
+      edit forms when vertical tabs has taken over the display of these fields.
+      You are advised to use <em>either</em> advancedform <em>or</em> vertical
+      tabs to enhance your node edit forms. Not both.
+    '), 'warning');
+  }
+  
+  return system_settings_form($form);
+}
+
+
+/**
+ * Ensure the rulset can be parsed legibly.
+ */
+function advancedform_admin_settings_validate($form, &$form_state) {
+  $form_values = $form_state['values'];
+  $rules = advancedform_parse_rules($form_values['advancedform_rules_global']);
+  // Not sure what errors to expect, I'll just assert a few things now...
+  $error_msg = t("Problem parsing ruleset, please try again.");
+  if(! is_array($rules)){ 
+    form_set_error('advancedform_rules_global', $error_msg. " Ruleset is not an array."); 
+    return FALSE;
+  }
+  foreach ($rules as $form_id => $fields) {
+    if (! is_array($fields) && ! is_object($fields)){ 
+      form_set_error('advancedform_rules_global', $error_msg . " Rules for '$form_id' are not an array or object"); 
+      return FALSE;
+    }
+  }
+}
+
+
+/**
+ * Parse and return the rules as defined in the settings.
+ * 
+ * Converts the text into an array we can use.
+ * 
+ * Returns all if no form_id is passed, returns NULL if the requested form ID
+ * has no ruleset
+ * 
+ * TODO User and role configs?
+ * 
+ * @param $form_id If given, return only that one. For the current user.
+ * @param $user if given return profile appropriate to that user or their role.
+ * @param $flush if set, flush the static cache (needed during admin updates)
+ */
+function advancedform_rules($form_id = '', $user=NULL, $flush = FALSE){
+  static $ruleset;
+  if (is_array($ruleset) && ! $flush) {
+    return $form_id ? (isset($ruleset[$form_id]) ? $ruleset[$form_id] : NULL) : $ruleset;
+  }
+  $ruleset = variable_get('advancedform_ruleset', array());
+  if ($form_id && ! isset($ruleset[$form_id])) {
+    return NULL;
+  }
+  #$rules = variable_get('advancedform_rules_global', 'node-form:edit-log,edit-date');
+  #$ruleset = advancedform_parse_rules($rules);
+  return ($form_id) ? $ruleset[$form_id] : $ruleset;
+}
+
+/**
+ * Dissolve the text array into an array of configurations, given in json-like
+ * format.
+ */
+function advancedform_parse_rules($text) {
+  $ruleset = array();
+  foreach (split("\n", $text) as $rule) {
+    $rule = trim($rule);
+    if (empty($rule)) {continue;}
+    // Enquote everything before trying to json it.
+    $rule = preg_replace('/([a-z0-9_\#\-\. ]+)/', '"$1"', $rule);
+    $rule_object = json_decode('{'. $rule . '}');
+    if (empty($rule_object)) {
+      drupal_set_message("JSON rule <pre>$rule</pre> could not be parsed", 'error');
+    }
+    $ruleset = array_merge_recursive($ruleset, (array)$rule_object);
+  }
+  variable_set('advancedform_ruleset', $ruleset);
+  return $ruleset;
+}
+
+/**
+ * Implementation of hook_form_alter().
+ *
+ * Ensure every form has our enhancements added to it.
+ * 
+ */
+function advancedform_form_alter(&$form, $form_state, $form_id) {
+  // Add a process to the form each time it is rendered
+  // Needs to be a pre_render process as add_js doesn't happen on preview 
+  // otherwise.
+  $form['#pre_render'][] = 'advancedform_add_css_and_js';
+
+  if ($form['#id'] == 'node-form') {
+    // Modify node form
+    // TODO if features is available, taxonomies may have a machine name.
+    // If so, pass that machine name through to the form as a better identifier  
+    # features_get_default_map('taxonomy');
+
+    // By adding this class, we make the taxonomy selects easier to find, 
+    // AND means the javascript is safe from node_form_rearrange manipulations.
+    // However, I need to be sure to run BEFORE node_form_rearrange does its thing
+    foreach (element_children((array)@$form['taxonomy']) as $vid) {
+      $form['taxonomy'][$vid]['#attributes']['class'] = 'taxonomy-select';
+    }
+  }
+}
+
+
+/**
+ * Add a number of informational classes to the form to indicate context.
+ * 
+ * Display the advanced switcher if the form has any edits on it
+ */
+function advancedform_add_css_and_js($form) {
+
+  global $user;
+  if (! isset($form['#attributes']['class'])) {
+    $form['#attributes']['class'] = '';
+  }
+  if ($rules = advancedform_rules($form['#id'])) {
+    $form['#attributes']['class'] .= ' advancedform-unfiltered';
+    // Invoke the css
+    // drupal_add_css won't let me add css on the fly from a dynamic path
+    // as it "doesn't exist"
+    drupal_set_html_head('<link type="text/css" rel="stylesheet" href="'. url('advancedform_css/'. $form['#id']) .'" />'."\n");
+    drupal_add_js(drupal_get_path('module', 'advancedform') .'/advancedform.js');
+  }
+
+  // Add extra class so we can have better type selectors
+  if ($form['#id'] == 'node-form') {
+    $form['#attributes']['class'] .= ' node-type-' . $form['#node']->type;
+    if (empty($form['#node']->nid)) {
+      $form['#attributes']['class'] .= ' node-new';
+    }
+  }
+  // Add a class indicating the user role, so we can set per-role rules
+  foreach ($user->roles as $role) {
+    $form['#attributes']['class'] .= ' user-role-' . form_clean_id($role);
+  }
+  if ($user->uid == 1) {
+    $form['#attributes']['class'] .= ' user-uid-1';
+  }
+  return $form;
+}
+
+
+/**
+ * Return the css that shows or hides form elements depending on the form class.
+ * 
+ * Used as a menu callback
+ * Displays dynamically  created css and exits
+ * 
+ * Expected value retrieved from advancedform_rules is a keyed array of form ids
+ * and css selectors.
+ * If the css selectors are themselves arrays, it's taken as being a nested
+ * list, and the key is added to the css as a modifier.
+ * 
+ * To make it easy on the user, both field_ID and field_ID-wrapper will be
+ * hidden, because most often that's what you actually want to hide.
+ * This may produce a few redundancies, but those will just be ignored then.
+ */
+function advancedform_css($form_id) {
+  $css = "\n/* Auto-generated css from advancedform settings. Temporarily hide some elements. */";
+  $css .= "\n.advancedform-toggle { position:absolute; top:0; right:0; opacity:0.5; border:1px outset; background-color:#DDDDDD; color:#333333; font-size:80%; padding:0.2em 1em;} ";
+  $css .= "\nform { position:relative; overflow:hidden;} "; // hidden fixes a flicker problem in FF during the fade transition
+  $selectors = array();
+
+  foreach ((array)advancedform_rules($form_id) as $ix => $field_id) {
+    // Construct the css rules, be concatenaging our css with 
+    // the user-endered selectors
+    
+      // However, as the trigger we may want to use may be a class on the form itself,
+      // only insert a space between ours and theirs
+      // if the nested rule doesn't start with a space.
+      // eg we need to be able to target 
+      // "#{$form_id}.advancedform-filtered.user-uid-1 #workflow"
+      // by entering node-form:[.user-uid-1 #workflow]
+      //
+
+    if (is_array($field_id)) {
+      // Value is nested, which means we add an extra selector.
+      
+      $modifier = $ix;
+      foreach ($field_id as $nested_field_ix => $nested_field_id) {
+        $separator = (substr($nested_field_id, 0, 1) == '.') ? '' : ' ';
+        $selectors[] = "#{$form_id}.advancedform-filtered{$modifier}{$separator}{$nested_field_id}";
+        $selectors[] = "#{$form_id}.advancedform-filtered{$modifier}{$separator}{$nested_field_id}-wrapper";
+      }
+    }
+    else {
+      // Select the user-defined arbitrary css selectors
+      $separator = (substr($field_id, 0, 1) == '.') ? '' : ' ';
+      $selectors[] = "#{$form_id}.advancedform-filtered{$separator}{$field_id}";
+      $selectors[] = "#{$form_id}.advancedform-filtered{$separator}{$field_id}-wrapper";
+    }
+  }
+  if (!empty($selectors)) {
+    $css .= "\n". join($selectors, ", \n") ."\n { display:none; }";
+  }
+
+  header('Content-Type: text/css');
+  print $css;
+  exit;
+}
+
+/**
+ * Add oour own rendering functions to the theme registry so we can override
+ * normal display. 
+ * 
+ * This will add some extra semantic classes that we can use to target elements 
+ * of forms and and the ctools UI and affect panels UI.
+ * 
+ * @impliments hook_theme_registry_alter()
+ * 
+ * @param array $theme_registry
+ */
+function advancedform_theme_registry_alter(&$theme_registry) {
+  $theme_registry['ctools_dropdown']['function'] = 'advancedform_override_theme_ctools_dropdown'; 
+
+  $theme_registry['form_element']['function'] = 'advancedform_override_theme_form_element'; 
+  $theme_registry['fieldset']['function'] = 'advancedform_override_theme_fieldset'; 
+  
+  // It would be better if we could use a preprocess, but can't seem to insert a function there.
+  // peprocess suggestions only trigger to tpl processes? not named functions?
+  #$theme_registry['ctools_dropdown']['preprocess functions'][] = 'advancedform_preprocess_ctools_dropdown';
+}
+
+
+
+/**
+ * Override of theme_form_element.
+ * 
+ * This was needed to get the right id into the elements outermost wrapper.
+ * May conflict with some themes :(
+ * Copied from core with one change.
+ */
+function advancedform_override_theme_form_element($element, $value) {
+  if (! isset($element['#id'])) {
+    // Some container elements (radios box) have no ID of their own.
+    // Make one for consistency
+    $element['#id'] = form_clean_id(join('-', (array)@$element['#array_parents'])); 
+  }
+  $output  = '<div class="form-item" id="'. $element['#id'] .'-wrapper">'."\n";
+  $required = !empty($element['#required']) ? '<span class="form-required" title="'. t('This field is required.') .'">*</span>' : '';
+
+  if (!empty($element['#title'])) {
+    $title = $element['#title'];
+    if (!empty($element['#id'])) {
+      $output .= ' <label for="'. $element['#id'] .'">'. t('!title: !required', array('!title' => filter_xss_admin($title), '!required' => $required)) ."</label>\n";
+    }
+    else {
+      $output .= ' <label>'. t('!title: !required', array('!title' => filter_xss_admin($title), '!required' => $required)) ."</label>\n";
+    }
+  }
+
+  $output .= " $value\n";
+
+  if (!empty($element['#description'])) {
+    $output .= ' <div class="description">'. $element['#description'] ."</div>\n";
+  }
+
+  $output .= "</div>\n";
+
+  return $output;
+}
+
+/**
+ * Override of theme_fieldset.
+ * 
+ * This was needed to get the right id into the elements outermost wrapper.
+ * May conflict with some themes :(
+ * Copied from core with one change.
+ */
+function advancedform_override_theme_fieldset($element) {
+  if ($element['#collapsible']) {
+    drupal_add_js('misc/collapse.js');
+
+    if (!isset($element['#attributes']['class'])) {
+      $element['#attributes']['class'] = '';
+    }
+
+    $element['#attributes']['class'] .= ' collapsible';
+    if ($element['#collapsed']) {
+     $element['#attributes']['class'] .= ' collapsed';
+    }
+  }
+  // Fieldsets don't usually have ids (?). Make one
+  if (empty($element['#attributes']['id'])) {
+    $element['#attributes']['id'] = preg_replace('|[^a-z0-9]+|', '-', strtolower($element['#title'])) .'-wrapper';
+  }
+
+  return '<fieldset' . drupal_attributes(@$element['#attributes']) .'>' . (@$element['#title'] ? '<legend>'. $element['#title'] .'</legend>' : '') . (@$element['#description'] ? '<div class="description">'. $element['#description'] .'</div>' : '') . @$element['#children'] . @$element['#value'] . "</fieldset>\n";
+}
+
+/**
+ * Hijack theme_ctools_dropdown()
+ * Re-index the links, so they get useful css classes.
+ * then call theme_ctools_dropdown directly to do the normal hard work.
+ * 
+ * @param string $title
+ * @param array $links
+ * @param bool $image
+ * @param string $class
+ */
+function advancedform_override_theme_ctools_dropdown($title, $links, $image = FALSE, $class = '') {
+  // Add useful classes to each item so we can selectively disable them in the UI
+  // if we do this by re-keying the list, the class will be placed on the LI by theme_links
+  $new_links = array();
+  foreach($links as $link_id => $link) {
+    $link_class = preg_replace('|[^a-z0-9]|', '-', strtolower(strip_tags($link['title'])));
+    $new_links[$link_class] = $link;
+  }
+  $links = $new_links;
+  // Call the normal function, no point in rewriting it ourself.  
+  return theme_ctools_dropdown($title, $links, $image, $class);
+}

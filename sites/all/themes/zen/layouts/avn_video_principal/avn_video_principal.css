@@ -1,0 +1,12 @@
+.video-principal {
+	position: relative;
+	width: 100%;
+}
+
+.horizontal1 {
+	margin-bottom: 10px;
+}
+
+.clear-float {
+	clear: both;
+}

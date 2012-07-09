@@ -1,0 +1,28 @@
+.index-contenedor {
+        position: relative;
+        width: 646px;
+        background-color: white;
+}
+
+.horizontal1,
+.horizontal2,
+.horizontal3,
+.horizontal4,
+.horizontal5 {
+	width: 656px;
+	margin-bottom: 5px;
+}
+
+.abajo-izquierda {
+	float: left;
+	width: 476px;
+}
+
+.abajo-derecha {
+	float: left;
+	width: 170px;
+}
+
+.clear-float {
+	clear: both;
+}

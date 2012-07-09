@@ -1,0 +1,1085 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#cintillo-institucional {
+	margin-top: 0;
+	height: 60px;
+}
+
+#cintillo-institucional img {
+	width: 980px;
+}
+
+#page {
+	background-color: #e0e0e0 !important;
+}
+
+.wrapper {
+	background-color: white;
+	margin: 0 23px 0 27px;
+	width: 926px;
+}
+
+/*.clear-float {
+	clear: both;
+}*/
+.clear-float {
+	clear: both;
+}
+
+
+/* Audio */
+
+.views-content-field-audio-fid object embed {
+	width: 294px !important;
+}
+
+/* Contenido slideshow */
+
+
+                                                                    
+/* Vista Contenido Posición */
+
+.vista-contenido-posicion-1,
+.vista-contenido-posicion-2,
+.vista-contenido-posicion-3,
+.vista-contenido-posicion-5-6-7-8,
+.vista-contenido-posicion-11-20-right {
+	margin: 5px 14px 0 13px;
+}
+.vista-contenido-posicion-11-20-left {
+	margin-bottom:0;
+	margin-left:13px;
+	margin-right:14px;
+	margin-top:0px;
+}
+.view-dom-id-6 .vista-contenido-posicion-9-10 {
+	border-right: none;
+	margin: 15px 0 10px 13px;
+	float: left;
+	width: 47%;
+}
+.vista-contenido-posicion-9-10 {
+	border-right: 1px solid #e0e0e0;
+	margin: 15px 0 10px 13px;
+	float: left;
+	width: 47%;
+}
+.vista-contenido-posicion-2 .cajon {
+	border-top: 1px solid #e6e6e6;
+	padding-top: 10px;
+	border-bottom: 1px solid #e6e6e6;
+	padding-bottom: 10px;
+	height:80px;
+}
+
+.vista-contenido-posicion-3 .cajon,
+.panel-right .vista-contenido-posicion-5-6-7-8 .cajon,
+.panel-left .vista-contenido-posicion-5-6-7-8 .cajon {
+	border-bottom: 1px solid #e6e6e6;
+	padding-bottom: 4px;
+}
+
+.vista-contenido-posicion-2 .imagen,
+.vista-contenido-posicion-11-20-left .imagen {
+	margin-right: 10px;
+	float: left;
+	width: 115px;
+}
+
+.vista-contenido-posicion-1 img,
+.vista-contenido-posicion-2 img,
+.vista-contenido-posicion-3 img,
+.vista-contenido-posicion-5-6-7-8 img,
+.vista-contenido-posicion-9-10 img,
+.vista-contenido-posicion-11-20-left img,
+.vista-contenido-posicion-11-20-right img,
+.vista-reportajes .imagen img {
+	border: 1px solid #585858;
+	margin-top: 5px;
+}
+
+.vista-contenido-posicion-1 .termino p,
+.vista-contenido-posicion-2 .termino p,
+.vista-contenido-posicion-2 .termino,
+.vista-contenido-posicion-3 .termino p,
+.vista-contenido-posicion-5-6-7-8 .termino p,
+.vista-contenido-posicion-11-20-left .termino p {
+	color: #919191;
+	font-size: 11px;
+	line-height: normal;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+
+.vista-contenido-posicion-11-20-left .titulo {
+	margin-bottom: 10px;
+}
+
+.vista-contenido-posicion-2 .titulo a,
+.vista-contenido-posicion-3 .titulo a,
+.vista-contenido-posicion-5-6-7-8 .titulo a,
+.vista-contenido-posicion-9-10 .titulo a,
+.vista-contenido-posicion-11-20-right .titulo a,
+.vista-reportajes .titulo a {
+	color: #51628d;
+	font-family: arial;
+	font-size: 17px;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 1.1em;
+}
+.vista-reportajes .titulo a {
+  font-size: 14px;
+  !important;
+}
+.vista-contenido-posicion-11-20-left .titulo a {
+	color: #51628d;
+	font-family: arial;
+	font-size: 17px;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 1.1em;
+}
+.vista-contenido-posicion-2 .titulo a {
+	width:200px;
+	color: #51628d;
+	font-family: arial;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 1.1em;
+	float: right;
+}
+.vista-contenido-posicion-11-20-right .titulo a {
+	font-size: 12px;
+}
+
+.vista-contenido-posicion-1 .titulo a {
+	font-size: 18px;
+	color:#51628D;
+	font-family:arial;
+	font-weight:bold;
+	line-height:1.1em;
+	text-decoration:none;
+}
+.vista-contenido-posicion-1 .sumario p,
+.vista-contenido-posicion-9-10 .sumario p,
+.vista-reportajes .sumario p {
+	margin-top: 5px;
+	font-size: 12px;
+}
+.vista-contenido-posicion-5-6-7-8 .sumario p {
+	width:329px;
+	margin-top: 5px;
+	font-size: 12px;
+}
+.views-row-1 .vista-contenido-posicion-5-6-7-8 .sumario p {
+	width:282px;
+	margin-top: 5px;
+	font-size: 12px;
+}
+.view-dom-id-10 .vista-contenido-posicion-5-6-7-8 .sumario p {
+	width:329px;
+}
+
+.vista-contenido-posicion-9-10 .sumario p {
+	width:267px;
+	margin-top: 5px;
+	font-size: 12px;
+}
+.vista-contenido-posicion-9-10 .vinculos {
+	width: 250px;
+}
+
+.vista-contenido-posicion-1 .vinculos li,
+.vista-contenido-posicion-9-10 .vinculos li {
+	color: #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.vista-contenido-posicion-11-20-left .vinculos li  {
+	color: #e0e0e0;
+}
+
+.vista-contenido-posicion-1 .vinculos li a,
+.vista-contenido-posicion-9-10 .vinculos li a,
+.vista-contenido-posicion-11-20-left .vinculos li a {
+	color: #516483;
+	font-size: .8em;
+	text-decoration: none;
+}
+
+.vista-contenido-posicion-11-20-left .cajon {
+	border-bottom: 1px solid #e0e0e0;
+	padding-bottom: 1px;
+}
+
+.vista-contenido-posicion-11-20-right .cajon {
+	border-bottom: 1px solid #e0e0e0;
+	padding-bottom: 10px;
+}
+.vista-contenido-posicion-11-20-left .cuerpo {
+	font-size: 12px;
+}
+.vista-contenido-posicion-11-20-left .antetitulo .field-content {
+	color:#919191;
+	font-size:11px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+/* Facebook */
+
+#facebook {
+	margin-top: 10px;
+}
+
+/* Redes Sociales */
+
+#redes-sociales {
+	background: url("/avnueva/sites/all/themes/avn/images/fondo_redes_sociales.png");
+	height: 24px;
+}
+
+#redes-sociales table {
+	margin-bottom:-5px;
+	margin-left: 20px;
+	margin-right:-5px;
+	margin-top:-5px;
+}
+
+#redes-sociales td {
+	padding-top: 10px;
+	padding-left: 8px;
+}
+
+#redes-sociales a {
+	color: #1a1a1a;
+	text-decoration: none;
+	font-size: 9px;
+ 	vertical-align: text-top;
+}
+
+/* Reportajes */
+
+.right .pane-vista-reportajes h2 {
+  margin-top: 0;
+}
+
+.right .pane-vista-reportajes h2 a {
+color:#51628D;
+font-family:arial;
+font-size:14px;
+font-weight:bold;
+line-height:1.1em;
+text-decoration:none;
+}
+.right .pane-vista-reportajes {
+	background-color: #eff0f2;
+	margin-top: 15px;
+	padding: 2px 15px 5px 15px;
+}
+
+.vista-reportajes .cajon {
+	margin: 10px 0;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #e0e0e0;
+	height: 80px;
+}
+
+.pane-vista-reportajes .views-row-3 .vista-reportajes .cajon {
+	border: none;
+}
+
+.vista-reportajes .imagen {
+	float: left;
+	margin-right: 10px;
+}
+
+.vista-reportajes .sumario p {
+	margin: 0;
+}
+
+/* Línea */
+
+.seccion {
+	clear: both;
+	margin-left: 10px;
+	width: 580px;
+}
+
+.seccion hr {
+	border: none;
+	border-top: 2px solid #ccc;
+}
+
+
+#search-block-form #edit-submit {
+	visibility: collapse;
+}
+
+/* Carrusel de Fotografías */
+
+#sticky {
+	position: absolute;
+}
+
+/* Especiales */
+
+.especiales {
+	padding: 5px 0;
+	border-bottom: 1px dotted #26478c;
+}
+
+.especiales a {
+	color: #26478c;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.views-row-1 .especiales a {
+	font-weight: bold;
+}
+
+/* Titulares */
+
+.pane-vista-titulares h2,
+.pane-vista-contenido h2 {
+	padding: 8px;
+	color: #515151;
+	border-top: 1px solid #e0e0e0;
+	font-family: arial;
+	font-size: 1.3em;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.titulares .titular:nth-child(2n+1) {
+	background-color: #f1f2f6;
+}
+
+.titulares .titular:nth-child(2n) {
+	background-color: #feffff;
+}
+
+.titulares .hora span {
+	color: #505b77;
+	font-size: .8em;
+}
+
+.titulares .titulo a {
+	color: #4c69a5;
+	font-size: .9em;
+	text-decoration: none;
+}
+
+.titulares .hora,
+.titulares .titulo {
+	padding: 2px 3px;
+	float: left;
+}
+
+.titulares .hora {
+	margin-left: 5px;
+}
+
+.titulares .titulo {
+	width: 240px;
+}
+
+/* Titulares Paginador */
+
+.pane-vista-titulares {
+	position: relative;
+}
+
+.pane-vista-titulares .item-list {
+	position: absolute;
+	top: -10px;
+	right: 0px;
+}
+
+.pane-vista-titulares .item-list .pager {
+	position: relative;
+}
+
+.pane-vista-titulares .item-list .pager .pager-previous {
+	position: absolute;
+	right: 50px;
+	width: 17px;
+	height: 12px;
+}
+
+.pane-vista-titulares .item-list .pager .pager-previous a {
+	font-size: 0;
+	display: block;
+	width: 17px;
+	height: 12px;
+	background: url("/avnueva/sites/all/themes/avn/images/background-prev.png") no-repeat;
+}
+
+.pane-vista-titulares .item-list .pager .pager-current {
+	display: none;
+}
+
+.pane-vista-titulares .item-list .pager .pager-next {
+	position: absolute;
+	right: 20px;
+	width: 17px;
+	height: 12px;
+}
+
+.pane-vista-titulares .item-list .pager .pager-next a {
+	font-size: 0;
+	display: block;
+	width: 17px;
+	height: 12px;
+	background: url("/avnueva/sites/all/themes/avn/images/background-next.png") no-repeat;
+}
+
+/* Lo más Leído */
+
+.lomasleido-1 {
+	background: url("/avnueva/sites/all/themes/avn/images/uno.png") left center no-repeat;
+	border-bottom: 1px solid #e0e0e0;
+	padding-bottom: 5px;
+}
+
+.lomasleido-2 {
+	background: url("/avnueva/sites/all/themes/avn/images/dos.png") left center no-repeat;
+	border-bottom: 1px solid #e0e0e0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.lomasleido-3 {
+	background: url("/avnueva/sites/all/themes/avn/images/tres.png") left center no-repeat;
+	border-bottom: 1px solid #e0e0e0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.lomasleido-4 {
+	background: url("/avnueva/sites/all/themes/avn/images/cuatro.png") left center no-repeat;
+	border-bottom: 1px solid #e0e0e0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.lomasleido-5 {
+	background: url("/avnueva/sites/all/themes/avn/images/cinco.png") left center no-repeat;
+	padding-top: 5px;
+	padding-bottom: 8px;
+}
+
+.lomasleido-1 .cajon,
+.lomasleido-2 .cajon,
+.lomasleido-3 .cajon,
+.lomasleido-4 .cajon,
+.lomasleido-5 .cajon {
+	margin-left: 35px;
+}
+
+.lomasleido-1 a,
+.lomasleido-2 a,
+.lomasleido-3 a,
+.lomasleido-4 a,
+.lomasleido-5 a {
+	color: #5267a8;
+	font-weight: .9em;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+/* Nodo Contenido */
+
+.view-vista-nodo table {
+	clear: both;
+}
+
+.nodo-contenido {
+	float:left;
+	margin-bottom:0;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:0;
+	width:430px;
+}
+
+.nodo-encabezado p {
+	font-weight: bold;
+	margin: 0 10px;
+	padding: 0;
+	
+}
+
+.nodo-encabezado .cajon-video,
+.nodo-encabezado .cajon-imagen {
+	margin: 0 10px;
+}
+
+.nodo-encabezado .cajon-imagen .imagen-datos {
+	text-align: right;
+}
+.nodo-encabezado .termino {
+	border-top-color:#E0E0E0;
+	border-top-style:solid;
+	border-top-width:1px;
+	margin-bottom:1px;
+	margin-left:10px;
+	width:590px;;
+
+}
+.nodo-encabezado .termino a {
+	color: #919191;
+	font-size: 11px;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.nodo-encabezado .titulo {
+	padding-bottom: 10px;
+}
+
+.nodo-encabezado .titulo p {
+	color: #516483;
+	font-family: arial;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 1.3em;
+}
+
+.nodo-encabezado .imagen-datos .autor {
+	color: black;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.nodo-encabezado .imagen-datos .titulo-imagen {
+	color: black;
+	font-size: 9px;
+}
+.nodo-encabezado .antetitulo {
+color:#919191;
+font-size:11px;
+text-transform:uppercase;
+}
+.nodo-contenido .sumario p {
+	color: #454545;
+	font-size: 14px;
+	line-height:18px;
+	font-weight: bold;
+
+}
+
+.nodo-contenido .contenido {
+	color: #454545;
+	font-size: 12px;
+	line-height: 1.5em;
+}
+
+.nodo-posicion-2,
+.nodo-posicion-3 {
+	float: left;
+	width: 155px;
+}
+
+.nodo-vinculos {
+	float: left;
+	width: 155px;
+	margin-top: 10px;
+}
+
+.nodo-vinculos .vinculo-1,
+.nodo-vinculos .vinculo-2,
+.nodo-vinculos .vinculo-3,
+.nodo-posicion-1,
+.nodo-posicion-2,
+.nodo-posicion-3 {
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.nodo-vinculos .vinculo-1 {
+	padding-bottom: 8px;
+}
+
+.nodo-vinculos .titulo,
+.nodo-posicion-1 .titulo,
+.nodo-posicion-2 .titulo,
+.nodo-posicion-3 .titulo {
+	font-family:arial;
+        font-size: 12px;
+	line-height: 13px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-weight: bold;
+	line-height:1.3em;
+	text-decoration:none;
+}
+
+.nodo-vinculos .titulo a, 
+.nodo-posicion-1 .titulo a,
+.nodo-posicion-2 .titulo a,
+.nodo-posicion-3 .titulo a {
+	color:#516483;
+	font-size: 12px;
+	text-decoration: none;
+	border-top: 8px;
+	border-bottom: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+/* relacionadas */
+.nodo-vinculos .relacionadas {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #CCCCCC;
+	font-family:arial;
+        font-size: 15px;
+	line-height: 13px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	text-decoration:none;
+	color: #515151;
+        
+}
+/* titulares debajo relacionadas */
+.nodo-posicion-1 {
+	float: left;
+	width: 155px;
+}
+.nodo-posicion-1 .termino {
+	font-family:arial;
+        font-size: 15px;
+	line-height: 13px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	line-height:1.5em;
+	text-decoration:none;
+	color: #515151;
+        border-bottom-color:#CCCCCC;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+}
+/* Iconos gráficos */
+.pane-vista-nodo .view-dom-id-2 .cols-5 tr {
+background-color:transparent !important;
+border:none;
+}
+.pane-vista-nodo .view-dom-id-2 .cols-5 {
+width: 430px;
+border-bottom-color:#CCCCCC;
+border-bottom-style:solid;
+border-bottom-width:1px;
+margin-left: 10px;
+}
+
+
+.pane-vista-nodo .view-dom-id-2 .cols-5 tbody {
+float: right;
+} 
+.pane-vista-nodo .view-dom-id-2 .cols-5 td a img {
+margin-bottom:5px;
+margin-left:5px;
+margin-top:10px;
+margin-right:10px;
+border: none;
+}
+.nodo-contenido .fecha {
+	font-family:arial;
+  font-size: 10px;
+	line-height: 13px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	border-bottom: 10px;
+	border-top: 20px;
+}
+/*Nodo Comentario*/
+.nodo-comentario {
+	margin: 10px;
+	position: relative;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.nodo-comentario .left-side {
+	float: left;
+	width: 120px;
+}
+
+.nodo-comentario .right-side {
+	float: left;
+	width: 460px;
+}
+
+.nodo-comentario .left-side .autor {
+	color: #5166a5;
+	font-weight: bold;
+}
+
+.nodo-comentario .left-side .fecha {
+	color: black;
+	font-size: 10px;
+}
+
+.nodo-comentario .right-side .asunto {
+	color: #5166a5;
+}
+
+.nodo-comentario .right-side .comentario p {
+	margin: 0;
+}
+
+.panel-right .pane-home-destacados {
+background-color:#EFF0F2;
+margin-top:10px;
+padding-bottom:5px;
+padding-left:15px;
+padding-right:15px;
+padding-top:5px;
+}
+
+/*barra inferior grande*/
+.pane-block-5 {
+background-color: #e0e0e0;
+font-family:Georgia,serif;
+font-size:10px;
+color:#000000;
+font-weight:normal;
+margin-top: 0;
+margin-bottom: 10px;
+}
+.pane-block-5 tr hr {
+1px dotted #b6b6b6;
+}
+
+/* Formulario */
+
+#comment-form {
+	clear: both;
+	margin-left: 10px;
+}
+
+#comment-form label {
+	display: block;
+	font-weight: bold;
+	line-height: 1.4;
+	color: #666;
+	color: rgba(0, 0, 0, 0.6);
+	text-shadow: 0 1px 1px #fff;
+}
+
+#comment-form input[type="text"],
+#comment-form textarea {
+	padding: 5px 8px;
+	font-size: 12px;
+	color: #666;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+}
+      
+#comment-form .tips,
+#comment-form > div > p,
+#comment-form #edit-preview,
+#comment-form .grippie {
+	display: none;
+}
+
+#comment-form textarea {
+	resize: none;
+}
+
+#comment-form .captcha {
+	border: 1px solid #e2e2e2;
+	margin-right: 10px;
+}
+
+/* Movil */
+
+/* Nice Menu */
+
+#nice-menu-2 {
+	margin: 10px 0;
+	background: transparent url("/avnueva/sites/all/themes/nokia_mobile/images/high/background-nice-menu-2.png") repeat-x;
+}
+
+#nice-menu-2 li {
+        display: table-cell;
+	padding: 10px 30px;
+        vertical-align: middle;
+}
+
+#nice-menu-2 li a {
+	color: white;
+	font-size: 1em;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* Noticias */
+
+#mobile-secciones {
+	background-color: white;
+	margin: 0 5px;
+}
+
+#mobile-secciones .secciones {
+	border: 1px solid #004276;
+	color: #004276;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 5px 10px;
+	padding: 2px;
+	width: 98.5%;
+}
+
+.wrapper-mobile .middle {
+	background-color: #dedede;
+	padding: 5px 0;
+}
+
+.wrapper-mobile .mobile-posicion-1,
+.wrapper-mobile .mobile-posicion-2-20,
+.wrapper-mobile .mobile-posicion-interna-1,
+.wrapper-mobile .mobile-posicion-interna-2-7,
+.wrapper-mobile .mobile-nodo {
+	background-color: white;
+	margin: 5px;
+}
+
+.wrapper-mobile .mobile-posicion-2-20 .cajon,
+.wrapper-mobile .mobile-posicion-interna-2-7 .cajon {
+	border-bottom: 1px solid #e2e2e2;
+	height: 70px;
+	padding: 10px 0 10px 5px;
+}
+
+.wrapper-mobile .mobile-posicion-1 .termino,
+.wrapper-mobile .mobile-posicion-interna-1 .termino,
+.wrapper-mobile .mobile-nodo .termino {
+	border-bottom: 1px solid #dedede;
+	padding-left: 10px;
+}
+
+.wrapper-mobile .mobile-posicion-1 .termino span,
+.wrapper-mobile .mobile-posicion-interna-1 .termino span {
+	color: black;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 42px;
+}
+
+.wrapper-mobile .mobile-nodo .termino a {
+	color: black;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 42px;
+	text-decoration: none;
+}
+
+.wrapper-mobile .mobile-posicion-1 .fecha,
+.wrapper-mobile .mobile-posicion-interna-1 .fecha,
+.wrapper-mobile .mobile-nodo .fecha {
+	margin: 10px 0 20px 20px;
+}
+
+.wrapper-mobile .mobile-posicion-1 .fecha span,
+.wrapper-mobile .mobile-posicion-interna-1 .fecha span,
+.wrapper-mobile .mobile-nodo .fecha span {
+	color: #999999;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.wrapper-mobile .mobile-posicion-1 .imagen,
+.wrapper-mobile .mobile-posicion-interna-1 .imagen,
+.wrapper-mobile .mobile-nodo .imagen {
+	text-align: center;
+}
+
+.wrapper-mobile .mobile-posicion-2-20 .imagen,
+.wrapper-mobile .mobile-posicion-interna-2-7 .imagen {
+	float: left;
+	margin-right: 10px;
+}
+
+.wrapper-mobile .mobile-posicion-1 .titulo,
+.wrapper-mobile .mobile-posicion-interna-1 .titulo,
+.wrapper-mobile .mobile-nodo .titulo {
+	margin-left: 10px;
+}
+
+.wrapper-mobile .mobile-posicion-1 .titulo a,
+.wrapper-mobile .mobile-posicion-interna-1 .titulo a,
+.wrapper-mobile .mobile-nodo .titulo span {
+	line-height: 40px;
+}
+
+.wrapper-mobile .mobile-posicion-1 .titulo a,
+.wrapper-mobile .mobile-posicion-2-20 .titulo a,
+.wrapper-mobile .mobile-posicion-interna-1 .titulo a,
+.wrapper-mobile .mobile-posicion-interna-2-7 .titulo a,
+.wrapper-mobile .mobile-nodo .titulo span {
+	text-decoration: none;
+	color: #004276;
+	font-size: 18px;
+	font-weight: 600;
+	margin: 5px 0;
+}
+
+.wrapper-mobile .mobile-posicion-2-20 .titulo a,
+.wrapper-mobile .mobile-posicion-interna-2-7 .titulo a {
+	font-size: 16px;
+}
+
+.wrapper-mobile .mobile-nodo .sumario,
+.wrapper-mobile .mobile-nodo .contenido {
+	padding: 0 10px;
+}
+
+.wrapper-mobile .mobile-nodo .contenido {
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.wrapper-mobile .mobile-nodo .sumario span {
+	font-weight: bold;
+}
+
+.wrapper-mobile .mobile-nodo .sumario span,
+.wrapper-mobile .mobile-nodo .contenido p {
+	color: #454545;
+	font-size: 12px;
+	line-height: 1.5em;
+}
+
+.wrapper-mobile .mobile-posicion-1 .vinculos,
+.wrapper-mobile .mobile-posicion-2-20 .vinculos,
+.wrapper-mobile .mobile-posicion-interna-1 .vinculos,
+.wrapper-mobile .mobile-nodo .vinculos {
+	list-style-type: square;
+}
+
+.wrapper-mobile .mobile-posicion-1 .vinculos .list,
+.wrapper-mobile .mobile-posicion-2-20 .vinculos .list,
+.wrapper-mobile .mobile-posicion-interna-1 .vinculos .list,
+.wrapper-mobile .mobile-nodo .vinculos .list {
+	border-bottom: 1px solid #dedede;
+	padding: 5px 5px 5px 0;
+}
+
+.wrapper-mobile .mobile-posicion-1 .vinculos .list li,
+.wrapper-mobile .mobile-posicion-2-20 .vinculos .list li,
+.wrapper-mobile .mobile-posicion-interna-1 .vinculos .list li,
+.wrapper-mobile .mobile-nodo .vinculos li {
+	color: #cc0000;
+	margin-left: 30px;
+}
+
+.wrapper-mobile .mobile-posicion-1 .vinculos li a,
+.wrapper-mobile .mobile-posicion-2-20 .vinculos li a,
+.wrapper-mobile .mobile-posicion-interna-1 .vinculos li a,
+.wrapper-mobile .mobile-nodo .vinculos li a {
+	background: transparent url("/avnueva/sites/all/themes/nokia_mobile/images/high/background-list.png") right center no-repeat;
+	color: #004276;
+	display: block;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 10px 20px 10px 0;
+}
+
+/* Banner Inferior */
+
+.banner-inferior {
+	background-color: #e0e0e0;
+	margin-top: 30px;
+}
+
+.banner-inferior .logo {
+	float: left;
+	margin: 10px 20px 0 10px;
+}
+
+.banner-inferior .tabla {
+	padding-top: 10px;
+}
+
+.banner-inferior .tabla table {
+	padding: 0;
+	margin: 0;
+}
+
+.banner-inferior .tabla table th {
+	color: #557090;
+	text-transform: uppercase;
+}
+
+.banner-inferior .tabla table thead .noticias {
+	width: 300px;
+	font-size: 11px;
+}
+
+.banner-inferior .tabla table thead .multimedia {
+	padding-left: 10px;
+	width: 120px;
+	font-size: 11px;
+}
+
+.banner-inferior .tabla table thead .redes-sociales {
+	padding-left: 10px;
+	width: 130px;
+	font-size: 11px;
+}
+
+.banner-inferior .tabla table thead .aliados {
+	padding-left: 10px;
+	width: 220px;
+	font-size: 11px;
+}
+
+.banner-inferior .tabla table tbody .barra {
+	border-left: 1px solid #aaa;
+	padding-left: 10px;
+}
+
+.banner-inferior .tabla table a {
+	color: black;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.banner-inferior .tabla table a:hover {
+	border-bottom: 1px solid #557090;
+}
+
+.banner-inferior .contacto {
+	border-top: 1px dashed #aaa;
+	width: 98%;
+	margin: 10px auto;
+}
+
+.banner-inferior .contacto p {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+.banner-inferior .contacto a {
+	color: black;
+	text-decoration: none;
+
+}
+
+.banner-inferior .contacto a img {
+	vertical-align: middle;
+}
+
+.pane-block-2 {
+	margin-bottom: 10px;
+}

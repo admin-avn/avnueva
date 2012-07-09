@@ -1,0 +1,25 @@
+.index3 {
+        position: relative;
+        width: 630px;
+}
+
+.horizontal1,
+.horizontal2,
+.horizontal3 {
+	width: 630px;
+	margin-bottom: 15px;
+}
+
+.horizontal3-izquierda {
+	float: left;
+	width: 460px;
+}
+
+.horizontal3-derecha {
+	float: left;
+	width: 170px;
+}
+
+.clear-float {
+	clear: both;
+}

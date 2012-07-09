@@ -1,0 +1,209 @@
+<?php
+// $Id: imagecache_proportions.module,v 1.1.2.2 2010/10/20 21:10:50 pcambra Exp $
+
+/**
+ * @file
+ * CCK formatter for imagefields that allows the user to select between 3
+ * different imagecache presets depending on the proportions of the original
+ * image uploaded. One preset would be squared for more or less squared images,
+ * another for wider images and the last one for taller images.
+ */
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function imagecache_proportions_field_formatter_info() {
+  $formatters['vertical_horizontal'] = array(
+    'label' => t('Imagecache proportions'),
+    'description' => t('Display the image in horizontal if it is more wide than high or in vertical if it is more high than wide.'),
+    'field types' => array('image', 'filefield'),
+  );
+  return $formatters;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function imagecache_proportions_theme() {
+  $theme = array(
+    'imagecache_proportions_formatter_vertical_horizontal' => array(
+      'arguments' => array('element' => NULL),
+    ),
+  );
+  return $theme;
+}
+
+/**
+ * Implements hook_widget_settings_alter().
+ */
+function imagecache_proportions_widget_settings_alter(&$settings, $op, $widget) {
+  $widget_types = array('imagefield_widget', 'swfupload_widget', 'image_fupload_imagefield_widget', 'imagefield_crop_widget');
+  if ((!empty($widget['type']) && in_array($widget['type'], $widget_types)) || (!empty($widget['widget_type']) && in_array($widget['widget_type'], $widget_types))) {
+    switch ($op) {
+      case 'form':
+        $options = array(t('None'), );
+        // get a list of all preset names for our form options
+        foreach (imagecache_presets() as $id => $preset) {
+          $options[$preset['presetname']] = $preset['presetname'];
+        }
+        $settings['imagecache_proportions'] = array(
+          '#type' => 'fieldset',
+          '#title' => t('Imagecache proportions'),
+          '#collapsible' => TRUE,
+          '#collapsed' => $collapsed,
+          '#description' => t('Preset settings for imagecache proportions.'),
+        );
+        $settings['imagecache_proportions']['horizontal_preset'] = array(
+          '#type' => 'select',
+          '#title' => t('Select the horizontal preset'),
+          '#description' => t('Preset used when the image is wider than higher.'),
+          '#options' => $options,
+          '#default_value' => $widget['horizontal_preset'],
+        );
+        $settings['imagecache_proportions']['vertical_preset'] = array(
+          '#type' => 'select',
+          '#title' => t('Select the vertical preset'),
+          '#description' => t('Preset used when the image is higher than wider.'),
+          '#options' => $options,
+          '#default_value' => $widget['vertical_preset'],
+        );
+        $settings['imagecache_proportions']['squared_preset'] = array(
+          '#type' => 'select',
+          '#title' => t('Select the squared preset'),
+          '#description' => t('Preset used when the image is equally wider and higher.'),
+          '#options' => $options,
+          '#default_value' => $widget['squared_preset'],
+        );
+        $settings['imagecache_proportions']['looseness'] = array(
+          '#type' => 'textfield',
+          '#size' => 10,
+          '#title' => t('Select the looseness to consider an image squared'),
+          '#description' => t('Number of pixels that a image can be wider than higher (or viceversa) to be considered squared.'),
+          '#default_value' => $widget['looseness'],
+        );
+        $link_options = array(
+          'none' => t('No link'),
+          'node' => t('Link to node'),
+          'image' => t('Link to image'),
+        );
+        // If some fancy modal-lightbox module exists, we allow the user to select it.
+        if (module_exists('colorbox')) {
+          $link_options['colorbox'] = t('Modal window using colorbox');
+        }
+        if (module_exists('thickbox')) {
+          $link_options['thickbox'] = t('Modal window using thickbox');
+        }
+        if (module_exists('shadowbox')) {
+          $link_options['shadowbox'] = t('Modal window using shadowbox');
+        }
+        if (module_exists('lightbox2')) {
+          $link_options['lightbox2'] = t('Modal window using lightbox2');
+        }
+        $settings['imagecache_proportions']['enable_link'] = array(
+          '#type' => 'select',
+          '#title' => t('Select the type of link of the image'),
+          '#description' => t('Type of link of the image, if image selected and one of the js image popups is enabled (colorbox, shadowbox, lightbox2...) the image will open in a popup.'),
+          '#options' => $link_options,
+          '#default_value' => $widget['enable_link'],
+        );
+        break;
+      case 'save':
+        $settings[] = 'horizontal_preset';
+        $settings[] = 'vertical_preset';
+        $settings[] = 'squared_preset';
+        $settings[] = 'looseness';
+        $settings[] = 'enable_link';
+        break;
+    }
+  }
+}
+
+/**
+ * Helper function to get the settings of the image presets.
+ */
+function imagecache_proportions_get_field_settings($field_name, $content_type) {
+  $field = content_fields($field_name, $content_type);
+  return $field['widget'];
+}
+
+/**
+ * Helper function to guess if the image is wider, higher or "squarer" taking a look to the looseness.
+ */
+function imagecache_proportions_calculate_proportions($width, $height, $looseness) {
+  if ($width == $height || abs($width - $height) < $looseness) {
+    return 'squared_preset';
+  }
+  if ($width > $height) {
+    return 'horizontal_preset';
+  }
+  if ($height > $width) {
+    return 'vertical_preset';
+  }
+}
+
+/**
+ * Depending on the dimensions of the image, we switch the preset chosen.
+ */
+function theme_imagecache_proportions_formatter_vertical_horizontal($element) {
+  // Inside a view $element may contain NULL data. In that case, just return.
+  if (empty($element['#item']['fid'])) {
+    return '';
+  }
+
+  $item = $element['#item'];
+  $widget = imagecache_proportions_get_field_settings($element['#field_name'], $element['#type_name']);
+  $size = getimagesize($item['filepath']);
+  $width = $size[0];
+  $height = $size[1];
+  $proportions = imagecache_proportions_calculate_proportions($size[0], $size[1], $widget['looseness']);
+  $presetname = $widget[$proportions];
+
+  $item['data']['alt'] = isset($item['data']['alt']) ? $item['data']['alt'] : '';
+  $item['data']['title'] = isset($item['data']['title']) ? $item['data']['title'] : NULL;
+
+  switch ($widget['enable_link']) {
+    case 'node':
+      // Link to its node, get the nid and show a link instead.
+      $style = 'linked';
+      $imagetag = theme('imagecache', $presetname, $item['filepath'], $item['data']['alt'], $item['data']['title']);
+      $path = empty($item['nid']) ? '' : 'node/'. $item['nid'];
+      $class = "imagecache imagecache-$presetname imagecache-$style imagecache-{$element['#formatter']}";
+      return l($imagetag, $path, array('attributes' => array('class' => $class), 'html' => TRUE));
+      break;
+    case 'image':
+      // Image link, also get the image modal window, if any.
+      $style = 'imagelink';
+      // No fancy image plugin, we just show the raw image.
+      $imagetag = theme('imagecache', $presetname, $item['filepath'], $item['data']['alt'], $item['data']['title']);
+      $path = file_create_url($item['filepath']);
+      $link_attributes['class'] = "imagecache imagecache-$presetname imagecache-$style imagecache-{$element['#formatter']}";
+      return l($imagetag, $path, array('attributes' => $link_attributes, 'html' => TRUE));
+      break;
+    case 'colorbox':
+      // Image link, also get the image modal window, if any.
+      $style = 'imagelink';
+      return theme('colorbox_imagefield', $presetname, $item['filepath'], $item['data']['alt'], $item['data']['title'], '', $element['#field_name']);
+      break;
+    case 'thickbox':
+      // Image link, also get the image modal window, if any.
+      $style = 'imagelink';
+      return theme('imagefield_image_imagecache_thickbox', $presetname, $item['filepath'], $item['data']['alt'], $item['data']['title']);
+      break;
+    case 'shadowbox':
+      // Image link, also get the image modal window, if any.
+      $style = 'imagelink';
+      return theme('imagefield_image_imagecache_shadowbox', $presetname, 'original', $item, array(), NULL);
+      break;
+    case 'lightbox2':
+      // Image link, also get the image modal window, if any.
+      $style = 'imagelink';
+      return theme('imagefield_image_imagecache_lightbox2', $presetname, $element['#field_name'], $item, $element['#node'], 'lightbox', $args = array());
+      break;
+    case 'none':
+    default:
+      // No link, return a normal imagecache element.
+      $style = 'default';
+      $class = "imagecache imagecache-$presetname imagecache-$style imagecache-{$element['#formatter']}";
+      return theme('imagecache', $presetname, $item['filepath'], $item['data']['alt'], $item['data']['title'], array('class' => $class));
+  }
+}

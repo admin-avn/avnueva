@@ -1,0 +1,48 @@
+<?php
+/**
+ * @file
+ * Integration with the views module to create the new PHP Array views display.
+ */
+
+/**
+ * Advertise the current views api version being used 
+ */
+function views_php_array_views_api() {
+  return array(
+    'api' => 2,
+    'path' => drupal_get_path('module','views_php_array'),
+  );
+}
+
+/**
+ * Try to execute and get the view result in PHP Array format.
+ * @param $view_id
+ *   The view id to be executed
+ * @param $display_id
+ *   (optional) The display id to be used, if it is not a PHP Array display, it will return FALSE. If it is not specified, the first PHP Array display will be used.
+ * @param $args
+ *   (optional) The arguments to be passed into the view
+ */
+function views_php_array_execute($view_id, $display_id = NULL, $args = array()) {
+  $view = views_get_view($view_id);
+  // if the view is invalid return FALSE
+  if (!$view) {
+    return FALSE;
+  }
+
+  // try to retrieve the display_id if it is not specified
+  foreach($view->display as $k => $display) {
+    if ($display->display_plugin == 'php_array') {
+      $display_id = $display_id == NULL ? $k : $display_id;
+    }
+  }
+
+  // if there is no PHP Array display OR invalid display_id OR it is not PHP Array display, return FALSE
+  if ($display_id == NULL || !isset($view->display[$display_id]) || $view->display[$display_id]->display_plugin != 'php_array') {
+    return FALSE;
+  }
+
+  $view->set_display($display_id);
+  $view->set_arguments($args);
+  return $view->preview();
+}

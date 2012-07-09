@@ -1,0 +1,56 @@
+<div class="nodo-encabezado">
+	<div class="termino"><?php print $fields['tid']->content; ?></div>
+	<div class="antetitulo"><span><?php print $fields['field_ante_titulo_value']->content; ?></span></div>
+	<div class="titulo"><span><?php print $fields['title']->content; ?></span></div>
+ 	<?php if(!empty($fields['field_autor_value']->content)): ?>
+    <div class="autor"><i><?php echo "por"; ?> </i><span><a href='/avnueva/titulares/autor/<?php print $fields['field_autor_value']->content; ?>'><?php print $fields['field_autor_value']->content; ?></a></span></div>
+  <?php endif; ?>
+	<?php if(!empty($fields['field_video_fid']->content)): ?>
+		<div class="cajon-video">
+			<div class="video"><a id="player" href="<?php print $fields['field_video_fid']->content; ?>" style="display: block; width: 622px; height: 384px;"></a></div>
+		</div>
+	<?php else: ?>
+		<?php if(!empty($fields['field_imagen_fid']->content)): ?>
+			<div class="cajon-imagen">
+				<div class="imagen"><a href="<?php print $fields['field_imagen_fid_1']->content; ?>" rel="lightbox" title="<?php print $fields['field_titulo_imagen_value']->content; ?>"><img src="<?php print $fields['field_imagen_fid']->content; ?>" /></a></div>
+				<div class="imagen-datos">
+					<div class="titulo-imagen"><span><?php print $fields['field_titulo_imagen_value']->content; ?></span></div>
+				</div>
+			</div>
+		<?php endif; ?>
+	<?php endif; ?>
+</div>
+
+<?php print $scripts ?>
+<?php
+if(empty($fields['field_imagen_fid']->content)) {
+	$fields['field_imagen_fid']->content = 'http://mitlan/avnueva/sites/all/themes/avn/images/default.png';
+}
+?>
+<script src="http://static.flowplayer.org/js/flowplayer.ipad-3.2.2.min.js"></script> 
+<script type="text/javascript">
+        flowplayer("player", "/avnueva/sites/all/libraries/flowplayer3/flowplayer-3.2.7.swf",  {
+                playlist: [
+                        {
+                                url: '<?php print $fields['field_imagen_fid']->content; ?>',
+                                scaling: 'orig'
+                        },
+                        {
+                                url: '<?php print $fields['field_video_fid']->content; ?>' , 
+                                <?php if (arg(2) == 'reproducir') {
+                                  print "autoPlay:true,";
+                                }
+                                else {
+                                  print "autoPlay: false,"; 
+                                }
+                                ?>
+                                autoBuffering: false 
+                        }
+                ],
+                plugins:  {
+                        controls:  {
+                                time: false,
+                        }
+		},
+        });
+</script>

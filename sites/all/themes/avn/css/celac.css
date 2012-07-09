@@ -1,0 +1,38 @@
+#celac-videos {
+	position: relative;
+	width: 319px;
+	height: 265px;
+	overflow: hidden;
+}
+
+#celac-videos .contenido {
+	position: absolute;
+	top: -77px;
+	width: 319px;
+	height: 330px;
+}
+
+#celac-twitter {
+	position: relative;
+	width: 319px;
+	height: 500px;
+	overflow: hidden;
+}
+
+#celac-twitter .contenido {
+	position: absolute;
+	width: 319px;
+	height: 500px;
+}
+
+#celac-imagenes {
+	position: relative;
+	width: 319px;
+	height: 290px;
+	overflow: hidden;
+}
+
+#celac-imagenes .contenido {
+	position: absolute;
+	top: -75px;
+}

@@ -1,0 +1,224 @@
+/* Css Aplicado a la página interna de las taxonomias  */
+
+
+/* slideshow */
+
+.contenido-slideshow-taxonomia a.views_slideshow_thumbnailhover_previous {
+  background: url("/avnueva/sites/all/themes/avn/images/slideshow-anterior.png") no-repeat scroll 0 0 transparent;
+  display: block;
+  font-size: 0;
+  height: 48px;
+  width: 32px;
+  position:absolute;
+  top:101px;
+  left:215px;
+}
+
+
+.contenido-slideshow-taxonomia .views_slideshow_teaser_section {
+ background-color: #323232;
+ height: 263px;
+}
+
+.contenido-slideshow-taxonomia .views-field-field-imagen-fid {
+  float:right;
+}
+.contenido-slideshow-taxonomia .views-field-field-titulo-portada-value {
+  float:left;
+  width: 175px;
+  padding:11px 10px 0 10px;
+}
+    
+    
+.contenido-slideshow-taxonomia .views-field-field-titulo-portada-value a{
+  color: white;
+  font-family: arial;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.1em;
+  text-decoration: none;
+}
+
+.contenido-slideshow-taxonomia .views-field-field-sumario-value {
+  float:left;
+  width: 175px;
+  font-size: 13px;
+  color: white;
+  font-family: arial;
+  margin:6px 0;
+  padding:11px 10px 0 10px;
+  clear: left;
+}
+
+
+.contenido-slideshow-taxonomia .views-slideshow-controls-bottom {
+  border-top: solid 11px #323232;
+  margin-top: 0px;
+}
+.contenido-slideshow-taxonomia .views-slideshow-controls-bottom .views_slideshow_thumbnailhover_div_breakout_teaser {
+  width: 188px;
+  float: left;
+  background-color: #323232;
+  height: 175px;
+  border-bottom: solid 3px #323232;
+/*  border-top: solid 1px #d8dae0;*/
+}
+
+.contenido-slideshow-taxonomia .views-slideshow-controls-bottom .views-row-even {
+  padding:0px 12px;
+}
+  
+
+.contenido-slideshow-taxonomia .views-slideshow-controls-bottom .activeSlide {
+  height: 175px;
+/*  border-bottom: solid 3px white;*/
+}
+
+
+.contenido-slideshow-taxonomia .views-slideshow-controls-bottom .views-field-field-imagen-fid {
+  float: none;
+/*  margin: 8px 7px 0px 7px;*/
+}
+
+.contenido-slideshow-taxonomia .views-slideshow-controls-bottom .views-field-field-titulo-portada-value {
+  float: none;
+  width: 188px;
+/*  margin: 2px 7px 5px 7px;*/
+}
+
+
+.contenido-slideshow-taxonomia .views-slideshow-controls-bottom .views-field-field-titulo-portada-value {
+  color: white;
+  font-family: arial;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.1em;
+  text-decoration: none;
+}
+
+.contenido-slideshow-taxonomia .views-slideshow-controls-bottom .activeSlide .views-field-field-titulo-portada-value {
+  font-weight: bold;
+  width: 175px;
+  color: white;
+}
+
+
+
+
+.vista-taxonomia-posicion-1 a
+{
+color: #51628d;
+font-family: arial;
+font-size: 17px;
+font-weight: bold;
+text-decoration: none;
+line-height: 1.2em;
+}
+.vista-taxonomia-posicion-2 a,
+.vista-taxonomia-posicion-3 a,
+.vista-taxonomia-posicion-4 a,
+.vista-taxonomia-posicion-5 a,
+.vista-taxonomia-posicion-6 a,
+.vista-taxonomia-posicion-7 a,
+.vista-taxonomia-posicion-4-slideshow a,
+.vista-taxonomia-posicion-5-slideshow a,
+.vista-taxonomia-posicion-6-slideshow a,
+.vista-taxonomia-posicion-7-slideshow a
+{
+color: #51628d;
+font-family:arial;
+font-size:14px;
+font-weight:bold;
+text-decoration:none;
+margin-top:1px;
+}
+.vista-taxonomia-posicion-1 .antetitulo,
+.vista-taxonomia-posicion-2 .antetitulo,
+.vista-taxonomia-posicion-3 .antetitulo,
+.vista-taxonomia-posicion-4 .antetitulo,
+.vista-taxonomia-posicion-5 .antetitulo,
+.vista-taxonomia-posicion-6 .antetitulo,
+.vista-taxonomia-posicion-7 .antetitulo,
+.vista-taxonomia-posicion-4-slideshow .antetitulo,
+.vista-taxonomia-posicion-5-slideshow .antetitulo,
+.vista-taxonomia-posicion-6-slideshow .antetitulo,
+.vista-taxonomia-posicion-7-slideshow .antetitulo
+{ 
+color:#919191;
+font-size:11px;
+text-transform:uppercase;
+font-weight:bold;
+}
+.vista-taxonomia-posicion-1,
+.vista-taxonomia-posicion-2,
+.vista-taxonomia-posicion-3,
+.vista-taxonomia-posicion-4,
+.vista-taxonomia-posicion-5,
+.vista-taxonomia-posicion-6,
+.vista-taxonomia-posicion-7
+{
+margin-left:14px;
+}
+
+.vista-taxonomia-posicion-4-slideshow,
+.vista-taxonomia-posicion-5-slideshow,
+.vista-taxonomia-posicion-6-slideshow,
+.vista-taxonomia-posicion-7-slideshow
+{
+margin-left:13px;
+}
+
+
+.vista-taxonomia-posicion-1 .cajon,
+.vista-taxonomia-posicion-2 .cajon,
+.vista-taxonomia-posicion-3 .cajon,
+.vista-taxonomia-posicion-4 .cajon,
+.vista-taxonomia-posicion-5 .cajon,
+.vista-taxonomia-posicion-6 .cajon,
+.vista-taxonomia-posicion-7 .cajon,
+.vista-taxonomia-posicion-4-slideshow .cajon,
+.vista-taxonomia-posicion-5-slideshow .cajon,
+.vista-taxonomia-posicion-6-slideshow .cajon,
+.vista-taxonomia-posicion-7 .cajon
+{ 
+border-bottom-color:#E0E0E0;
+border-bottom-style:solid;
+border-bottom-width:1px;
+margin-bottom:8px;
+padding-bottom:1px;
+}
+
+/* titulo de taxomonias */
+
+.pane-taxomonias .titulo-taxonomia .views-field-name span.field-content {
+margin-bottom:5px;
+margin-top:20px;
+color:#919191;
+font-size:11px;
+text-decoration:none;
+text-transform:uppercase;
+}
+.pane-taxomonias .titulo-taxonomia .views-field-name {
+border-top-color:#E0E0E0;
+border-top-style:solid;
+border-top-width:1px;
+margin-left:15px;
+margin-bottom:1px;
+width:590px;
+}
+.pane-taxomonias .titulo-taxonomia {
+padding-top:13px;
+}
+.vista-taxonomia-posicion-1 .sumario,
+.vista-taxonomia-posicion-2 .sumario,
+.vista-taxonomia-posicion-3 .sumario {
+width:329px;
+}
+
+.vista-taxonomia-posicion-4-slideshow .sumario,
+.vista-taxonomia-posicion-5-slideshow .sumario,
+.vista-taxonomia-posicion-6-slideshow .sumario,
+.vista-taxonomia-posicion-7-slideshow .sumario {
+width:273px;
+}
+

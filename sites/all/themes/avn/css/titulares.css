@@ -1,0 +1,208 @@
+.pagina-titulares {
+	padding: 0 10px;
+}
+
+.pagina-titulares .titulo-titulares {
+  margin-top: 0;
+	background: #9C9C9C;
+	height: 31px;
+	line-height: 31px;
+	margin-top: 10px;
+	padding-left: 10px;
+}
+
+.pagina-titulares .titulo-titulares span{
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.pagina-titulares .views-field-created{
+  float:left;
+  margin-right: 10px;
+}
+
+.pagina-titulares .views-row {
+	clear: both;
+	min-height: 30px;
+	padding: 0 0 5px 0;
+}
+
+.pagina-titulares span {
+	color: #Ac2d00;
+	font-size: .9em;
+	font-weight: bold;
+	width: 50px;
+}
+
+.pagina-titulares a {
+	color: black;
+	font-weight: bold;
+}
+
+.pagina-titulares a:hover {
+	color: #ac2d00;
+	font-weight: bold;
+}
+
+.pagina-titulares a {
+	color: #514d4d;
+	font-size: .9em;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#views-exposed-form-vista-titulares-page-1 {
+	height: 50px;
+	position: relative;
+}
+
+#views-exposed-form-vista-titulares-page-1 .views-widget-filter-tid {
+	left: 250px;
+	position: absolute;
+	width: 400px;
+}
+
+#views-exposed-form-vista-titulares-page-1 .views-widget-filter-date_filter {
+	position: absolute;
+}
+
+#views-exposed-form-vista-titulares-page-1 .views-widget-filter-tid label {
+	width: 80px;
+	float: left;
+  margin-top: 3px;
+}
+
+#views-exposed-form-vista-titulares-page-1 .views-widget-filter-tid .views-widget {
+	float: left;
+}
+
+
+.titulo-titulares-autor span{
+  color:#514D4D;
+  font-size:0.9em;
+  font-weight:bold;
+}
+
+.titulo-titulares-autor {
+  margin-bottom:30px;
+}
+
+.fecha-pagina-titulares-autor {
+  font-size: 10px;
+  clear: right;
+}
+
+.pagina-titulares .views-field-field-imagen-fid {
+  width: 75px;
+  height: 50px;
+  float:left;
+  margin: 5px 5px 0 0;
+}
+
+.pagina-titulares .views-field-title {
+  width: 500px;
+  float: left;
+}
+
+.pagina-titulares .views-field-title-titulares2 {
+  width: 420px;
+  float: left;
+}
+
+
+.pagina-titulares .clear-float {
+  clear:both;
+}
+
+
+.pagina-titulares .lomasleido-daycount,
+.pagina-titulares .lomasleido-totalcount {
+  float:left;
+  color:#514D4D;
+  margin-right: 5px;
+  font-size:13px;
+  font-weight: bold;
+}
+
+.pagina-titulares .stats {
+  margin-left: 51px;
+  height:14px;
+  float:left;
+}
+
+.page-estadisticas .pagina-titulares .views-row,
+.page-estadisticas-lomasleidohoy .pagina-titulares .views-row,
+.page-estadisticas-lomasleidototal .pagina-titulares .views-row {
+  margin-bottom: 5px;
+  min-height:45px;
+}
+
+.page-estadisticas .pagina-titulares .views-row-odd,
+.page-estadisticas-lomasleidohoy .pagina-titulares .views-row-odd,
+.page-estadisticas-lomasleidototal .pagina-titulares .views-row-odd {
+  background-color: #F2F2F2;
+}
+
+.page-estadisticas .pagina-titulares .views-field-title,
+.page-estadisticas-lomasleidohoy .pagina-titulares .views-field-title,
+.page-estadisticas-lomasleidototal .pagina-titulares .views-field-title {
+  width: 490px;
+}
+
+/* Especiales */
+
+.pagina-titulares {
+}
+
+.titulares-descripcion {
+	margin-bottom: 10px;
+}
+
+.titulares-descripcion .izquierda {
+	float: left;
+	width: 100px;
+}
+
+.calendario .titulares-descripcion .izquierda {
+	float: left;
+	width: 55px;
+}
+
+.titulares-descripcion .izquierda .fecha {
+	color: darkGray;
+	font-family: "Georgia";
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.titulares-descripcion .derecha {
+	float: left;
+	width: 526px;
+}
+
+.titulares-descripcion .derecha .imagen {
+	float: left;
+	margin-right: 10px;
+}
+
+.titulares-descripcion .derecha .imagen a {
+}
+
+.titulares-descripcion .derecha .titulo a {
+	color: #514D4D;
+	font-weight: bold;
+}
+
+.calendario .titulares-descripcion .derecha .titulo a {
+	color: #514D4D;
+}
+
+.titulares-descripcion .derecha .descripcion {
+}
+
+.titulares-descripcion .derecha .descripcion .sumario {
+	color: #514d4d;
+	font-weight: normal;
+}

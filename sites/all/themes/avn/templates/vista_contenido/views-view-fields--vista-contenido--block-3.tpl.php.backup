@@ -1,0 +1,26 @@
+<div class="front-contenedor-6-7">
+	<?php if(empty($fields['field_video_fid']->content)): ?>
+		<div class="imagen"><?php print $fields['field_imagen_fid']->content; ?></div>
+	<?php else: ?>
+		<div class="imagen"><a href="<?php print "node/" . $fields['nid']->content . "/reproducir"  ?>"><?php print $fields['field_imagen_fid_1']->content; ?></a></div>
+	<?php endif; ?>
+
+	<div class="contenido">
+		<div class="termino"><?php print $fields['tid']->content; ?></div>
+		<div class="titulo"><a href="<?php print "node/" . $fields['nid']->content; ?>"><?php print $fields['field_titulo_portada_value']->content; ?></a></div>
+
+		<?php if(($fields['field_mostrar_sumario_value']->content) == 1): ?>
+			<div class="sumario"><span><?php print $fields['field_sumario_value']->content; ?></span></div>
+		<?php else: ?>
+			<?php if(!empty($fields['field_vinculo1_nid']->content)): ?>
+				<ul class="vinculos">
+					<li class="vinculo-1"><?php print $fields['field_vinculo1_nid']->content; ?></li>
+					<?php if(!empty($fields['field_vinculo2_nid']->content)): ?>
+						<li class="vinculo-2"><?php print $fields['field_vinculo2_nid']->content; ?></li>
+					<?php endif; ?>
+				</ul>
+			<?php endif; ?>
+		<?php endif; ?>
+	</div>
+	<div class="clear-float"></div>
+</div>

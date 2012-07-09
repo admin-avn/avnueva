@@ -1,0 +1,18 @@
+.wrapper-mobile {
+        position: relative;
+        width: 100%;
+	background-color: white;
+}
+
+.header,
+.middle {
+	margin-bottom: .5em;
+}
+
+.middle .inside {
+	padding: 0 10px;
+}
+
+.clear-float {
+	clear: both;
+}

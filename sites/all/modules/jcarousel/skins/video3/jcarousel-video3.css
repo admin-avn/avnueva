@@ -1,0 +1,49 @@
+.jcarousel-skin-video3 {
+}
+
+.jcarousel-skin-video3 .jcarousel-container-horizontal {
+	width: 744px;
+	height: 204px;
+	padding: 0 11px;
+	margin-left: 4px;
+}
+
+.jcarousel-skin-video3 .jcarousel-clip-horizontal {
+	width: 744px;
+}
+
+.jcarousel-skin-video3 .jcarousel-item {
+	padding: 0;
+	margin: 0;
+	width: 182px;
+	height: 204px;
+	overflow: hidden;
+	list-style: none;
+	margin: 0 2px;
+}
+
+.jcarousel-skin-video3 .jcarousel-next {
+	display: block;
+	width: 11px;
+	height: 116px;
+	background-image: url("background-especiales-next.png");
+}
+
+.jcarousel-skin-video3 .jcarousel-prev {
+	display: block;
+	width: 11px;
+	height: 116px;
+	background-image: url("background-especiales-prev.png");
+}
+
+.jcarousel-skin-video3 .jcarousel-prev-horizontal {
+	position: absolute;
+	top: 40px;
+	left: 0px;
+}
+
+.jcarousel-skin-video3 .jcarousel-next-horizontal {
+	position: absolute;
+	top: 40px;
+	right: -2px;
+}

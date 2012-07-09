@@ -1,0 +1,5 @@
+; $Id$
+name = Facebook Comments
+description = Muestra comentarios de facebook en los nodos
+core = 6.x
+

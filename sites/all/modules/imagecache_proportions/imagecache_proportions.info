@@ -1,0 +1,14 @@
+; $Id: imagecache_proportions.info,v 1.1.2.1 2010/10/19 11:31:37 pcambra Exp $
+name =Imagecache Proportions
+description = CCK Formatter that allows to select different imagecache presets depending on the image proportions.
+dependencies[] = content
+dependencies[] = imagecache
+package = ImageCache
+core = 6.x
+
+; Information added by drupal.org packaging script on 2010-11-20
+version = "6.x-1.0"
+core = "6.x"
+project = "imagecache_proportions"
+datestamp = "1290266176"
+

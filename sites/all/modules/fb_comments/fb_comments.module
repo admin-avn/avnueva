@@ -1,0 +1,45 @@
+<?php
+function fb_comments_help ($path, $arg) {
+  $output = '';
+  switch ($path) {
+    case 'admin/help#fb_comments':
+      $output .= '<p>' . t('Módulo que muestra los comentarios de facebook en los nodos.') . '</p>';
+      break;
+  }
+  return $output;
+}
+
+function fb_comments_perm() {
+  return array('access facebook comments');
+}
+
+function fb_comments_block($op = 'list', $delta = 0, $edit = array()) {
+	switch ($op) {
+    case 'list':
+			$block[0] = array(
+				'info' => t('Facebook comments'),
+				'cache' => BLOCK_NO_CACHE,
+			);
+			return $block;
+
+		case 'view':    
+			switch ($delta) {
+				case 0:
+					$block = array(
+						'subject' => t('Test'),
+						'content' => fb_comments_display(),
+					);
+					break;
+			}
+			return $block;
+	}
+}
+
+function fb_comments_display() {
+	global $base_url;
+	$url = $base_url .'/'. drupal_get_path_alias($_GET['q']);
+	$facebook_comment_box = <<<EOF
+		<div class="fb-comments" data-href="$url" data-num-posts="2" data-width="470"></div>
+EOF;
+	return $facebook_comment_box;
+}

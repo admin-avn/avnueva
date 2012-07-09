@@ -1,0 +1,38 @@
+.wrapper-radio {
+        position: relative;
+        width: 980px;
+}
+
+.left-right {
+	margin-bottom: .5em;
+	padding-bottom: .5em;
+}
+
+.left-right {
+	background-color: white;
+	width: 100%;
+}
+
+.left {
+	float: left;
+	width: 63%;
+}
+
+.right {
+	float: right;
+	width: 36%;
+}
+
+.left .inside {
+	padding-left: 10px;
+	padding-right: 10px;
+	border-right: 1px solid #e0e0e0;
+}
+
+.right .inside {
+	padding-right: 10px;
+}
+
+.clear-float {
+	clear: both;
+}

@@ -1,0 +1,53 @@
+.front-contenedor {
+        position: relative;
+        width: 656px;
+        background-color: white;
+}
+
+.medio-centro,
+.abajo {
+	margin-bottom: 10px;
+}
+
+.arriba {
+	width: 656px;
+}
+
+.arriba-izquierda {
+	float: left;
+	width: 188px;
+}
+
+.arriba-derecha {
+	float: left;
+	width: 467px;
+}
+
+.medio-izquierda {
+	float: left;
+	width: 327px;
+}
+
+.medio-derecha {
+	float: left;
+	width: 328px;
+}
+
+.medio-centro {
+	position: relative;
+	width: 656px;
+}
+
+.abajo-izquierda {
+	float: left;
+	width: 446px;
+}
+
+.abajo-derecha {
+	float: left;
+	width: 206px;
+}
+
+.clear-float {
+	clear: both;
+}

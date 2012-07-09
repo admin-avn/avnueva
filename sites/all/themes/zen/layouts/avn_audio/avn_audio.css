@@ -1,0 +1,31 @@
+.contenedor-audio {
+        position: relative;
+        width: 980px;
+}
+
+.izquierda,
+.derecha {
+	float: left;
+}
+
+.izquierda {
+	margin: 9px;
+	width: 62%;
+}
+
+.derecha {
+	width: 36%;
+}
+
+.horizontal1,
+.horizontal2,
+.horizontal3,
+.horizontal4,
+.horizontal5 {
+	position: relative;
+	margin-bottom: .5em;
+}
+
+.clear-float {
+	clear: both;
+}

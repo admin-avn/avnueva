@@ -1,0 +1,47 @@
+<p>First, read up on how to get the View/Display pair that contain PHP Array display. This section assumes that you already have the view_name and display_id to be executed. We assume the following variables.</p>
+<code>
+<pre>
+$view_name = the view name
+$display_id = the display id
+// we assume that the view specified by $view_name has $display_id as its display.
+</pre>
+</code>
+<p>To get the view specified by $view_name</p>
+<code>
+$view = views_get_view($view_name);
+</code>
+<p>To set the display</p>
+<code>
+$view->set_display($display_id);
+</code>
+<p>Optional: to set the arguments</p>
+<code>
+$view->set_arguments('arg1/arg2/arg3');
+</code>
+<p>To set which page to be fetched (if pager is enabled)</p>
+<code>
+$view->set_current_page(1);
+</code>
+<p>To execute it (recommended)</p>
+<code>
+$php_array = $view->preview();
+</code>
+<p>$php_array will contain the view output in the following format:</p>
+<code>
+<pre>
+group1
+--item1
+----field1
+----field2
+--item2
+----field1
+----field2
+group2
+--item3
+----field1
+----field2
+--item4
+----field1
+----field2
+</pre>
+</code>

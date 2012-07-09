@@ -1,0 +1,44 @@
+/* Página Twitter */
+
+.twitter-page .titulo-twitter,
+.rss-page .titulo-rss {
+	color: #3f3f3f;
+	font-size: 1.3em;
+	font-weight: bold;
+	border-bottom: 1px solid #787878;
+	padding-bottom: 5px;
+	margin: 20px 0 0 0;
+}
+
+.twitter-page table,
+.rss-page table {
+	margin-left: 20px;
+}
+
+.twitter-page .titulo,
+.rss-page .titulo {
+	color: #3f3f3f;
+	font-size: 1em;
+	font-family: sans-serif;
+	font-weight: bold;
+	width: 200px;
+}
+
+.twitter-page .cuerpo {
+	color: #696969;
+	font-size: .9em;
+	font-family: sans-serif;
+	margin: 5px 0 32px 0;
+}
+
+.twitter-page a,
+.rss-page a {
+	color: #696969;
+	font-size: .9em;
+	text-decoration: none;
+}
+
+.twitter-page .separador,
+.rss-page .separador {
+	height: 20px;
+}

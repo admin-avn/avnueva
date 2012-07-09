@@ -1,0 +1,30 @@
+.wrapper-fotografia {
+        position: relative;
+        width: 100%;
+	background-color: #4a4a4c;
+	margin: 0 23px 0 27px;
+	width: 926px;
+}
+
+.header,
+.left-right {
+	margin-bottom: .5em;
+}
+
+.left-right {
+	width: 100%;
+}
+
+.left {
+	float: left;
+	width: 60%;
+}
+
+.right {
+	float: left;
+	width: 39%;
+}
+
+.clear-float {
+	clear: both;
+}

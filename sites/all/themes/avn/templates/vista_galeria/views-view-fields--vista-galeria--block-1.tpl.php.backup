@@ -1,0 +1,32 @@
+<?php
+list($width, $height) = getimagesize($fields['field_foto_fid']->content);
+?>
+
+<div id="galeria">
+	<?php $path = explode("sites", $fields['field_foto_fid']->content); ?>
+	<?php $path_horizontal = explode("sites", $fields['field_foto_fid_1']->content); ?>
+	<?php $path_vertical = explode("sites", $fields['field_foto_fid_2']->content); ?>
+	<?php for($i = 1; $i < sizeof($path); $i++): ?>
+		<?php $path_horizontal[$i] = '/sites' . $path_horizontal[$i]; ?>
+		<?php $path_vertical[$i] = '/sites' . $path_vertical[$i]; ?>
+		<?php if($width > $height): ?>
+			<a rel="<?php print $path_horizontal[$i]; ?>" href="<?php print $path_horizontal[$i]; ?>">
+				<img src="<?php print $path_horizontal[$i]; ?>" title="<?php print $fields['title']->content; ?>" alt="">
+			</a>
+		<?php else: ?>
+			<a rel="<?php print $path_vertical[$i]; ?>" href="<?php print $path_vertical[$i]; ?>">
+				<img src="<?php print $path_vertical[$i]; ?>" title="<?php print $fields['title']->content; ?>" alt="">
+			</a>
+		<?php endif; ?>
+	<?php endfor; ?>
+</div>
+<script>
+	Galleria.loadTheme('/sites/all/libraries/galleria/themes/twelve/galleria.twelve.min.js');
+	$("#galeria").galleria({
+		_showTooltip: false,
+		autoplay: 8000,
+		height: 627,
+		width: 940,
+		preload: 1
+	});
+</script>

@@ -1,0 +1,87 @@
+/*
+ * Accordionza jQuery Plugin
+ * Copyright 2010, Geert De Deckere <geert@idoe.be>
+ */
+
+#accordion1 {
+	color:#fff;
+	height:200px;
+	list-style:none;
+	margin:0;
+	overflow:scroll;
+	padding:0;
+	text-shadow:0 1px 0 #333;
+	width: 646px;
+}
+#accordion1 li {
+	height:200px;
+	position:relative;
+}
+#accordion1 .slide_handle {
+/*	background:url(images/handles.png);*/
+	background-color: black;
+	bottom:0;
+	cursor:pointer;
+	left:0;
+	position:absolute;
+	top:0;
+	width:40px;
+}
+/*
+#accordion1 .slide2 .slide_handle { background-position:-40px 0; }
+#accordion1 .slide3 .slide_handle { background-position:-80px 0; }
+#accordion1 .slide4 .slide_handle { background-position:-120px 0; }
+*/
+#accordion1 .slide_handle div {
+/*	background:url(images/arrows.gif);*/
+	bottom:16px;
+	height:7px;
+	left:16px;
+	position:absolute;
+	width:7px;
+}
+#accordion1 .slide_opened .slide_handle { cursor:default; }
+#accordion1 .slide_opened .slide_handle div { background-position:0 -7px; }
+#accordion1 .slide_content {
+	background-color: #e9e7e8 !important;
+	bottom:0;
+	left: 40px; /* Matches the width of .slide_handle */
+	position:absolute;
+	right:0;
+	top:0;
+}
+#accordion1 .slide_content a img { border:0; }
+#accordion1 .slide_caption {
+	background:url(images/black-30pct.png); /* You could use rgba instead, but that means less browser support */
+	bottom:0;
+	left:0;
+	padding:10px 20px;
+	position:absolute;
+	right:0;
+	/* To change the height of the caption, set the captionHeight option in script.js */
+}
+#accordion1 .slide_caption_toggle {
+	cursor:pointer;
+	height:10px;
+	left:0;
+	position:absolute;
+	right:0;
+	top:0;
+}
+#accordion1 .slide_caption_toggle div {
+	background:url(images/toggle-caption.png) no-repeat 50% -10px;
+	height:100%;
+}
+#accordion1 .slide_caption_toggle:hover { background:url(images/black-30pct.png); }
+#accordion1 .slide_caption_collapsed .slide_caption_toggle div { background-position:50% 0; }
+#accordion1 a {
+	background:none;
+	color:#fff;
+	text-shadow:0 1px 0 #333;
+}
+#accordion1 a:hover { text-decoration:none; }
+#accordion1 .slide1 .slide_content { background: white; }
+#accordion1 .slide2 .slide_content { background: white; }
+#accordion1 .slide3 .slide_content { background: white; }
+#accordion1 .slide4 .slide_content { background: white; }
+#accordion1 .slide5 .slide_content { background: white; }

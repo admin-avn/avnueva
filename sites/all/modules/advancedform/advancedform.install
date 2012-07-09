@@ -1,0 +1,15 @@
+<?php
+
+/** 
+  * Implementation of hook_install(). 
+  */
+function advancedform_install() {  
+  // Set a high weight so the module is called after other modules that
+  // modify forms.
+  db_query('UPDATE {system} SET weight = 20 WHERE name = "advancedform"');
+  drupal_set_message(t("Advanced Form has been enabled. Visit !settings to check the rules.", array('!settings' => l('admin/settings/advancedform', t('settings')))));
+}
+
+function advancedform_uninstall() {  
+  variable_del('advancedform_rules_global');
+}

@@ -1,0 +1,561 @@
+.wrapper-radio .left .pane-vista-radio {
+	background-color: white !important;
+}
+
+.wrapper-radio .left .pane-vista-radio h2 {
+	color: white;
+	background: #86b2e6;
+	margin: 0;
+	padding: 0;
+	width: 100px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.wrapper-radio .left .pane-vista-radio {
+	background-color: #e2e2e2;
+	width: 615px;
+}
+
+.sm2_plst_cck-outer .playlist a {
+	font-size: .6em;
+}
+
+.sm2_plst_cck-outer .sm2-filelink {
+	display: none;
+}
+
+/* Avances en Audio */
+
+.wrapper-radio .right .pane-vista-radio h2 {
+	color: #515151;
+	font-family: sans-serif;
+	font-size: 1.3em;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.wrapper-radio .views-table {
+	width: 266px;
+}
+
+.wrapper-radio .views-table td,
+.wrapper-radio .playlist li {
+	background-color: #e2e2e2 !important;
+}
+
+.wrapper-radio .views-table td {
+	padding-left: 5px;
+}
+
+.wrapper-radio .views-table tr {
+	border: none;
+}
+
+.wrapper-radio .views-table td .hora {
+	margin: 3px 3px 0px 3px;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	-o-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+
+.wrapper-radio .views-table td .fecha {
+	margin: 0 3px 3px 3px;
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	-o-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+}
+
+.wrapper-radio .views-table td .hora,
+.wrapper-radio .views-table td .fecha {
+	background-color: #f1f1f1;
+	height: 18px;
+}
+
+.wrapper-radio .views-table td .hora span,
+.wrapper-radio .views-table td .fecha span {
+	color: #666666;
+	font-size: .7em;
+	margin: 0 10px;
+}
+
+.wrapper-radio .views-table td .fecha span {
+	font-weight: bold;
+}
+
+/* Emisión */
+
+.emision-matutina,
+.emision-meridiana,
+.emision-vespertina {
+	padding-top: 10px;
+	float: left;
+	width: 205px;
+	height: 102px;
+}
+
+.emision-matutina {
+	background: white url("/avnueva/sites/all/themes/avn/images/background-emision-matutina.png") no-repeat;
+}
+
+.emision-meridiana {
+	background: white url("/avnueva/sites/all/themes/avn/images/background-emision-meridiana.png") no-repeat;
+}
+
+.emision-vespertina {
+	background: white url("/avnueva/sites/all/themes/avn/images/background-emision-vespertina.png") no-repeat;
+}
+
+.emision-matutina .cajon,
+.emision-meridiana .cajon,
+.emision-vespertina .cajon {
+	margin-top: 13px;
+}
+
+.avance-principal {
+	position: relative;
+	background-color: white;
+	border: 1px solid #dedede;
+	margin: 12px 0;
+	height: 90px;
+}
+
+.regiones {
+	background: url("/avnueva/sites/all/themes/avn/images/background-regiones.png") no-repeat;
+}
+
+.agenda-cultural {
+	background: url("/avnueva/sites/all/themes/avn/images/background-agenda-cultural.png") no-repeat;
+}
+
+.sintesis-informativa {
+	background: url("/avnueva/sites/all/themes/avn/images/background-sintesis-informativa.png") no-repeat;
+}
+
+.regiones,
+.agenda-cultural,
+.sintesis-informativa {
+	padding-top: 10px;
+	float: left;
+	width: 205px;
+	height: 55px;
+}
+
+.regiones,
+.agenda-cultural {
+	border-radius: 0 5px 5px 0;
+}
+
+.QTRadio {
+	background-color: transparent;
+	padding-top: 16px;
+	float: left;
+	width: 615px;
+}
+
+.emision-matutina .reproductor,
+.emision-meridiana .reproductor,
+.emision-vespertina .reproductor {
+	margin: 10px 0 0 20px;
+	width: 26px;
+	height: 25px;
+	float: left;
+}
+
+.avance-principal .reproductor {
+	margin: 10px 0 0 20px;
+	width: 54px;
+	height: 54px;
+	float: left;
+}
+
+.regiones .reproductor,
+.agenda-cultural .reproductor,
+.sintesis-informativa .reproductor {
+	margin: 10px 0 0 20px;
+	width: 27px;
+	height: 24px;
+	float: left;
+}
+
+.QTRadio .reproductor {
+	margin: 10px 0 0 171px;
+	width: 29px;
+	height: 27px;
+	float: left;
+}
+
+.emision-matutina .termino span,
+.emision-meridiana .termino span,
+.emision-vespertina .termino span {
+	color: white;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+.QTRadio .termino {
+	position: absolute;
+	top: 70px;
+	/*
+	top: 53px;
+	*/
+	left: 38px;
+}
+
+.avance-principal .titulo {
+	padding-top: 10px;
+}
+
+.QTRadio .titulo {
+	padding-top: 14px;
+}
+
+.QTRadio .titulo span {
+	color: white;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.avance-principal .titulo span {
+	color: #666666;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+.regiones .termino span,
+.agenda-cultural .termino span,
+.sintesis-informativa .termino span {
+	color: white;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.QTRadio .termino span {
+	color: white;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+.emision-matutina .hora,
+.emision-meridiana .hora,
+.emision-vespertina .hora,
+.emision-matutina .fecha,
+.emision-meridiana .fecha,
+.emision-vespertina .fecha {
+	margin-left: 45px;
+}
+
+.avance-principal .fecha {
+	position: absolute;
+	margin-left: 80px;
+	bottom: 0px;
+}
+
+.emision-matutina .hora span,
+.emision-meridiana .hora span,
+.emision-vespertina .hora span {
+	color: white;
+	font-size: 1.3em;
+}
+
+.emision-matutina .fecha span,
+.emision-meridiana .fecha span,
+.emision-vespertina .fecha span {
+	color: white;
+	font-size: .8em;
+}
+
+.avance-principal .fecha span {
+	color: #666666;
+	font-size: .8em;
+}
+
+.regiones .fecha span,
+.agenda-cultural .fecha span,
+.sintesis-informativa .fecha span {
+	color: white;
+	font-size: .8em;
+}
+
+.QTRadio .fecha span {
+	color: white;
+	font-size: .8em;
+	margin-left: 10px;
+}
+
+.emision-matutina .reproductor .playlist li,
+.emision-meridiana .reproductor .playlist li,
+.emision-vespertina .reproductor .playlist li {
+	background-color: transparent !important;
+	padding: 0;
+	margin: 0;
+	width: 26px;
+	height: 25px;
+}
+
+.avance-principal .reproductor .playlist li {
+	background-color: transparent !important;
+	padding: 0;
+	margin: 0;
+	width: 54px;
+	height: 54px;
+}
+
+.regiones .reproductor .playlist li,
+.agenda-cultural .reproductor .playlist li,
+.sintesis-informativa .reproductor .playlist li {
+	background-color: transparent !important;
+	padding: 0;
+	margin: 0;
+	width: 27px;
+	height: 24px;
+}
+
+.QTRadio .reproductor .playlist li {
+	background-color: transparent !important;
+	padding: 0;
+	margin: 0;
+	width: 29px;
+	height: 27px;
+}
+
+.emision-matutina .reproductor .playlist .sm2-filelink,
+.emision-matutina .reproductor .playlist .timing,
+.emision-matutina .reproductor .playlist .peak,
+.emision-meridiana .reproductor .playlist .sm2-filelink,
+.emision-meridiana .reproductor .playlist .timing,
+.emision-meridiana .reproductor .playlist .peak,
+.emision-vespertina .reproductor .playlist .sm2-filelink,
+.emision-vespertina .reproductor .playlist .timing,
+.emision-vespertina .reproductor .playlist .peak,
+.avance-principal .reproductor .playlist .sm2-filelink,
+.avance-principal .reproductor .playlist .timing,
+.avance-principal .reproductor .playlist .peak,
+.regiones .reproductor .playlist .sm2-filelink,
+.regiones .reproductor .playlist .timing,
+.regiones .reproductor .playlist .peak,
+.agenda-cultural .reproductor .playlist .sm2-filelink,
+.agenda-cultural .reproductor .playlist .timing,
+.agenda-cultural .reproductor .playlist .peak,
+.sintesis-informativa .reproductor .playlist .sm2-filelink,
+.sintesis-informativa .reproductor .playlist .timing,
+.sintesis-informativa .reproductor .playlist .peak,
+.QTRadio .reproductor .playlist .sm2-filelink,
+.QTRadio .reproductor .playlist .timing,
+.QTRadio .reproductor .playlist .peak {
+	display: none;
+}
+
+.emision-matutina .reproductor a,
+.emision-matutina .reproductor ul.playlist li.sm2_paused a.sm2_link, 
+.emision-meridiana .reproductor a,
+.emision-meridiana .reproductor ul.playlist li.sm2_paused a.sm2_link, 
+.emision-vespertina .reproductor a,
+.emision-vespertina .reproductor ul.playlist li.sm2_paused a.sm2_link {
+	font-size: 0px;
+	background: url("/avnueva/sites/all/themes/avn/images/background-emision-play.png") no-repeat;
+	color: transparent;
+	display: block;
+	height: 25px;
+	width: 26px;
+}
+
+.avance-principal .reproductor a,
+.avance-principal .reproductor ul.playlist li.sm2_paused a.sm2_link {
+	font-size: 0px;
+	background: url("/avnueva/sites/all/themes/avn/images/background-avance-principal-play.png") no-repeat;
+	color: transparent;
+	display: block;
+	height: 54px;
+	width: 54px;
+}
+
+.regiones .reproductor a,
+.regiones .reproductor ul.playlist li.sm2_paused a.sm2_link, 
+.agenda-cultural .reproductor a,
+.agenda-cultural .reproductor ul.playlist li.sm2_paused a.sm2_link, 
+.sintesis-informativa .reproductor a,
+.sintesis-informativa .reproductor ul.playlist li.sm2_paused a.sm2_link {
+	font-size: 0px;
+	background: url("/avnueva/sites/all/themes/avn/images/background-regiones-play.png") no-repeat;
+	color: transparent;
+	display: block;
+	height: 24px;
+	width: 27px;
+}
+
+.QTRadio .reproductor a,
+.QTRadio .reproductor ul.playlist li.sm2_paused a.sm2_link {
+	font-size: 0px;
+	background: url("/avnueva/sites/all/themes/avn/images/background-qtradio-play.png") no-repeat;
+	color: transparent;
+	display: block;
+	height: 27px;
+	width: 29px;
+}
+
+.emision-matutina .reproductor ul.playlist li.sm2_playing a.sm2_link,
+.emision-meridiana .reproductor ul.playlist li.sm2_playing a.sm2_link,
+.emision-vespertina .reproductor ul.playlist li.sm2_playing a.sm2_link {
+	background: url("/avnueva/sites/all/themes/avn/images/background-emision-paused.png") no-repeat;
+}
+
+.avance-principal .reproductor ul.playlist li.sm2_playing a.sm2_link {
+	background: url("/avnueva/sites/all/themes/avn/images/background-avance-principal-paused.png") no-repeat;
+}
+
+.regiones .reproductor ul.playlist li.sm2_playing a.sm2_link,
+.agenda-cultural .reproductor ul.playlist li.sm2_playing a.sm2_link,
+.sintesis-informativa .reproductor ul.playlist li.sm2_playing a.sm2_link {
+	background: url("/avnueva/sites/all/themes/avn/images/background-regiones-paused.png") no-repeat;
+}
+
+.QTRadio .reproductor ul.playlist li.sm2_playing a.sm2_link {
+	background: url("/avnueva/sites/all/themes/avn/images/background-qtradio-paused.png") no-repeat;
+}
+
+.emision-matutina .reproductor a:hover,
+.emision-meridiana .reproductor a:hover,
+.emision-vespertina .reproductor a:hover,
+.avance-principal .reproductor a:hover,
+.regiones .reproductor a:hover,
+.agenda-cultural .reproductor a:hover,
+.sintesis-informativa .reproductor a:hover {
+	color: transparent;
+}
+
+.emision-matutina .reproductor .controls,
+.emision-meridiana .reproductor .controls,
+.emision-vespertina .reproductor .controls {
+	top: 40px;
+	width: 140px;
+	left: 25px;
+}
+
+.avance-principal .reproductor .controls {
+	width: 500px;
+	top: -20px;
+	left: 60px;
+}
+
+.regiones .reproductor .controls,
+.agenda-cultural .reproductor .controls,
+.sintesis-informativa .reproductor .controls {
+	width: 140px;
+	left: 30px;
+}
+
+.QTRadio .reproductor .controls {
+	width: 380px;
+	top: 50px;
+	left: 40px;
+}
+
+.emision-matutina .reproductor .controls,
+.emision-meridiana .reproductor .controls,
+.emision-vespertina .reproductor .controls,
+.emision-matutina .reproductor .controls .statusbar,
+.emision-meridiana .reproductor .controls .statusbar,
+.emision-vespertina .reproductor .controls .statusbar,
+.emision-matutina .reproductor .controls .statusbar .loading,
+.emision-meridiana .reproductor .controls .statusbar .loading,
+.emision-vespertina .reproductor .controls .statusbar .loading,
+.emision-matutina .reproductor .controls .statusbar .position,
+.emision-meridiana .reproductor .controls .statusbar .position,
+.emision-vespertina .reproductor .controls .statusbar .position,
+.regiones .reproductor .controls,
+.agenda-cultural .reproductor .controls,
+.sintesis-informativa .reproductor .controls,
+.regiones .reproductor .controls .statusbar,
+.agenda-cultural .reproductor .controls .statusbar,
+.sintesis-informativa .reproductor .controls .statusbar,
+.regiones .reproductor .controls .statusbar .loading,
+.agenda-cultural .reproductor .controls .statusbar .loading,
+.sintesis-informativa .reproductor .controls .statusbar .loading,
+.regiones .reproductor .controls .statusbar .position,
+.agenda-cultural .reproductor .controls .statusbar .position,
+.sintesis-informativa .reproductor .controls .statusbar .position {
+	height: 5px;
+}
+
+.avance-principal .reproductor .controls,
+.avance-principal .reproductor .controls .statusbar,
+.avance-principal .reproductor .controls .statusbar .loading,
+.avance-principal .reproductor .controls .statusbar .position,
+.QTRadio .reproductor .controls,
+.QTRadio .reproductor .controls .statusbar,
+.QTRadio .reproductor .controls .statusbar .loading,
+.QTRadio .reproductor .controls .statusbar .position {
+	height: 15px;
+	border: none;
+	border-radius: 10px;
+}
+
+.avance-principal .reproductor .controls .statusbar .position,
+.QTRadio .reproductor .controls .statusbar .position {
+	background-color: #90a4be;
+}
+
+/* QTRadio */
+
+.wrapper-radio .pane-quicktabs-qtradio {
+	background: url("/avnueva/sites/all/themes/avn/images/background-QTRadio.png") no-repeat;
+	position: relative;
+	margin-top: 190px;
+	width: 615px;
+}
+
+.wrapper-radio #quicktabs_container_qtradio {
+	height: 130px;
+}
+
+.wrapper-radio .quicktabs_tabs {
+	padding: 0;
+	margin: 0;
+}
+
+.wrapper-radio .quicktabs_tabs li {
+	display: inline-block;
+	width: 205px;
+	line-height: 27px;
+	padding: 3px 0 0 0;
+	text-align: center;
+}
+
+.wrapper-radio .quicktabs_tabs li a {
+	color: #666666;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.wrapper-radio .quicktabs_tabs li.active a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.wrapper-radio .quicktabs_tabs .qtab-0 {
+	background: url("/avnueva/sites/all/themes/avn/images/background-micros-desactivado.png") no-repeat;
+}
+
+.wrapper-radio .quicktabs_tabs .qtab-0.active {
+	background: url("/avnueva/sites/all/themes/avn/images/background-micros-activado.png") no-repeat;
+}
+
+.wrapper-radio .quicktabs_tabs .qtab-1 {
+	background: url("/avnueva/sites/all/themes/avn/images/background-reportajes-desactivado.png") no-repeat;
+}
+
+.wrapper-radio .quicktabs_tabs .qtab-1.active {
+	background: url("/avnueva/sites/all/themes/avn/images/background-reportajes-activado.png") no-repeat;
+}
+
+.wrapper-radio .quicktabs_tabs .qtab-2 {
+	background: url("/avnueva/sites/all/themes/avn/images/background-en-contexto-desactivado.png") no-repeat;
+}
+
+.wrapper-radio .quicktabs_tabs .qtab-2.active {
+	background: url("/avnueva/sites/all/themes/avn/images/background-en-contexto-activado.png") no-repeat;
+}

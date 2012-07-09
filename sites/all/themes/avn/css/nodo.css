@@ -1,0 +1,616 @@
+body #content {
+	width: 630px !important;
+	margin-left: 0 !important;
+	margin-right: -630px !important;
+}
+
+body .region-sidebar-second {
+	margin: 0 !important;
+	margin-left: 650px !important;
+	width: 330px !important;
+}
+
+body {
+	background: url("/sites/all/themes/avn/images/background-avn-index3.png") repeat-x, -webkit-linear-gradient(-50deg, #fbfbfb, #ebebeb) 0px 54px;
+	background: url("/sites/all/themes/avn/images/background-avn-index3.png") repeat-x, -moz-linear-gradient(-50deg, #fbfbfb, #ebebeb) 0px 54px;
+	background: url("/sites/all/themes/avn/images/background-avn-index3.png") repeat-x, -o-linear-gradient(-50deg, #fbfbfb, #ebebeb) 0px 54px;
+	//background: url("/sites/all/themes/avn/images/background-avn-index3.png") repeat-x, -webkit-linear-gradient(-50deg, #fbfbfb, #ebebeb) 0px 54px;
+}
+
+body #page-wrapper {
+	background: transparent !important;
+}
+
+.nodo-encabezado .termino {
+	margin-bottom: 10px;
+}
+
+.nodo-encabezado .termino a {
+	color: white;
+	background: #8E99B4;
+	padding: 5px 10px;
+	font-family: verdana, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.nodo-encabezado .titulo {
+	margin-bottom: 0px;
+	width: 450px;
+}
+
+.nodo-encabezado .titulo span {
+	color: #31487E;
+	font-family: verdana, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.nodo-encabezado .cajon-imagen a img {
+	width: 630px;
+}
+
+.nodo-encabezado .titulo-imagen {
+	text-align: right;
+}
+
+.nodo-encabezado .titulo-imagen span {
+	color: #514d4d;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.nodo-encabezado .autor, .nodo-encabezado .autor a  {
+	font-weight: bold;
+	color: #514D4D;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.nodo-encabezado .autor a {
+	color: #31487E;
+}
+
+.nodo-encabezado .cajon-imagen {
+	width: 630px;
+	margin-top: 10px;
+}
+
+.nodo-encabezado .cajon-video {
+  margin-top: 10px;
+}
+
+.nodo-encabezado .cajon-video img.playbutton {
+  position: absolute;
+  top:210px;
+  left:281px;
+  height: 60px;
+  width: 60px;
+  opacity: .7;
+        -webkit-transition: opacity .1s ease-in-out;
+        -moz-transition: opacity .1s ease-in-out;
+        -o-transition: opacity .1s ease-in-out;
+        transition: opacity .1s ease-in-out;
+}
+
+.nodo-encabezado .cajon-video img:hover.playbutton{
+  position: absolute;
+  top:210px;
+  left:281px;
+  height: 60px;
+  width: 60px;
+  opacity: 1;
+        -webkit-transition: opacity .1s ease-in-out;
+        -moz-transition: opacity .1s ease-in-out;
+        -o-transition: opacity .1s ease-in-out;
+        transition: opacity .1s ease-in-out;
+}
+
+
+.nodo-encabezado #galeria {
+  margin-top: 10px;
+}
+
+
+.nodo-contenido .cuerpo div {
+	padding-right: 0px;
+}
+
+.nodo-contenido .cuerpo p,
+.nodo-contenido .cuerpo li {
+	color: #444;
+	font-family: verdana, sans-serif;
+	font-size: 12px;
+}
+
+.nodo-contenido .cuerpo a {
+	color: #31487E;
+	font-family: verdana, sans-serif;
+}
+
+.nodo-contenido .cuerpo a:hover {
+	text-decoration: underline;
+}
+
+.nodo-contenido .detalles {
+		margin: 30px 0;
+}
+
+.nodo-contenido .detalles span,
+.nodo-contenido .detalles span a {
+	color: #514d4d;
+	font-size: 12px;
+}
+
+.nodo-contenido .detalles span a {
+		text-decoration: none;
+}
+
+.nodo-contenido .detalles span a:hover {
+		text-decoration: underline;
+}
+
+.nodo-contenido .detalles span.autor,
+.nodo-contenido .detalles span.avn {
+	font-weight: bold;
+}
+
+.nodo-contenido .mensaje {
+		border-top: 1px solid #e0e0e0;
+}
+
+.nodo-contenido .mensaje span {
+	color: #514d4d;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.nodo-vinculos .relacionadas,
+.nodo-posicion .termino {
+	background: #31487E;
+	padding: 2px 5px;
+	width: 128px;
+}
+
+.nodo-vinculos .relacionadas,
+.nodo-posicion .termino a {
+	color: white;
+	font-family: verdana,sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.nodo-vinculos {
+	margin-top: 12px;
+}
+
+.nodo-posicion {
+	margin-bottom: 20px;
+}
+
+
+.nodo-vinculos .vinculo-1,
+.nodo-vinculos .vinculo-2,
+.nodo-vinculos .vinculo-3,
+.nodo-posicion {
+	border-bottom: 1px solid #bcbcbc;
+	margin-bottom: 10px;
+}
+
+.nodo-vinculos .vinculo-1 .titulo,
+.nodo-vinculos .vinculo-2 .titulo,
+.nodo-vinculos .vinculo-3 .titulo,
+.nodo-posicion .titulo {
+	line-height: 15px;
+	margin-bottom: 10px;
+}
+
+.nodo-vinculos .vinculo-1 .titulo a,
+.nodo-vinculos .vinculo-2 .titulo a,
+.nodo-vinculos .vinculo-3 .titulo a,
+.nodo-posicion .titulo a {
+	color: #31487E;
+	font-family: verdana, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.views-row-2 .nodo-posicion .termino,
+.views-row-3 .nodo-posicion .termino {
+	display: none;
+}
+
+/* Lo Más Leído */
+
+.nodo-lomasleido .titulo-lomasleido {
+	padding-top: 10px;
+}
+
+.nodo-lomasleido-1-5 {
+	padding: 0 10px 0 5px;
+}
+
+.nodo-lomasleido-1-5 table {
+	margin: 0 !important;
+}
+
+.views-row-last .nodo-lomasleido-1-5 {
+  border-bottom-width:0px;
+}
+
+.nodo-lomasleido-1-5 .digito,
+.nodo-lomasleido-1-5 .digito,
+.nodo-lomasleido-1-5 .digito,
+.nodo-lomasleido-1-5 .digito,
+.nodo-lomasleido-1-5 .digito {
+	position: absolute;
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-top: 5px;
+}
+
+.fdigito {
+	vertical-align: top;
+}
+
+.nodo-lomasleido-1-5 tr.fila1,
+.nodo-lomasleido-1-5 tr.fila2,
+.nodo-lomasleido-1-5 tr.fila3,
+.nodo-lomasleido-1-5 tr.fila4 {
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.nodo-lomasleido-1-5 .fila1 .digito {
+	background: url("/sites/all/themes/avn/images/lomasleidogris-1.png") no-repeat;
+}
+
+.nodo-lomasleido-1-5 .fila2 .digito {
+	background: url("/sites/all/themes/avn/images/lomasleidogris-2.png") no-repeat;
+}
+
+.nodo-lomasleido-1-5 .fila3 .digito {
+	background: url("/sites/all/themes/avn/images/lomasleidogris-3.png") no-repeat;
+}
+
+.nodo-lomasleido-1-5 .fila4 .digito {
+	background: url("/sites/all/themes/avn/images/lomasleidogris-4.png") no-repeat;
+}
+
+.nodo-lomasleido-1-5 .fila5 .digito {
+	background: url("/sites/all/themes/avn/images/lomasleidogris-5.png") no-repeat;
+}
+
+.nodo-lomasleido-1-5 {
+	border-bottom: 1px solid #e0e0e0;
+	position: relative;
+}
+
+.nodo-lomasleido-1-5 .titulo,
+.nodo-lomasleido-1-5 .titulo-imagen {
+	padding-left: 20px;
+	float: left;
+}
+
+.nodo-lomasleido-1-5 .titulo-imagen {
+	width: 208px;
+}
+
+.nodo-lomasleido-1-5 .titulo a,
+.nodo-lomasleido-1-5 .titulo-imagen a {
+	color: #514d4d;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.nodo-lomasleido-1-5 .imagen {
+	width: 82px;
+	height: 44px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+/* Titulares */
+
+.nodo-titulo-titulares {
+	background: #9C9C9C !important;
+	height: 31px !important;
+	line-height: 31px !important;
+	margin-top: 10px !important;
+	padding-left: 10px !important;
+	margin-left: 0!important;
+	width: 320px !important;
+}
+
+.nodo-titulo-titulares a {
+	color: white !important;
+	font-family: verdana, sans-serif !important;
+	font-size: 12px !important;
+	font-weight: bold !important;
+	text-decoration: none !important;
+	text-transform: uppercase !important;
+}
+
+.nodo-titulo-titulares a.titulo {
+	display: inline-block;
+	width: 100px;
+	font-weight: bold;
+	background: url("/sites/all/themes/avn/images/flechas-blancas.png") 85px 12px no-repeat;
+}
+
+.index3-titulo-titulares {
+	background: #9C9C9C;
+	height: 31px;
+	line-height: 31px;
+	margin-top: 10px;
+	padding-left: 10px;
+}
+
+.index3-titulo-titulares a {
+	color: white;
+	font-family: verdana, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+table.index3-titulares {
+	margin: 0;
+}
+
+table.index3-titulares tr.titular {
+	background: #dfdfdf;
+}
+
+table.index3-titulares tr.titular-0,
+table.index3-titulares tr.titular-1,
+table.index3-titulares tr.titular-2,
+table.index3-titulares tr.titular-3 {
+	border-bottom: 1px solid #b2b2b2;
+}
+
+table.index3-titulares tr.titular td.hora {
+	color: #a9a9a9;
+	font-family: "Georgia";
+	font-size: 15px;
+	font-weight: bold;
+	padding: 5px 10px;
+}
+
+table.index3-titulares tr.titular td.titulo {
+	padding: 5px 10px 5px 0;
+}
+
+table.index3-titulares tr.titular td.titulo a {
+	color: #31487e;
+	font-size: 12px;
+	font-family: verdana, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+table.index3-titulares tr.vertodo-titulares {
+	background: #dfdfdf;
+
+}
+
+table.index3-titulares tr.vertodo-titulares td div {
+	background: #31487E;
+	float: right;
+	padding: 0 10px;
+}
+
+table.index3-titulares tr.vertodo-titulares td div a {
+	color: white;
+	font-family: verdana, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+
+/* Formulario de contacto */
+
+#comment-form {
+	clear: both;
+	margin-left: 10px;
+}
+
+#print-mail-form a {
+	color: #A80005;
+	text-decoration: none;
+}
+
+#print-mail-form {
+	padding: 10px;
+}
+
+#comment-form label,
+#print-mail-form label,
+.captcha legend {
+	display: block;
+	font-size: .9em;
+	font-weight: bold;
+	line-height: 1.4em;
+	color: #666;
+	color: rgba(0, 0, 0, 0.6);
+	text-shadow: 0 1px 1px #fff;
+}
+
+.captcha .description {
+	font-size: .85em;
+}
+
+#comment-form input[type="text"],
+#comment-form textarea,
+#print-mail-form input[type="text"],
+#print-mail-form textarea {
+	padding: 5px 8px;
+	font-size: 12px;
+	color: #666;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+}
+      
+#comment-form .tips,
+#comment-form > div > p,
+#comment-form #edit-preview,
+#comment-form .grippie,
+#print-mail-form .grippie {
+	display: none;
+}
+
+#comment-form textarea,
+#print-mail-form textarea {
+	resize: none;
+}
+
+#comment-form .captcha {
+	border: 1px solid #e2e2e2;
+	margin-right: 10px;
+}
+
+
+.titulo-titulares {
+	margin-top: 6px;
+/*
+	background: url("/sites/all/themes/avn/images/background-titulo-titulares.png") repeat-x;
+	width: 304px;
+	height: 21px;
+	padding-left: 5px;
+	line-height: 21px;
+*/
+}
+
+.titulo-titulares .termino {
+	color: #A80005;
+	font-size: 1.2em;
+	height: 21px;
+}
+
+.region-sidebar-second  .section .block-views {
+  margin-bottom:10px !important;
+}
+
+table.compartir td {
+		padding-right: 5px
+}
+
+table.compartir td div {
+		width: 50px !important;
+}
+
+.advertencia {
+	color: #514d4d;
+	font-size: 9px;
+	line-height: 11px;
+}
+
+.nodo-audio .reproductor {
+	margin: auto;
+	height: 29px;
+	width: 28px;
+}
+
+.nodo-audio .reproductor .playlist li {
+        background-color: transparent !important;
+        padding: 0;
+        margin: 0;
+        width: 29px;
+        height: 28px;	
+}
+
+.nodo-audio .reproductor .playlist .sm2-filelink,
+.nodo-audio .reproductor .playlist .timing,
+.nodo-audio .reproductor .playlist .peak,
+.nodo-audio .reproductor .controls {
+	display: none !important;
+}
+
+.nodo-audio .reproductor a,
+.nodo-audio .reproductor ul.playlist li.sm2_paused a.sm2_link {
+        font-size: 0px;
+        background: url("/sites/all/themes/avn/images/nodo-play.png") no-repeat;
+        color: transparent;
+        display: block;
+        height: 29px;
+        width: 28px;
+}
+
+.nodo-audio .reproductor ul.playlist li.sm2_playing a.sm2_link {
+        background: url("/sites/all/themes/avn/images/nodo-pausa.png") no-repeat;
+}
+
+.nodo-audio .reproductor a:hover {
+	color: transparent;
+}
+
+.nodo-audio .escuchelo {
+	font-family: helvetica;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.nodo-audio .radio {
+	font-family: helvetica;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.nodo-audio .radio span {
+	color: #005281;
+	font-family: helvetica;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+/* Comentarios */
+
+.nodo-comentario {
+	margin: 10px;
+}
+
+.nodo-comentario .left-side {
+	float: left;
+	width: 30%;
+}
+
+.nodo-comentario .right-side {
+	float: left;
+	width: 70%;
+}
+
+.nodo-comentario .autor {
+	color: #a00100;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.nodo-comentario .fecha {
+	color: #514d4d;
+	font-size: 12px;
+}
+
+.nodo-comentario .comentario {
+	color: #514d4d;
+	font-size: 12px;
+}
+
+.nodo-contenedor {
+	background: transparent !important;
+}
+
+.nodo-contenedor .medio-izquierda {
+	width: 482px !important;
+	margin-right: 10px;
+}

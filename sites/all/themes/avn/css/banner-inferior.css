@@ -1,0 +1,147 @@
+/* Banner Inferior */
+
+.banner-inferior {
+	background-color: #ccc;
+	margin-top: 30px;
+  clear:both;
+}
+
+.banner-inferior .logo {
+	float: left;
+	margin: 10px 20px 0 10px;
+}
+
+.banner-inferior .tabla {
+	padding-top: 10px;
+}
+
+.banner-inferior .tabla table {
+	padding: 0;
+	margin: 0;
+}
+
+.banner-inferior .tabla table th {
+	color: #557090;
+	text-transform: uppercase;
+}
+
+.banner-inferior .tabla table thead .noticias {
+	width: 200px;
+	font-size: 11px;
+}
+
+.banner-inferior .tabla table thead .snmp, 
+.banner-inferior .tabla table thead .ulan {
+	width: 220px;
+	font-size: 11px;
+}
+
+.banner-inferior .tabla table thead .multimedia {
+	padding-left: 10px;
+	width: 100px;
+	font-size: 11px;
+}
+
+.banner-inferior .tabla table thead .snmp,
+.banner-inferior .tabla table thead .ulan a {
+	color: #557090;
+	padding-left: 10px;
+	width: 200px;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.banner-inferior .tabla table thead th.ulan,
+.banner-inferior .tabla table thead th.snmp {
+	position: relative;
+}
+
+.banner-inferior .tabla table thead .snmp:hover {
+	z-index: 999;
+}
+
+.banner-inferior .tabla table thead .snmp:hover span {
+	display: block;
+	position: absolute;
+	width: 210px;
+	padding: 5px;
+	background-color: #0080C0;
+	color: #FFFFFF;
+	top: -56px;
+}
+
+.banner-inferior .tabla table thead .ulan:hover {
+	z-index: 999;
+}
+
+.banner-inferior .tabla table thead .ulan:hover span {
+	display: block;
+	position: absolute;
+	width: 250px;
+	padding: 5px;
+	background-color: #0080C0;
+	color: #FFFFFF;
+	top: -56px;
+}
+
+
+.banner-inferior .tabla table thead .snmp span,
+.banner-inferior .tabla table thead .ulan span {
+	display: none;
+}
+
+.banner-inferior .tabla table thead .aliados {
+	padding-left: 10px;
+	font-size: 11px;
+}
+
+.banner-inferior .tabla table tbody .barra {
+	border-left: 1px solid #dad8d9;
+	padding-left: 10px;
+}
+
+.banner-inferior .tabla table a {
+	color: black;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.banner-inferior .tabla table tbody a:hover {
+	border-bottom: 1px solid #557090;
+}
+
+.banner-inferior .contacto {
+	border-top: 1px dashed #aaa;
+	width: 98%;
+	margin: 10px auto;
+}
+
+.banner-inferior .contacto table {
+	width: 910px;
+}
+
+.banner-inferior .contacto table img {
+	margin: 0 5px;
+}
+
+.banner-inferior .contacto td {
+	text-align: center;
+}
+
+.banner-inferior .contacto strong,
+.banner-inferior .contacto span {
+	font-size: .7em;
+}
+
+.banner-inferior .contacto a {
+	color: black;
+	text-decoration: none;
+}
+
+.banner-inferior .contacto a img {
+	vertical-align: middle;
+}
+
+.pane-block-2 {
+	margin-bottom: 10px;
+}

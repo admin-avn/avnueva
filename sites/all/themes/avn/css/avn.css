@@ -1,0 +1,62 @@
+/* Regiones */
+
+body {
+	background: #e6e6e6 url("/sites/all/themes/avn/images/background-avn.png") repeat-x;
+}
+
+#page-wrapper {
+	background: white;
+}
+
+.region-header {
+	position: relative !important;
+}
+
+body .sidebar-second #content {
+	width: 656px !important;
+}
+
+body .region-sidebar-second {
+	margin: 0 !important;
+	margin-left: 656px !important;
+	width: 324px !important;
+}
+
+/* Búsqueda */
+
+#block-search-0 {
+	position: absolute;
+	right: 0;
+	margin-right: 7px;
+	margin-top: 5px;
+	z-index: 1;
+}
+
+.block {
+	margin-bottom: 0 !important;
+}
+
+/* Front */
+
+.arriba-centro {
+	border-right: 1px solid #e0e0e0;
+}
+
+/* Contenedor del soundmanager al pie de pagina */
+
+#sm2-container {
+	position: fixed;
+	z-index: -1000 !important;
+}
+
+.front-contenedor .arriba {
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.front-contenedor .medio {
+	border-right: 1px solid #e0e0e0;
+}
+
+.views_slideshow_thumbnailhover_play {
+	display: none;
+}

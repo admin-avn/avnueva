@@ -1,0 +1,62 @@
+/*
+ * Accordionza jQuery Plugin
+ * Copyright 2010, Geert De Deckere <geert@idoe.be>
+ */
+
+#accordion2 {
+	background:#000;
+	color:#fff;
+	height:160px;
+	list-style:none;
+	overflow:scroll;
+	padding:0;
+	width:640px;
+}
+#accordion2 li {
+	background:url(images/slide.jpg);
+	height:160px; /* Needed in case javascript is disabled */
+	position:relative;
+	width:320px;
+}
+#accordion2 .slide_thumb {
+	background:rgba(255,255,255,0.1);
+	border:1px solid rgba(255,255,255,0.1);
+	left:35px;
+	padding:4px;
+	position:absolute;
+	top:35px;
+}
+#accordion2 p {
+	left:320px;
+	margin:0;
+	position:absolute;
+	width:140px;
+}
+#accordion2 .slide_title {
+	text-shadow:0 1px 0 #333;
+	top:40px;
+}
+#accordion2 .slide_content {
+	color:rgba(255,255,255,0.6);
+	line-height:18px;
+	top:60px;
+}
+#accordion2 .slide_button {
+	font-size:10px;
+	letter-spacing:0.2em;
+	text-transform:uppercase;
+	top:100px;
+}
+#accordion2 .slide_button a {
+	background:rgb(34,92,122); /* Fallback */
+	background:rgba(255,255,255,0.1);
+	border:1px solid rgba(255,255,255,0.1);
+	color:#fff;
+	padding:2px 4px;
+	text-decoration:none;
+	text-shadow:none;
+}
+#accordion2 .slide_button a:hover {
+	background:rgb(56,114,135); /* Fallback */
+	background:rgba(255,255,255,0.2);
+}

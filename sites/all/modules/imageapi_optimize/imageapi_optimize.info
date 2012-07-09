@@ -1,0 +1,13 @@
+; $Id: imageapi_optimize.info,v 1.1 2010/04/16 14:46:58 jcisio Exp $
+name = ImageAPI Optimize
+description = An optimized version Image Toolkits
+package = ImageCache
+dependencies[] = imageapi
+core = 6.x
+
+; Information added by drupal.org packaging script on 2011-01-10
+version = "6.x-1.4"
+core = "6.x"
+project = "imageapi_optimize"
+datestamp = "1294662173"
+

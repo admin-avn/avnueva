@@ -1,0 +1,25 @@
+.nodo-contenedor {
+	position: relative;
+	width: 652px;
+	background-color: white;
+}
+
+.arriba,
+.medio,
+.abajo {
+	margin-bottom: 10px;
+}
+
+.medio-izquierda {
+	float: left;
+	width: 484px;
+}
+
+.medio-derecha {
+	float: left;
+	width: 138px;
+}
+
+.clear-float {
+	clear: both;
+}

@@ -1,0 +1,13 @@
+; $Id: quickmenu.info,v 1.6 2009/01/26 21:58:18 suydam Exp $
+name = Quick Menu
+description = Adds select-box navigation blocks for any menus
+dependencies[] = menu
+core = 6.x
+package = Other
+
+; Information added by drupal.org packaging script on 2009-01-26
+version = "6.x-1.4"
+core = "6.x"
+project = "quickmenu"
+datestamp = "1233007260"
+

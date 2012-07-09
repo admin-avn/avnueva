@@ -1,0 +1,22 @@
+.video-contenedor {
+	position: relative;
+	width: 100%;
+}
+
+.arriba {
+	margin-bottom: 10px;
+}
+
+.arriba-izquierda {
+	float: left;
+	width: 68%;
+}
+
+.arriba-derecha {
+	float: left;
+	width: 31%;
+}
+
+.clear-float {
+	clear: both;
+}

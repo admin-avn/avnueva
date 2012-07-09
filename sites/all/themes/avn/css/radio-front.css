@@ -1,0 +1,136 @@
+/* Nodo */
+
+.nodo-contenido .audio {
+	float: left;
+	margin-top: 15px;
+}
+
+/* Radio */
+
+.wrapper .right .pane-vista-radio h2 {
+  margin: 10px 0 5px 0;
+}
+
+.wrapper .right .pane-vista-radio h2 a{
+	color:#51628D;
+	font-family:sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	line-height:1.1em;
+	text-decoration:none;
+}
+
+/* Reproductor sin reproducir */
+
+.radio-front .player-radio ul li {
+	background-color: transparent !important;
+}
+
+.radio-front .player-radio ul li a {
+	color: #514d4d;
+	background: url("/sites/all/themes/avn/images/background-27x24-play.png") left center no-repeat;
+	padding-left: 30px;
+	border-right: 20px;
+	letter-spacing: 0;
+}
+
+
+/* Reproductor reproduciendo o en pausa */
+
+.radio-front {
+	position: relative;
+	width: 314px;
+	margin-top: 2px 0;
+}
+
+.radio-front .player-radio ul li.sm2_paused,
+.radio-front .player-radio ul li.sm2_playing {
+	position: relative;
+	width: 304px;
+	height: 65px;
+	z-index: 1000;
+}
+
+.radio-front .player-radio ul li.sm2_paused a {
+	color: #514d4d;
+	background: url("/sites/all/themes/avn/images/background-27x24-play.png") left center no-repeat;
+	display: block;
+	margin: 0 !important;
+}
+
+.radio-front .player-radio ul li.sm2_playing a {
+	color: #514d4d;
+	background: url("/sites/all/themes/avn/images/background-27x24-paused.png") left center no-repeat;
+	display: block;
+	margin: 0 !important;
+}
+
+.radio-front .player-radio li.sm2_playing .controls,
+.radio-front .player-radio li.sm2_paused .controls {
+	position: relative;
+	left: 92px;
+	bottom: 0;
+}
+
+.radio-front .player-radio li.sm2_playing .controls,
+.radio-front .player-radio li.sm2_playing .controls .statusbar,
+.radio-front .player-radio li.sm2_playing .controls .statusbar .loading,
+.radio-front .player-radio li.sm2_playing .controls .statusbar .position,
+.radio-front .player-radio li.sm2_paused .controls,
+.radio-front .player-radio li.sm2_paused .controls .statusbar,
+.radio-front .player-radio li.sm2_paused .controls .statusbar .loading,
+.radio-front .player-radio li.sm2_paused .controls .statusbar .position {
+	height: 10px;
+	width: 155px;
+	z-index: 1000;
+}
+
+.radio-front .player-radio .controls .statusbar {
+	border: 1px solid #8d8d8d;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+.radio-front .player-radio .controls .statusbar .loading {
+	background-color: #ccc;
+}
+
+.radio-front .player-radio .controls .statusbar .position {
+	background-color: #666 !important;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	border-right: 2px solid #666;
+}
+
+.radio-front .sm2_paused > div,
+.radio-front .sm2_playing > div {
+	position: relative;
+}
+
+.radio-front .sm2_paused > div + div,
+.radio-front .sm2_playing > div + div {
+	margin-left: 80px;
+}
+
+.radio-front .timing {
+	background-color: transparent !important;
+	border: none !important;
+	left: 0 !important;
+	top: 0 !important;
+	right: 0 !important;;
+	margin-left: 60px;
+	width: 215px !important;
+	font-size: 0;
+	bottom: 0 !important;
+}
+
+.radio-front .timing .sm2_position {
+	float: left;
+}
+
+.radio-front .timing span {
+	color: #666;
+	font-size: 10px;
+}

@@ -1,0 +1,52 @@
+#nice-menu-1 {
+	position: absolute;
+	padding: 0;
+	margin: 3.2em 0 0 0;
+}
+
+#nice-menu-1 li {
+	display: table-cell;
+	vertical-align: middle;
+	background: url("../images/background-menu-right.png") right center no-repeat;
+	padding: 0 7px 0 4px;
+}
+
+#nice-menu-1 li a {
+	color: #666666;
+	text-decoration: none;
+	font-size: 10px;
+	font-weight: bold;
+	font-family: helvetica;
+	padding: 5px 0;
+}
+
+#nice-menu-1 li a:hover {
+	text-decoration: underline;
+}
+
+#nice-menu-1 .menu-1804 a, #nice-menu-1 .menu-1805 a, #nice-menu-1 .menu-1806 a {
+	padding: 0 10px;
+	text-indent: -5000px;
+}
+
+#block-imagemenu-1 {
+	position: absolute;
+	right: 0;
+	margin-right: 3px;
+	margin-top: 33px;
+	z-index: 1;
+}
+
+#block-imagemenu-1 .imagemenu li {
+	display: table-cell;
+	padding: 0 5px 0 5px;
+}
+
+#nice-menu-1 li.menu-10266 {
+	background: none;
+}
+
+#nice-menu-1 li.menu-10266 a {
+	margin-left:9px;
+    	margin-right:26px;
+}

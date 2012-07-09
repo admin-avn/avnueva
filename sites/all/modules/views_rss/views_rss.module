@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * Implementation of hook_views_api().
+ */
+function views_rss_views_api() {
+  return array(
+    'api' => 2,
+    'path' => drupal_get_path('module', 'views_rss') . '/views',
+  );
+}
+
+/**
+ * Implementation of hook_theme().
+ */
+function views_rss_theme() {
+  $path = drupal_get_path('module', 'views_rss');
+  return array(
+    'views_rss_fields_item' => array(
+      'arguments' => array('row' => NULL),
+      'file' => 'views_rss_views_fields.theme.inc',
+      'template' => 'views-rss-fields-item',
+      'path' => "$path/views",
+    ),
+    'views_rss_element' => array(
+      'arguments' => array('vars' => NULL),
+      'file' => 'views_rss_views_fields.theme.inc',
+      'path' => "$path/views",
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_views_handlers().
+ */
+function views_rss_views_handlers() {
+  return array(
+    'info' => array(
+      'path' => drupal_get_path('module', 'views_rss') . '/views',
+    ),
+    'handlers' => array(
+      'views_rss_handler_field_user_mail' => array(
+        'parent' => 'views_handler_field_user_mail',
+      ),
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_views_data_alter().
+ */
+function views_rss_views_data_alter(&$data) {
+  $data['users']['mail']['field']['handler'] = 'views_rss_handler_field_user_mail';
+}

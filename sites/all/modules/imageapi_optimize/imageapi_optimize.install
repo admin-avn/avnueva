@@ -1,0 +1,10 @@
+<?php
+// $Id: imageapi_optimize.install,v 1.2 2011/01/10 12:12:27 jcisio Exp $
+/**
+ * @file
+ * Install, update and uninstall functions
+ */
+
+function imageapi_optimize_uninstall() {
+  db_query("DELETE FROM {variable} WHERE name LIKE 'imageapi_optimize_%'");
+}

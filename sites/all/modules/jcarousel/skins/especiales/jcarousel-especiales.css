@@ -1,0 +1,144 @@
+
+/**
+ * A simple sample carousel skin.
+ *
+ * This skin includes a sample arrows.svg file that may be edited with the free
+ * illustration application InkScape (http://inkscape.org).
+ *
+ * CSS and icons by Nathan Haug.
+ */
+
+.jcarousel-skin-especiales {
+	margin: 10px 0;
+	text-align: center;
+}
+
+.jcarousel-skin-especiales .jcarousel-container-horizontal {
+	width: 272px;
+	height: 116px;
+	padding: 0 11px;
+	margin: auto;
+}
+
+.jcarousel-skin-especiales .jcarousel-container-vertical {
+  width: 102px;
+  height: 440px;
+  padding: 40px 20px;
+  margin: auto;
+}
+
+.jcarousel-skin-especiales .jcarousel-clip-horizontal {
+	width: 272px;
+}
+
+.jcarousel-skin-especiales .jcarousel-clip-vertical {
+  height: 440px;
+}
+
+.jcarousel-skin-especiales .jcarousel-item {
+	padding: 0;
+	width: 136px;
+	height: 116px;
+	overflow: hidden;
+	list-style: none;
+}
+
+.jcarousel-skin-especiales .jcarousel-item-horizontal {
+	margin: 0 0px;
+}
+
+.jcarousel-skin-especiales .jcarousel-item-vertical {
+  margin: 4px 0;
+}
+
+.jcarousel-skin-especiales .jcarousel-item-placeholder {
+  background: #fff url(throbber.gif) no-repeat center center;
+  color: #000;
+}
+
+/**
+ * Buttons
+ */
+.jcarousel-skin-especiales .jcarousel-next,
+.jcarousel-skin-especiales .jcarousel-prev {
+	display: block;
+	width: 11px;
+	height: 116px;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-especiales .jcarousel-prev-horizontal {
+	background: url("background-especiales-prev.png") no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.jcarousel-skin-especiales .jcarousel-prev-horizontal:hover {
+}
+.jcarousel-skin-especiales .jcarousel-prev-horizontal:active {
+}
+.jcarousel-skin-especiales .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-especiales .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-especiales .jcarousel-prev-disabled-horizontal:active {
+  cursor: default;
+}
+
+.jcarousel-skin-especiales .jcarousel-next-horizontal {
+	background: url("background-especiales-next.png") no-repeat;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.jcarousel-skin-especiales .jcarousel-next-horizontal:hover {
+}
+.jcarousel-skin-especiales .jcarousel-next-horizontal:active {
+}
+.jcarousel-skin-especiales .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-especiales .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-especiales .jcarousel-next-disabled-horizontal:active {
+  cursor: default;
+}
+
+/**
+ *  Vertical Buttons
+ */
+.jcarousel-skin-especiales .jcarousel-prev-vertical {
+  position: absolute;
+  top: 10px;
+  left: 55px;
+  background-position: 0 -64px;
+}
+.jcarousel-skin-especiales .jcarousel-prev-vertical:hover {
+  background-position: -32px -64px;
+}
+.jcarousel-skin-especiales .jcarousel-prev-vertical:active {
+  background-position: -64px -64px;
+}
+.jcarousel-skin-especiales .jcarousel-prev-disabled-vertical,
+.jcarousel-skin-especiales .jcarousel-prev-disabled-vertical:hover,
+.jcarousel-skin-especiales .jcarousel-prev-disabled-vertical:active {
+  cursor: default;
+  background-position: -96px -64px;
+}
+
+.jcarousel-skin-especiales .jcarousel-next-vertical {
+  position: absolute;
+  bottom: 10px;
+  left: 55px;
+  background-position: 0 -96px;
+}
+.jcarousel-skin-especiales .jcarousel-next-vertical:hover {
+  background-position: -32px -96px;
+}
+.jcarousel-skin-especiales .jcarousel-next-vertical:active {
+  background-position: -64px -96px;
+}
+.jcarousel-skin-especiales .jcarousel-next-disabled-vertical,
+.jcarousel-skin-especiales .jcarousel-next-disabled-vertical:hover,
+.jcarousel-skin-especiales .jcarousel-next-disabled-vertical:active {
+  cursor: default;
+  background-position: -96px -96px;
+}
+

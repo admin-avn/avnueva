@@ -1,0 +1,113 @@
+<?php
+
+function quickmenu_block( $op = 'list', $delta = 'primary-links', $edit = array() ) {
+	switch ($op) {
+		case 'list':
+			return _quickmenu_block_list();
+		case 'view':
+			return _quickmenu_block_view( $delta );
+	}
+}
+
+function _quickmenu_block_list() {
+	$quickmenus = _quickmenu_enabled_menus();
+	$q = db_query("SELECT * FROM {menu_custom} ORDER BY title");
+	while ( $row = db_fetch_array($q) ) {
+		$titles[$row['menu_name']] = $row['title'];
+	}
+	foreach ( $quickmenus as $menu_name ) {
+		if ( $menu_name ) {
+			$blocks[ $menu_name ] = array(
+				'info' => t('QUICK MENU: ' . $titles[$menu_name]),
+				'weight' => '0',
+				'enabled' => '0',
+				'region' => 'left',
+			);
+		}
+	}
+	return $blocks;
+}
+
+function _quickmenu_block_view( $delta ) {
+	drupal_add_js( drupal_get_path('module','quickmenu') . '/quickmenu.js');
+
+	if ( in_array($delta,_quickmenu_enabled_menus()) ) {
+		$tree = menu_tree_page_data( $delta );
+		if ( is_array( $tree ) && count( $tree ) ) {
+			$options = array( '' => '-- Select --' );
+			foreach ( $tree as $data ) {
+				$item = $data['link'];
+				if ( !$item['hidden'] ) {
+					$options[check_url(url($item['href'],$item['localized_options']))] = $item['title'];
+				}
+			}
+		
+			$select = array(
+				'#type'		=> 'select',
+				'#id'		=> str_replace('-','_',"quick_menu_$delta"),
+				'#options'	=> $options,
+				'#attributes'	=> array( 'class' => 'quick_menu_select' ),
+			);
+		
+			$title = db_result(db_query("SELECT title FROM {menu_custom} WHERE menu_name = '%s'",$delta));
+			return array(
+				'subject'	=> $title,
+				'content'	=> drupal_render( $select ),
+			);
+		}
+	}
+}
+
+function quickmenu_menu() {
+	$items = array();
+
+	$items['admin/build/menu/quickmenus'] = array(
+		'title' => t('Quick Menu'),
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array('quickmenu_settings'),
+		'access arguments' => array('administer quick menus'),
+		'type' => MENU_LOCAL_TASK,
+		'weight' => 100,
+	);
+
+	return $items;
+}
+
+function quickmenu_settings() {
+	$q = db_query("SELECT * FROM {menu_custom} ORDER BY title");
+	$options = array();
+	while ( $row = db_fetch_array($q) ) {
+		$options[$row['menu_name']] = $row['title'];
+	}
+
+	$form['qm_intro'] = array(
+		'#value' => '<h2>Quick Menu Configuration</h2><P>Which menus in the system should be available as quick menu blocks?</P><P>A quick menu block forms a select box with all the pages in that menu.	When a user selects an entry from the select box, they are sent to that page.</p>'
+	);
+	$form['quickmenu_enabled'] = array(
+		'#type' => 'checkboxes',
+		'#options' => $options,
+		'#default_value' => _quickmenu_enabled_menus(),
+		'#title' => t('Select the menus you wish to enable as quick menu blocks'),
+		'#description' => t('You will still need to individually enable the QUICK MENU blocks for each of these menus at ' . l('block admin','admin/build/block')),
+	);
+	$form['quickmenu_maxlength'] = array(
+		'#type' => 'textfield'
+		,'#default_value' => variable_get('quickmenu_maxlength','25')
+		,'#title' => t('Max width of quick-menu entries')
+		,'#size' => '6'
+		,'#description' => t('This affects entries coming from node/edit but does <i>not</i> affect entries from other menu editing sources.')
+	);
+
+	return system_settings_form( $form );
+}
+
+function quickmenu_perm() {
+	return array(
+		'administer quick menus'
+	);
+}
+
+function _quickmenu_enabled_menus() {
+	return variable_get('quickmenu_enabled',array('primary-links'));
+}
+

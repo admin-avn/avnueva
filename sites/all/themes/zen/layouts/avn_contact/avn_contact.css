@@ -1,0 +1,15 @@
+.wrapper-contact {
+    position: relative;
+    width: 100%;
+	background-color: white;
+	width: 980px;
+}
+
+.middle {
+	margin-bottom: .5em;
+	padding: 5px 20px;
+}
+
+.clear-float {
+	clear: both;
+}

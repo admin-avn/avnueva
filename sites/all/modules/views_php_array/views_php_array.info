@@ -1,0 +1,12 @@
+﻿; $Id$
+name = Views PHP Array
+description = Defines PHP Array views display.
+package = Views
+dependencies[] = views
+core = 6.x
+; Information added by drupal.org packaging script on 2011-02-25
+version = "6.x-1.0.x-dev"
+core = "6.x"
+project = "views_php_array"
+datestamp = "1298620660"
+

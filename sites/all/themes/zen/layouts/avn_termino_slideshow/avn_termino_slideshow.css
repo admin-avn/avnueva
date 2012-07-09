@@ -1,0 +1,27 @@
+.contenedor-termino {
+        position: relative;
+	background-color: white;
+	width: 656px;
+}
+
+.arriba {
+	margin-bottom: 10px;
+}
+
+.medio {
+	margin-bottom: 1em;
+}
+
+.abajo-izquierda {
+	float: left;
+	width: 328px;
+}
+
+.abajo-derecha {
+	float: left;
+	width: 328px;
+}
+
+.clear-float {
+	clear: both;
+}

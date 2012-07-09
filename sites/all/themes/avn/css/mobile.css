@@ -1,0 +1,195 @@
+/* Nice Menu */
+
+body.section-mobile {
+	background: none !important;
+}
+
+body.section-mobile div#page-wrapper {
+	width:100% !important;
+}
+
+body.section-mobile div#content {
+	float: none;
+	width: 100% !important;
+	margin-right: auto;
+}
+
+#nice-menu-2 {
+	margin: 10px 0;
+	background: transparent url("/sites/all/themes/nokia_mobile/images/high/background-nice-menu-2.png") repeat-x;
+}
+
+#nice-menu-2 li {
+        display: table-cell;
+	padding: 10px 30px;
+        vertical-align: middle;
+}
+
+#nice-menu-2 li a {
+	color: white;
+	font-size: 1em;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* Noticias */
+
+#mobile-secciones {
+	background-color: white;
+	margin: 0 5px;
+}
+
+#mobile-secciones .secciones {
+	border: 1px solid #004276;
+	color: #004276;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 5px 10px;
+	padding: 2px;
+	width: 98.5%;
+}
+
+.wrapper-mobile .middle {
+	background-color: #dedede;
+	padding: 5px 0;
+}
+
+.wrapper-mobile .mobile-posicion-1,
+.wrapper-mobile .mobile-posicion-2-20,
+.wrapper-mobile .mobile-posicion-interna-1,
+.wrapper-mobile .mobile-posicion-interna-2-7,
+.wrapper-mobile .mobile-nodo {
+	background-color: white;
+	margin: 5px;
+}
+
+.wrapper-mobile .mobile-posicion-2-20 .cajon,
+.wrapper-mobile .mobile-posicion-interna-2-7 .cajon {
+	border-bottom: 1px solid #e2e2e2;
+	height: 70px;
+	padding: 10px 0 10px 5px;
+}
+
+.wrapper-mobile .mobile-posicion-1 .termino,
+.wrapper-mobile .mobile-posicion-interna-1 .termino,
+.wrapper-mobile .mobile-nodo .termino {
+	border-bottom: 1px solid #dedede;
+	padding-left: 10px;
+}
+
+.wrapper-mobile .mobile-posicion-1 .termino span,
+.wrapper-mobile .mobile-posicion-interna-1 .termino span {
+	color: black;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.wrapper-mobile .mobile-nodo .termino a {
+	color: black;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.wrapper-mobile .mobile-posicion-1 .fecha,
+.wrapper-mobile .mobile-posicion-interna-1 .fecha,
+.wrapper-mobile .mobile-nodo .fecha {
+	margin: 10px 0 20px 20px;
+}
+
+.wrapper-mobile .mobile-posicion-1 .fecha span,
+.wrapper-mobile .mobile-posicion-interna-1 .fecha span,
+.wrapper-mobile .mobile-nodo .fecha span {
+	color: #999999;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.wrapper-mobile .mobile-posicion-1 .imagen,
+.wrapper-mobile .mobile-posicion-interna-1 .imagen,
+.wrapper-mobile .mobile-nodo .imagen {
+	text-align: center;
+}
+
+.wrapper-mobile .mobile-posicion-2-20 .imagen,
+.wrapper-mobile .mobile-posicion-interna-2-7 .imagen {
+	float: left;
+	margin-right: 10px;
+}
+
+.wrapper-mobile .mobile-posicion-1 .titulo,
+.wrapper-mobile .mobile-posicion-interna-1 .titulo,
+.wrapper-mobile .mobile-nodo .titulo {
+	margin-left: 10px;
+}
+
+.wrapper-mobile .mobile-posicion-1 .titulo a,
+.wrapper-mobile .mobile-posicion-2-20 .titulo a,
+.wrapper-mobile .mobile-posicion-interna-1 .titulo a,
+.wrapper-mobile .mobile-posicion-interna-2-7 .titulo a,
+.wrapper-mobile .mobile-nodo .titulo span {
+	text-decoration: none;
+	color: #004276;
+	font-size: 18px;
+	font-weight: 600;
+	margin: 5px 0;
+}
+
+.wrapper-mobile .mobile-posicion-2-20 .titulo a,
+.wrapper-mobile .mobile-posicion-interna-2-7 .titulo a {
+	font-size: 16px;
+}
+
+.wrapper-mobile .mobile-nodo .sumario,
+.wrapper-mobile .mobile-nodo .contenido {
+	padding: 0 10px;
+}
+
+.wrapper-mobile .mobile-nodo .contenido {
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.wrapper-mobile .mobile-nodo .sumario span {
+	font-weight: bold;
+}
+
+.wrapper-mobile .mobile-nodo .sumario span,
+.wrapper-mobile .mobile-nodo .contenido p {
+	color: #454545;
+	font-size: 12px;
+}
+
+.wrapper-mobile .mobile-posicion-1 .vinculos,
+.wrapper-mobile .mobile-posicion-2-20 .vinculos,
+.wrapper-mobile .mobile-posicion-interna-1 .vinculos,
+.wrapper-mobile .mobile-nodo .vinculos {
+	list-style-type: square;
+}
+
+.wrapper-mobile .mobile-posicion-1 .vinculos .list,
+.wrapper-mobile .mobile-posicion-2-20 .vinculos .list,
+.wrapper-mobile .mobile-posicion-interna-1 .vinculos .list,
+.wrapper-mobile .mobile-nodo .vinculos .list {
+	border-bottom: 1px solid #dedede;
+	padding: 5px 5px 5px 0;
+}
+
+.wrapper-mobile .mobile-posicion-1 .vinculos .list li,
+.wrapper-mobile .mobile-posicion-2-20 .vinculos .list li,
+.wrapper-mobile .mobile-posicion-interna-1 .vinculos .list li,
+.wrapper-mobile .mobile-nodo .vinculos li {
+	color: #cc0000;
+	margin-left: 30px;
+}
+
+.wrapper-mobile .mobile-posicion-1 .vinculos li a,
+.wrapper-mobile .mobile-posicion-2-20 .vinculos li a,
+.wrapper-mobile .mobile-posicion-interna-1 .vinculos li a,
+.wrapper-mobile .mobile-nodo .vinculos li a {
+	background: transparent url("/sites/all/themes/nokia_mobile/images/high/background-list.png") right center no-repeat;
+	color: #004276;
+	display: block;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 10px 20px 10px 0;
+}

@@ -1,0 +1,10 @@
+.titulares-contenedor {
+        position: relative;
+        width: 100%;
+	background-color: white;
+	width: 656px;
+}
+
+.medio {
+	margin-bottom: 1em;
+}

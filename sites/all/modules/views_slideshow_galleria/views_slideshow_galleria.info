@@ -1,0 +1,14 @@
+; $Id: views_slideshow_galleria.info,v 1.1 2010/07/09 21:32:45 aaron Exp $
+
+name = Views Slideshow: Galleria
+description = Provides integration between the Galleria plugin and Views Slideshow.
+core = 6.x
+package = Views
+dependencies[] = views_slideshow
+
+; Information added by drupal.org packaging script on 2010-08-26
+version = "6.x-1.0-beta3"
+core = "6.x"
+project = "views_slideshow_galleria"
+datestamp = "1282833115"
+

@@ -1,0 +1,23 @@
+<p>First, we need to get all the views stored by using the following command</p>
+<code>
+$views = views_get_all_views();
+</code>
+<p>Next, we need to iterate and search for a view that contains PHP Array display (display_plugin == 'php_array')</p>
+<code>
+<pre>
+$php_view_list[] = array();
+foreach ($views as $view) {  // foreach view
+  foreach ($view->display as $display) { // foreach display in a view
+    if ($display->display_plugin == 'php_array') {      
+      $php_view_list[] = array(
+      'view_name' => $view->name,
+      'display_id' => $display->id,
+      );
+    }
+  }
+}
+</pre>
+</code>
+<p>
+$php_view_list will be an array that contains the view_name/display_id pair with PHP Array display.
+</p>

@@ -1,0 +1,88 @@
+.views-slideshow-controls-top {
+	display: none;
+}
+
+.jcarousel-skin-slideshow {
+	position: relative;
+}
+
+.jcarousel-skin-slideshow .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.jcarousel-skin-slideshow .jcarousel-container-horizontal {
+	border: 1px solid #c8c7c5;
+	width: 444px;
+}
+
+.jcarousel-skin-slideshow .jcarousel-clip-horizontal {
+	width: 444px;
+	height: 140px;
+}
+
+.jcarousel-skin-slideshow .jcarousel-item {
+	background-color: white;
+	border-left: 1px solid #c8c7c5;
+	border-right: 1px solid #c8c7c5;
+	width: 101px;
+	height: 132px;
+	padding: 4px;
+}
+
+.jcarousel-skin-slideshow .jcarousel-item:hover,
+.jcarousel-skin-slideshow .jcarousel-item.activeSlide {
+	background-color: #cecccd;
+}
+
+.jcarousel-skin-slideshow .jcarousel-item-horizontal {
+	margin: 0;
+}
+
+.jcarousel-skin-slideshow .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 10px;
+	margin-right: 0;
+}
+
+.jcarousel-skin-slideshow .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+.jcarousel-skin-slideshow .jcarousel-next-horizontal,
+.jcarousel-skin-slideshow .jcarousel-next-horizontal:active,
+.jcarousel-skin-slideshow .jcarousel-prev-horizontal,
+.jcarousel-skin-slideshow .jcarousel-prev-horizontal:active {
+	cursor: default;
+}
+
+.jcarousel-skin-slideshow .jcarousel-next-horizontal {
+	position: absolute;
+	width: 13px;
+	height: 10px;
+	right: 0;
+	bottom: -20px;
+	background: url("background-next.png") no-repeat;
+}
+
+.jcarousel-skin-slideshow .jcarousel-prev-horizontal {
+	position: absolute;
+	width: 13px;
+	height: 10px;
+	right: 20px;
+	bottom: -20px;
+	background: url("background-prev.png") no-repeat;
+}
+
+.jcarousel-skin-slideshow .jcarousel-next-horizontal:hover,
+.jcarousel-skin-slideshow .jcarousel-prev-horizontal:hover {
+	cursor: pointer;
+}
+
+/* Cambios */
+
+.jcarousel-item-horizontal,
+.jcarousel-item-horizontal .views-field-field-imagen-fid,
+.jcarousel-item-horizontal .views-field-field-imagen-fid .views-content-field-imagen-fid {
+	width: 103px;
+	height: 67px;
+}

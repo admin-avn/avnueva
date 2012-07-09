@@ -1,0 +1,132 @@
+<?php 
+module_load_include('test', 'views', 'tests/views_basic');
+
+/**
+ * @file
+ * Declaration of basic Views PHP Array plugin test (derived from Views basic tests)
+ */
+class ViewsPHPArrayTest extends ViewsBasicTest {
+	public static function getInfo() {
+	  return array(
+  	  'name' => t('Views PHP Array Test'),
+  	  'description' => t('Tests for the Views PHP Array module.'),
+  	  'group' => t('Views'),
+    );
+	}
+	
+	protected function setUp() {
+	  // @todo refactor this. This is a dirty hack to enable views_php_array module
+	  // @tdoo while getting the functionality of the ViewsBasicTest class
+    DrupalWebTestCase::setUp('views', 'views_ui', 'views_test', 'views_php_array');
+    
+    // Load the test dataset.
+    foreach ($this->testDataSet() as $record) {
+      drupal_write_record('views_test', $record);
+    }
+  }
+
+  /**
+   * Simple test on views_test table
+   */
+  public function testExecuteSimple() {
+    $view = $this->getBasicPHPView();
+    
+    // Execute the view.
+    $view->execute();
+    
+    // Verify the results
+    $this->assertEqual(5, count($view->result), t('The number of returned rows match.'));
+    $this->assertIdenticalResultset($view, $this->testDataSet(), array(
+      'views_test_name' => 'name',
+      'views_test_age' => 'age',
+    ));
+  }
+  
+  /**
+   * @todo Test the format of the array without any grouping
+   */
+  public function testArrayFormat() {
+    $view = $this->getBasicPHPView();
+    
+    // Get the PHP Array returned by the view    
+    $array = $view->preview();
+    
+    // Reset the keys    
+    $result = array_values($array);
+    $expected_result = array_values($this->testDataSetArray());        
+        
+    // Test the PHP Array returned
+    $this->assertIdentical($result, $expected_result, 'Array formatting is as expected.');
+  }
+  
+  /**
+   * @todo Test several cases of grouping
+   */
+  
+   
+  /**
+   * @todo Test using advanced_render()
+   */
+   
+  /**
+   * @todo Test using arguments
+   */
+   
+  /**
+   * 
+   */
+   
+  /**
+   * Get the default PHP display view used for this test
+   */
+	protected function getBasicPHPView() {
+    // Inherit everything from the parent view.
+    $view = parent::getBasicView();
+
+    /* Display: PHP Array */
+    $display = $view->new_display('php_array', 'PHP Array', 'php_array_1');        
+    $display->override_option('style_plugin', 'php_array');
+    // $display->override_option('row_plugin', 'fields');
+    
+    // Set the display to be pointing to php_array_1
+    $view->set_display('php_array_1');
+    return $view;
+  }
+  
+  /**
+   * A very simple test dataset in array format.
+   */
+  protected function testDataSetArray() {
+    return array(
+      0 => array( 
+        0 => array (
+          'id' => '1', 
+          'name' => 
+          'John', 
+          'age' => '25', 
+        ), 
+        1 => array(
+          'id' => '2',
+          'name' => 'George',
+          'age' => '27', 
+        ),
+        2 => array( 
+          'id' => '3', 
+          'name' => 
+          'Ringo', 
+          'age' => '28', 
+        ), 
+        3 => array( 
+          'id' => '4', 
+          'name' => 'Paul', 
+          'age' => '26', 
+        ), 
+        4 => array( 
+          'id' => '5', 
+          'name' => 'Meredith', 
+          'age' => '30',
+        ), 
+      ), 
+    );
+  }
+}

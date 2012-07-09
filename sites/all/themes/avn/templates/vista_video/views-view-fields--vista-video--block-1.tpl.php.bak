@@ -1,0 +1,34 @@
+<div id="front-video">
+	<div class="front-video-player">
+		<a id="player" href="<?php print $fields['field_video_fid']->content; ?>" style="display: block; width: 268px; height: 200px;"></a>
+	</div>
+	<div class="front-video-description">
+		<div class="termino"><span><?php print $fields['name']->content; ?></span></div>
+		<div class="titulo"><span><?php print $fields['title']->content; ?></span></div>
+		<div class="sumario"><?php print $fields['body']->content; ?></div>
+	</div>
+	<div class="clear-float"></div>
+</div>
+
+<?php print $scripts ?>
+
+<script type="text/javascript">
+	flowplayer("player", "sites/all/libraries/flowplayer3/flowplayer-3.2.7.swf",  {
+		playlist: [
+			{
+				url: '<?php print $fields['field_video_miniatura_fid']->content; ?>',
+				scaling: 'orig'
+			},
+			{
+				url: '<?php print $fields['field_video_fid']->content; ?>' , 
+				autoPlay: false, 
+				autoBuffering: false 
+			}
+		],
+		plugins:  {
+			controls:  {
+				time: false,
+			}
+		}
+	});
+</script>

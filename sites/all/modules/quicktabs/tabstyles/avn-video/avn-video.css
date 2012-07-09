@@ -1,0 +1,50 @@
+/* $Id: avn-video.css,v 1.2.4.3 2009/03/20 23:35:58 pasqualle Exp $ */
+
+#quicktabs-qtvideo {
+	margin-top: 20px;
+}
+
+.quicktabs_main.quicktabs-style-avn-video {
+	background-color: #4a4a4c;
+	clear: both;
+}
+
+ul.quicktabs_tabs.quicktabs-style-avn-video {
+	padding: 0 5px 0 0;
+	font: bold 12px/19px Verdana !important;
+	font-weight: bold;
+	height: 21px;
+	margin: 0 0 1px 93px;
+	width: 722px;
+	padding-left: 15px;
+}
+
+ul.quicktabs_tabs.quicktabs-style-avn-video a {
+	font: bold 12px/19px Verdana !important;
+	text-decoration: none;
+	color: white;
+}
+
+ul.quicktabs_tabs.quicktabs-style-avn-video a: hover {
+	color: #555  !important;
+}
+
+ul.quicktabs_tabs.quicktabs-style-avn-video li {
+	padding: 5px 35px 5px 10px;
+	margin: 0;
+	position: relative;
+	background: url("background-qt-disable.png") no-repeat right;
+}
+
+ul.quicktabs_tabs.quicktabs-style-avn-video li: hover {
+	border: 1px solid #ccc;
+	border-bottom: none;
+}
+
+ul.quicktabs_tabs.quicktabs-style-avn-video li.active {
+	background: url("background-qt-enable.png") no-repeat right;
+}
+
+ul.quicktabs_tabs.quicktabs-style-avn-video li.active a {
+	color: white;
+}

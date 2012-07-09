@@ -1,0 +1,51 @@
+  <?php
+  $node = node_load($row->nid);
+  $cantidad = count($node->field_imagen);
+  $sw_youtube = substr_count($fields['field_video_fid']->content, "youtube");
+  if($sw_youtube == 1) {
+    $url_video = explode("%3D", $fields['field_video_fid']->content);
+  }
+  ?>
+<div id="front-video">
+	<div class="front-video-player">
+   <?php if($sw_youtube == 0): ?>
+      <?php
+      if(empty($fields['field_imagen_fid']->content)) {
+        $fields['field_imagen_fid']->content = '/sites/all/themes/avn/images/default.png';
+      }
+      ?>
+      <a id="ipad" href="<?php print $fields['field_video_fid']->content; ?>" style="display: block; width: 268px; height: 200px;">
+      <?php
+      if (arg(2) != 'reproducir') {
+              print '<img src="';
+                print $fields['field_imagen_fid']->content; 
+                print '">';
+                print '<img class="playbutton" src="/sites/all/themes/avn/images/playbutton.png">';
+      }    
+      ?>
+      </a>
+      <?php endif; ?>
+	</div>
+	<div class="front-video-description">
+		<div class="termino"><span><?php print $fields['name']->content; ?></span></div>
+		<div class="titulo"><span><?php print $fields['title']->content; ?></span></div>
+		<div class="sumario"><?php print $fields['body']->content; ?></div>
+	</div>
+	<div class="clear-float"></div>
+</div>
+
+      <script type="text/javascript" src="http://static.flowplayer.org/js/flowplayer-3.2.6.min.js"></script> 
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+      <script src="http://static.flowplayer.org/js/flowplayer-3.2.6.min.js"></script> 
+      <script src="http://static.flowplayer.org/js/flowplayer.ipad-3.2.2.min.js"></script>  
+      <script> 
+        $f("ipad", "http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf",{
+            clip: {
+            autoPlay: true,
+            autoBuffering: true
+          },
+          play: {
+            replayLabel: 'Reproducir de nuevo'
+          }
+        }).ipad();
+      </script> 

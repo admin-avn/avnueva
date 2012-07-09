@@ -1,0 +1,22 @@
+.wrapper-galeria {
+        position: relative;
+        width: 100%;
+	background-color: #515151;
+	margin: 0;
+	width: 980px;
+}
+
+.header,
+.middle,
+.middle-list {
+	margin-bottom: .5em;
+}
+
+.middle,
+.middle-list {
+	padding: 5px 20px;
+}
+
+.clear-float {
+	clear: both;
+}

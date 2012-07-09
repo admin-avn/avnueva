@@ -1,0 +1,15 @@
+.video2-contenedor {
+	background: transparent !important;
+	position: relative;
+	width: 100%;
+}
+
+.horizontal2-izquierda,
+.horizontal2-derecha {
+	float: left;
+	width: 50%;
+}
+
+.clear-float {
+	clear: both;
+}

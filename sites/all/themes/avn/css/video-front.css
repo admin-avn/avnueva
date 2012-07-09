@@ -1,0 +1,204 @@
+/* Vista Videos */
+
+.pane-vista-video {
+	position: relative;
+}
+
+#front-video {
+	position: relative;
+	background-color: #2c2c2c;
+	padding: 10px;
+	margin: 0 0 0 10px;
+}
+
+#front-video .front-video-player {
+	float: left;
+	margin-right: 10px;
+	width: 268px;
+}
+
+#front-video .front-video-description {
+	float: left;
+	width: 345px;
+}
+
+#front-video .front-video-description .termino span {
+	color: #a7a7a7;
+	font-size: .9em;
+	font-weight: bold;
+	font-family: sans-serif;
+	text-transform: uppercase;
+}
+
+#front-video .front-video-description .titulo span {
+	color: #a7a7a7;
+	font-family: sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#front-video .front-video-description .titulo, 
+#front-video .front-video-description .sumario  {
+	margin-left: 10px;
+	width: 320px;
+}
+
+#front-video .front-video-description .sumario span {
+	color: #a7a7a7;
+	font-size: .8em;
+	line-height: 1.2em;
+	width: 100px;
+}
+
+/* Listado */
+
+#front-video-list {
+	position: absolute;
+	z-index: 1;
+	margin-top: 162px;
+	margin-left: 300px;
+	width: 277px;
+}
+
+#front-video-list .thumbnail-list {
+	float: left;
+	width: 90px;
+}
+
+.panel-middle .pane-vista-video .view-content {
+	position: relative;
+}
+
+.jcarousel-skin-video2 .thumbnail {
+	width: 77px;
+	height: 58px;
+}
+
+
+#front-video img.playbutton {
+  position: absolute;
+  top:75px;
+  left:109px;
+  height: 60px;
+  width: 60px;
+  opacity: .7;
+        -webkit-transition: opacity .1s ease-in-out;
+        -moz-transition: opacity .1s ease-in-out;
+        -o-transition: opacity .1s ease-in-out;
+        transition: opacity .1s ease-in-out;
+}
+
+#front-video img.playbutton:hover {
+  position: absolute;
+  top:75px;
+  left:109px;
+  height: 60px;
+  width: 60px;
+  opacity: 1;
+        -webkit-transition: opacity .1s ease-in-out;
+        -moz-transition: opacity .1s ease-in-out;
+        -o-transition: opacity .1s ease-in-out;
+        transition: opacity .1s ease-in-out;
+}
+
+.views_slideshow_singleframe_slide > div > a {
+	float: left;
+}
+
+.slideshow-video {
+	height: 260px;
+	border: 1px solid #e0e0e0;
+	position: relative;
+	margin-left: 10px;
+}
+
+.slideshow-video .descripcion-video-front {
+	float: left;
+	padding: 10px;
+	width: 274px;
+}
+
+.slideshow-video .titulo a {
+	color: #3a3a3a;
+	font-weight: bold;
+	text-decoration: none;
+	margin-bottom: 5px;
+}
+
+.slideshow-video a.titulo {
+	background: white;
+	color: #a00700;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.slideshow-video div.descripcion {
+	color: #3a3a3a;
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+.slideshow-video div.contenido p {
+	margin: 0;
+}
+
+/* Paginador */
+
+.slideshow-video .views_slideshow_singleframe_play,
+.slideshow-video .views_slideshow_singleframe_pause,
+.slideshow-video .views_slideshow_singleframe_previous,
+.slideshow-video .views_slideshow_singleframe_next {
+	position: absolute;
+	z-index: 100;
+	display: block;
+	width: 18px;
+	height: 18px;
+	font-size: 0px;
+}
+
+.slideshow-video .views_slideshow_singleframe_play,
+.slideshow-video .views_slideshow_singleframe_pause {
+	display: none;
+	top: 5px;
+	right: 1px;
+}
+
+.slideshow-video .views_slideshow_singleframe_previous {
+	bottom: 10px;
+	right: 272px;
+	background: url("/sites/all/themes/avn/images/red_carousel_previous_bg.png") no-repeat;
+}
+
+.slideshow-video .views_slideshow_singleframe_next {
+	bottom: 10px;
+	right: 7px;
+	background: url("/sites/all/themes/avn/images/red_carousel_next_bg.png") no-repeat;
+}
+
+.slideshow-video .views_slideshow_singleframe_play {
+	background: url("/sites/all/themes/avn/images/red_carousel_play_bg.png") no-repeat;
+}
+
+.slideshow-video .views_slideshow_singleframe_pause {
+	background: url("/sites/all/themes/avn/images/red_carousel_pause_bg.png") no-repeat;
+}
+
+.slideshow-video .views_slideshow_singleframe_pager {
+	position: absolute;
+	bottom: 10px;
+	right: 110px;
+	z-index: 100;
+}
+
+.slideshow-video .views_slideshow_singleframe_pager a {
+	color: #3a3a3a;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.slideshow-video .views_slideshow_singleframe_pager .activeSlide a {
+	color: #a00700;
+}

@@ -1,0 +1,68 @@
+.wrapper {
+        position: relative;
+        width: 100%;
+        background-color: white;
+        margin: 0 23px 0 27px;
+        width: 926px;
+}
+
+.header,
+.left-right,
+.middle,
+.left-right-2 {
+	margin-bottom: 10px;
+}
+
+.left {
+	float: left;
+	width: 66%;
+}
+
+.panel-centro {
+  background-color: #b8b3a7;
+  padding: 11px;
+  margin: 12px;
+}
+
+.panel-left {
+        float: left;
+        width: 50%;
+}
+
+.panel-right {
+        float: left;
+        width: 50%;
+}
+
+.panel-right .inside {
+	border-left: 1px solid #e0e0e0;
+}
+
+.right {
+        float: left;
+        width: 33%;
+}
+
+.right .inside {
+	border-left: 1px solid #e0e0e0;
+	padding-left: 10px;
+}
+
+.panel-middle {
+        position: static;
+}
+
+.panel-left-2 {
+        float: left;
+	margin-right: .5em;
+        width: 65%;
+}
+
+.panel-right-2 {
+        float: left;
+        width: 33%;
+}
+
+.clear-float {
+        clear: both;
+}
