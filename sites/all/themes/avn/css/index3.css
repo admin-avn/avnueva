@@ -8,8 +8,8 @@ body#content {
 
 body.region-sidebar-second {
 	margin: 0 !important;
-	margin-left: 650px !important;
-	width: 330px !important;
+	margin-left: 630px !important;
+	width: 350px !important;
 }
 
 body.page-index3,
@@ -18,6 +18,10 @@ body.page-video2 {
 	background: url("/sites/all/themes/avn/images/background-avn-index3.png") repeat-x, -moz-linear-gradient(-50deg, #fbfbfb, #ebebeb) 0px 54px;
 	background: url("/sites/all/themes/avn/images/background-avn-index3.png") repeat-x, -o-linear-gradient(-50deg, #fbfbfb, #ebebeb) 0px 54px;
 	//background: url("/sites/all/themes/avn/images/background-avn-index3.png") repeat-x, -webkit-linear-gradient(-50deg, #fbfbfb, #ebebeb) 0px 54px;
+}
+
+.region-sidebar-second .section {
+	margin: 0 0 0 0 !important;
 }
 
 body#page-wrapper {
@@ -30,7 +34,7 @@ body#page-wrapper {
 }
 
 .index3 .index3-slideshow #views_slideshow_thumbnailhover_main_vista_contenido-block_11 {
-	height: 354px;
+	height: 354px !important;
 }
 
 .index3 .index3-slideshow .views_slideshow_slide .views-field-field-imagen-fid {
@@ -41,6 +45,7 @@ body#page-wrapper {
 	background: url("/sites/all/themes/avn/images/background-contenido.png");
 	position: absolute;
 	padding: 10px;
+	bottom: 0px;
 /*	max-height: 110px;
 	min-height: 110px;*/
 }
@@ -721,13 +726,15 @@ table.index3-debates tr.vertodo-titulares td div a {
 }
 
 #nice-menu-2 li a {
+	color: white;
+	text-decoration: none;
 	font-size: 10px;
 }
 
 
 #nice-menu-2 li {
 	display: table-cell;
-	padding: 15px 4px 0 4px;
+	padding: 15px 3px 0 3px;
 	vertical-align: middle;
 }
 
@@ -989,3 +996,42 @@ table.index3-debates tr.vertodo-titulares td div a {
 	right: 150px;
 	z-index: 100;
 }
+
+#block-block-23 {
+    position:absolute;
+    right:330px;
+    top:0;
+    width:242px;
+}
+
+.mostrar-usuario .usuario {
+	float: left;
+	margin-right: 5px;
+    	color:#3B3B3B;
+    	font-weight:bold;
+}
+
+.mostrar-usuario .nombre-usuario {
+	float: left;
+    	color:#3B3B3B;
+    	font-weight:bold;
+}
+
+.mostrar-usuario .salir {
+	clear: both;
+}
+
+.mostrar-usuario .salir a{
+    	color: white;
+    	font-weight:bold;
+	text-decoration: none;
+}
+
+#block-block-24 {
+	height:30px;
+    	position:absolute;
+    	right:420px;
+    	top:1px;
+    	width:333px;
+}
+

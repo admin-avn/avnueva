@@ -5,7 +5,7 @@ if($sw_youtube == 1) {
 	$url = 'http://www.youtube.com/v/' . $url_video[1];
 }
 ?>
-<div class="video2">
+<div class="video3">
 	<div class="video-player">
 		<?php if($sw_youtube == 0): ?>
 			<?php
@@ -14,12 +14,12 @@ if($sw_youtube == 1) {
 			}
 			?>
 	
-			<a id="ipad" href="<?php print $fields['field_video_fid']->content; ?>" style="display: block; width: 646px; height: 488px;">
+			<a id="ipad" href="<?php print $fields['field_video_fid']->content; ?>" style="display: block; width: 655px; height: 488px;">
 				<?php
 				if (arg(2) != 'reproducir') {
 					print '<img src="';
 					print $fields['field_video_miniatura_fid']->content; 
-					print '" style="width: 646px; height: 488px;">';
+					print '" style="width: 655px; height: 488px;">';
 					print '<img class="playbutton2" src="/sites/all/themes/avn/images/playbutton.png">';
 				}    
 				?>
@@ -46,7 +46,7 @@ if($sw_youtube == 1) {
 				}).ipad();
 			</script> 
 		<?php else: ?>
-			<object width="646" height="488">
+			<object width="655" height="488">
 				<param name="movie" value="<?php print $url; ?>"</param>
 				<param name="allowFullScreen" value="true"></param>
 				<param name="allowScriptAccess" value="always"></param>
@@ -54,7 +54,7 @@ if($sw_youtube == 1) {
 					type="application/x-shockwave-flash"
 					allowfullscreen="true"
 					allowscriptaccess="always"
-					width="646" height="488">
+					width="655" height="488">
 				</embed>
 			</object>
 		<?php endif; ?>
@@ -63,6 +63,7 @@ if($sw_youtube == 1) {
 		<div class="categoria"><?php print $fields['tid']->content; ?></div>
 		<div class="titulo"><?php print $fields['title']->content; ?></div>
 		<div class="contenido"><?php print $fields['body']->content; ?></div>
+		<div class="clear-float"></div>
 	</div>
 	<div class="clear-float"></div>
 </div>

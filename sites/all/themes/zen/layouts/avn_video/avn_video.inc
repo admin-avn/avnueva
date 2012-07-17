@@ -9,8 +9,7 @@ $plugin = array(
 	'theme' => 'panels_avn_video',
 	'css' => 'avn_video.css',
 	'panels' => array(
-		'arriba_izquierda' => t('Arriba izquierda'),
-		'arriba_derecha' => t('Arriba derecha'),
+		'arriba' => t('Arriba'),
 		'abajo' => t('Abajo'),
 	),
 );

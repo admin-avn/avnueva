@@ -359,3 +359,77 @@ body.page-video2 #page-wrapper {
 .video-contenedor .arriba-izquierda .view-display-id-block_3 {
 	background: black;
 }
+
+/* Vídeo3 De aquí para arriba creo que se puede borrar */
+
+.video3 {
+	background: #c8c8c8;
+	width: 980px;
+}
+
+.video3 .video-player {
+	float: left;
+	width: 655px;
+}
+
+.video3 .descripcion-video {
+	float: left;
+	width: 325px;
+	padding: 0 !important;
+}
+
+.video3 .descripcion-video .categoria {
+	background: #3b4b83;
+	color: white;
+	font-family: sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 66px;
+	padding: 0 0 0 10px;
+	text-transform: uppercase;
+}
+
+.video3 .descripcion-video .titulo {
+	color: #32427a;
+	padding: 10px;
+	font-family: sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.video3 .descripcion-video .contenido p {
+	color: black;
+	padding: 0 10px;
+}
+
+.video3-carrusel-categoria {
+	background: #7D7D7D;
+	height: 33px;
+	width: 980px;
+}
+
+.video3-carrusel-categoria .titulo {
+	background: #595959;
+	color: white;
+	display: inline-block;
+	margin-left: 20px;
+	padding: 0 10px;
+	height: 33px;
+	font-family: sans-serif;
+	font-size: 18px;
+	line-height: 33px;
+	text-transform: uppercase;
+}
+
+.jcarousel-skin-fotografia .jcarousel-item a {
+	color: #32427A;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+#video2 .abajo {
+	padding-top: 70px;
+	background: url("/sites/all/themes/avn/images/background-audiovisual-horizontal.png") no-repeat;
+	width: 980px;
+}
