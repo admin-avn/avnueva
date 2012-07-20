@@ -518,7 +518,9 @@ table.index3-titulares tr.titular-1,
 table.index3-titulares tr.titular-2,
 table.index3-titulares tr.titular-3,
 table.index3-debates tr.titular-0,
-table.index3-debates tr.titular-1 {
+table.index3-debates tr.titular-1,
+table.index3-debates tr.titular-2,
+table.index3-debates tr.titular-3 {
 	border-bottom: 1px solid #b2b2b2;
 }
 

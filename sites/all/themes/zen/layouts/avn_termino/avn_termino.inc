@@ -12,5 +12,6 @@ $plugin = array(
 		'arriba' => t('Arriba'),
 		'medio_izquierda' => t('Medio izquierda'),
 		'medio_derecha' => t('Medio derecha'),
+		'abajo' => t('Abajo'),
 	),
 );

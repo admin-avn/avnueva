@@ -21,3 +21,8 @@
 .clear-float {
 	clear: both;
 }
+
+.abajo {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}

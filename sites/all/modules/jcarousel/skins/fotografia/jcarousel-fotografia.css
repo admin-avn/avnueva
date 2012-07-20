@@ -20,6 +20,10 @@
 	background: url("/sites/all/themes/avn/images/background-foot-video.png") 0 bottom no-repeat;
 }
 
+.jcarousel-skin-fotografia .jcarousel-container-horizontal ul {
+	width: 3680px !important;
+}
+
 .jcarousel-skin-fotografia .jcarousel-clip-horizontal {
 	width: 920px;
 }
@@ -47,8 +51,8 @@
 .jcarousel-skin-fotografia .jcarousel-next,
 .jcarousel-skin-fotografia .jcarousel-prev {
 	display: block;
-	width: 24px;
-	height: 23px;
+	width: 14px;
+	height: 24px;
 }
 
 /**

@@ -92,37 +92,37 @@
 	background-color: transparent !important;
 }
 
-.emision-matutina,
-.emision-meridiana,
-.emision-vespertina {
+.contenedor-audio .emision-matutina,
+.contenedor-audio .emision-meridiana,
+.contenedor-audio .emision-vespertina {
 	position: relative;
 	padding-top: 10px;
 	float: left;
 	height: 93px;
 }
 
-.emision-matutina {
+.contenedor-audio .emision-matutina {
 	background: transparent url("/sites/all/themes/avn/images/background-emision-matutina.png") no-repeat;
 	width: 210px;
 }
 
-.emision-meridiana {
+.contenedor-audio .emision-meridiana {
 	background: transparent url("/sites/all/themes/avn/images/background-emision-meridiana.png") no-repeat;
 	width: 190px;
 }
 
-.emision-vespertina {
+.contenedor-audio .emision-vespertina {
 	background: transparent url("/sites/all/themes/avn/images/background-emision-vespertina.png") no-repeat;
 	width: 180px;
 }
 
-.emision-matutina .cajon,
-.emision-meridiana .cajon,
-.emision-vespertina .cajon {
+.contenedor-audio .emision-matutina .cajon,
+.contenedor-audio .emision-meridiana .cajon,
+.contenedor-audio .emision-vespertina .cajon {
 	margin-top: 5px;
 }
 
-.avance-principal {
+.contenedor-audio .avance-principal {
 	position: relative;
 	background: -webkit-linear-gradient(-50deg, #F9F9F9, whiteSmoke) 0px 54px;
 	background: -moz-linear-gradient(-50deg, #fbfbfb, whiteSmoke) 0px 54px;
@@ -132,7 +132,7 @@
 	width: 578px;
 }
 
-.avance-principal .controls-fake {
+.contenedor-audio .avance-principal .controls-fake {
 	background-color: #eee;
 	display: block;
 	width: 480px;
@@ -145,140 +145,140 @@
 	z-index: 1;
 }
 
-.avance-principal-2-5 {
+.contenedor-audio .avance-principal-2-5 {
 	position: relative;
 	height: 70px;
 	width: 285px;
 	float: left;
 }
 
-.regiones {
+.contenedor-audio .regiones {
 	background: url("/sites/all/themes/avn/images/background-regiones.png") no-repeat;
 	width: 210px;
 }
 
-.agenda-cultural {
+.contenedor-audio .agenda-cultural {
 	background: url("/sites/all/themes/avn/images/background-agenda-cultural.png") no-repeat;
 	width: 190px;
 }
 
-.sintesis-informativa {
+.contenedor-audio .sintesis-informativa {
 	background: url("/sites/all/themes/avn/images/background-sintesis-informativa.png") no-repeat;
 	width: 180px;
 }
 
-.regiones,
-.agenda-cultural,
-.sintesis-informativa {
+.contenedor-audio .regiones,
+.contenedor-audio .agenda-cultural,
+.contenedor-audio .sintesis-informativa {
 	position: relative;
 	padding-top: 10px;
 	float: left;
 	height: 55px;
 }
 
-.emision-matutina .reproductor,
-.emision-meridiana .reproductor,
-.emision-vespertina .reproductor {
+.contenedor-audio .emision-matutina .reproductor,
+.contenedor-audio .emision-meridiana .reproductor,
+.contenedor-audio .emision-vespertina .reproductor {
 	position: absolute;
 	width: 27px;
 	height: 24px;
 }
 
-.emision-matutina .reproductor,
-.regiones .reproductor {
+.contenedor-audio .emision-matutina .reproductor,
+.contenedor-audio .regiones .reproductor {
 	top: 10px;
 	left: 10px;
 }
 
-.emision-meridiana .reproductor {
+.contenedor-audio .emision-meridiana .reproductor {
 	top: 10px;
 	left: 0;
 }
 
-.emision-vespertina .reproductor {
+.contenedor-audio .emision-vespertina .reproductor {
 	top: 10px;
 	left: 0;
 }
 
-.emision-matutina .termino,
-.emision-matutina .hora,
-.emision-matutina .fecha,
-.emision-meridiana .termino,
-.emision-meridiana .hora,
-.emision-meridiana .fecha,
-.emision-vespertina .termino,
-.emision-vespertina .hora,
-.emision-vespertina .fecha,
-.regiones .termino,
-.agenda-cultural .termino,
-.sintesis-informativa .termino,
-.regiones .fecha,
-.agenda-cultural .fecha,
-.sintesis-informativa .fecha {
+.contenedor-audio .emision-matutina .termino,
+.contenedor-audio .emision-matutina .hora,
+.contenedor-audio .emision-matutina .fecha,
+.contenedor-audio .emision-meridiana .termino,
+.contenedor-audio .emision-meridiana .hora,
+.contenedor-audio .emision-meridiana .fecha,
+.contenedor-audio .emision-vespertina .termino,
+.contenedor-audio .emision-vespertina .hora,
+.contenedor-audio .emision-vespertina .fecha,
+.contenedor-audio .regiones .termino,
+.contenedor-audio .agenda-cultural .termino,
+.contenedor-audio .sintesis-informativa .termino,
+.contenedor-audio .regiones .fecha,
+.contenedor-audio .agenda-cultural .fecha,
+.contenedor-audio .sintesis-informativa .fecha {
 	position: absolute;
 }
 
-.emision-matutina .termino,
-.regiones .termino {
+.contenedor-audio .emision-matutina .termino,
+.contenedor-audio .regiones .termino {
 	top: 10px;
 	left: 38px;
 }
 
-.emision-meridiana .termino,
-.agenda-cultural .termino {
+.contenedor-audio .emision-meridiana .termino,
+.contenedor-audio .agenda-cultural .termino {
 	top: 10px;
 	left: 28px;
 }
 
-.emision-vespertina .termino,
-.sintesis-informativa .termino {
+.contenedor-audio .emision-vespertina .termino,
+.contenedor-audio .sintesis-informativa .termino {
 	top: 10px;
 	left: 28px;
 }
 
-.emision-matutina .hora,
-.regiones .fecha {
+.contenedor-audio .emision-matutina .hora,
+.contenedor-audio .regiones .fecha {
 	top: 28px;
 	left: 38px;
 }
 
-.emision-meridiana .hora,
-.agenda-cultural .fecha {
+.contenedor-audio .emision-meridiana .hora,
+.contenedor-audio .agenda-cultural .fecha {
 	top: 28px;
 	left: 28px;
 }
 
-.emision-vespertina .hora,
-.sintesis-informativa .fecha {
+.contenedor-audio .emision-vespertina .hora,
+.contenedor-audio .sintesis-informativa .fecha {
 	top: 28px;
 	left: 28px;
 }
 
-.emision-matutina .fecha {
+.contenedor-audio .emision-matutina .fecha {
 	top: 42px;
 	left: 38px;
 }
 
-.emision-meridiana .fecha {
+.contenedor-audio .emision-meridiana .fecha {
 	top: 42px;
 	left: 28px;
 }
 
-.emision-vespertina .fecha {
+.contenedor-audio .emision-vespertina .fecha {
 	top: 42px;
 	left: 28px;
 }
 
-.emision-matutina .termino span,
-.emision-meridiana .termino span,
-.emision-vespertina .termino span {
+.contenedor-audio .emision-matutina .termino span,
+.contenedor-audio .emision-meridiana .termino span,
+.contenedor-audio .emision-vespertina .termino span {
 	color: white;
 	font-size: 1.2em;
 	text-shadow: 1px 1px 3px #555;
 }
 
 
-.avance-principal .reproductor {
+.contenedor-audio .avance-principal .reproductor {
 	position: absolute;
 	left: 10px;
 	top: 10px;
@@ -286,7 +286,7 @@
 	height: 54px;
 }
 
-.avance-principal-2-5 .reproductor {
+.contenedor-audio .avance-principal-2-5 .reproductor {
 	position: absolute;
 	width: 24px;
 	height: 24px;
@@ -294,16 +294,16 @@
 	left: 10px;
 }
 
-.avance-principal-2-5 .titulo {
+.contenedor-audio .avance-principal-2-5 .titulo {
 	position: absolute;
 	line-height: 14px;
 	top: 10px;
 	left: 40px;
 }
 
-.regiones .reproductor,
-.agenda-cultural .reproductor,
-.sintesis-informativa .reproductor {
+.contenedor-audio .regiones .reproductor,
+.contenedor-audio .agenda-cultural .reproductor,
+.contenedor-audio .sintesis-informativa .reproductor {
 	position: absolute;
 	height: 27px;
 	width: 24px;
@@ -318,9 +318,9 @@
 	margin-left: 180px;
 }
 
-.views-row-2 #micros .termino,
-.views-row-2 #reportajes .termino,
-.views-row-2 #en-contexto .termino {
+.contenedor-audio .views-row-2 #micros .termino,
+.contenedor-audio .views-row-2 #reportajes .termino,
+.contenedor-audio .views-row-2 #en-contexto .termino {
 	display: none;
 }
 
@@ -349,7 +349,7 @@
 	text-decoration: underline;
 }
 
-.avance-principal .titulo {
+.contenedor-audio .avance-principal .titulo {
 	position: absolute;
 	top: 10px;
 	left: 80px;
@@ -379,61 +379,61 @@
 	margin-left: 215px;
 }
 
-.avance-principal .titulo span {
+.contenedor-audio .avance-principal .titulo span {
 	color: #666666;
 	font-size: 1.2em;
 	font-weight: bold;
 }
 
-.avance-principal-2-5 .titulo span {
+.contenedor-audio .avance-principal-2-5 .titulo span {
 	color: #535353;
 	font-size: 12px;
 	font-weight: bold;
 }
 
-.regiones .termino span,
-.agenda-cultural .termino span,
-.sintesis-informativa .termino span {
+.contenedor-audio .regiones .termino span,
+.contenedor-audio .agenda-cultural .termino span,
+.contenedor-audio .sintesis-informativa .termino span {
 	color: white;
 	font-size: .9em;
 	font-weight: bold;
 	text-shadow: 1px 1px 3px #555;
 }
 
-.avance-principal .fecha {
+.contenedor-audio .avance-principal .fecha {
 	position: absolute;
 	left: 80px;
 	bottom: 10px;
 }
 
-.emision-matutina .hora span,
-.emision-meridiana .hora span,
-.emision-vespertina .hora span {
+.contenedor-audio .emision-matutina .hora span,
+.contenedor-audio .emision-meridiana .hora span,
+.contenedor-audio .emision-vespertina .hora span {
 	color: white;
 	font-size: 1.3em;
 }
 
-.emision-matutina .fecha span,
-.emision-meridiana .fecha span,
-.emision-vespertina .fecha span {
+.contenedor-audio .emision-matutina .fecha span,
+.contenedor-audio .emision-meridiana .fecha span,
+.contenedor-audio .emision-vespertina .fecha span {
 	color: white;
 	font-size: .8em;
 }
 
-.avance-principal .fecha span {
+.contenedor-audio .avance-principal .fecha span {
 	color: #666666;
 	font-size: .8em;
 }
 
-.avance-principal .inline-exclude {
+.contenedor-audio .avance-principal .inline-exclude {
 	position: absolute;
 	left: 145px;
 	bottom: 5px;
 }
 
-.regiones .fecha span,
-.agenda-cultural .fecha span,
-.sintesis-informativa .fecha span {
+.contenedor-audio .regiones .fecha span,
+.contenedor-audio .agenda-cultural .fecha span,
+.contenedor-audio .sintesis-informativa .fecha span {
 	color: white;
 	font-size: .8em;
 }
@@ -445,9 +445,9 @@
 	font-size: .8em;
 }
 
-.emision-matutina .reproductor .playlist li,
-.emision-meridiana .reproductor .playlist li,
-.emision-vespertina .reproductor .playlist li {
+.contenedor-audio .emision-matutina .reproductor .playlist li,
+.contenedor-audio .emision-meridiana .reproductor .playlist li,
+.contenedor-audio .emision-vespertina .reproductor .playlist li {
 	background-color: transparent !important;
 	padding: 0;
 	margin: 0;
@@ -455,7 +455,7 @@
 	height: 24px;
 }
 
-.avance-principal .reproductor .playlist li {
+.contenedor-audio .avance-principal .reproductor .playlist li {
 	background-color: transparent !important;
 	padding: 0;
 	margin: 0;
@@ -463,7 +463,7 @@
 	height: 54px;
 }
 
-.avance-principal-2-5 .reproductor .playlist li {
+.contenedor-audio .avance-principal-2-5 .reproductor .playlist li {
 	background-color: transparent !important;
 	padding: 0;
 	margin: 0;
@@ -471,9 +471,9 @@
 	height: 24px;
 }
 
-.regiones .reproductor .playlist li,
-.agenda-cultural .reproductor .playlist li,
-.sintesis-informativa .reproductor .playlist li {
+.contenedor-audio .regiones .reproductor .playlist li,
+.contenedor-audio .agenda-cultural .reproductor .playlist li,
+.contenedor-audio .sintesis-informativa .reproductor .playlist li {
 	background-color: transparent !important;
 	padding: 0;
 	margin: 0;
@@ -491,30 +491,30 @@
 	height: 24px;
 }
 
-.emision-matutina .reproductor .playlist .sm2-filelink,
-.emision-matutina .reproductor .playlist .timing,
-.emision-matutina .reproductor .playlist .peak,
-.emision-meridiana .reproductor .playlist .sm2-filelink,
-.emision-meridiana .reproductor .playlist .timing,
-.emision-meridiana .reproductor .playlist .peak,
-.emision-vespertina .reproductor .playlist .sm2-filelink,
-.emision-vespertina .reproductor .playlist .timing,
-.emision-vespertina .reproductor .playlist .peak,
-.avance-principal .reproductor .playlist .sm2-filelink,
-.avance-principal .reproductor .playlist .timing,
-.avance-principal .reproductor .playlist .peak,
-.avance-principal-2-5 .reproductor .playlist .sm2-filelink,
-.avance-principal-2-5 .reproductor .playlist .timing,
-.avance-principal-2-5 .reproductor .playlist .peak,
-.regiones .reproductor .playlist .sm2-filelink,
-.regiones .reproductor .playlist .timing,
-.regiones .reproductor .playlist .peak,
-.agenda-cultural .reproductor .playlist .sm2-filelink,
-.agenda-cultural .reproductor .playlist .timing,
-.agenda-cultural .reproductor .playlist .peak,
-.sintesis-informativa .reproductor .playlist .sm2-filelink,
-.sintesis-informativa .reproductor .playlist .timing,
-.sintesis-informativa .reproductor .playlist .peak,
+.contenedor-audio .emision-matutina .reproductor .playlist .sm2-filelink,
+.contenedor-audio .emision-matutina .reproductor .playlist .timing,
+.contenedor-audio .emision-matutina .reproductor .playlist .peak,
+.contenedor-audio .emision-meridiana .reproductor .playlist .sm2-filelink,
+.contenedor-audio .emision-meridiana .reproductor .playlist .timing,
+.contenedor-audio .emision-meridiana .reproductor .playlist .peak,
+.contenedor-audio .emision-vespertina .reproductor .playlist .sm2-filelink,
+.contenedor-audio .emision-vespertina .reproductor .playlist .timing,
+.contenedor-audio .emision-vespertina .reproductor .playlist .peak,
+.contenedor-audio .avance-principal .reproductor .playlist .sm2-filelink,
+.contenedor-audio .avance-principal .reproductor .playlist .timing,
+.contenedor-audio .avance-principal .reproductor .playlist .peak,
+.contenedor-audio .avance-principal-2-5 .reproductor .playlist .sm2-filelink,
+.contenedor-audio .avance-principal-2-5 .reproductor .playlist .timing,
+.contenedor-audio .avance-principal-2-5 .reproductor .playlist .peak,
+.contenedor-audio .regiones .reproductor .playlist .sm2-filelink,
+.contenedor-audio .regiones .reproductor .playlist .timing,
+.contenedor-audio .regiones .reproductor .playlist .peak,
+.contenedor-audio .agenda-cultural .reproductor .playlist .sm2-filelink,
+.contenedor-audio .agenda-cultural .reproductor .playlist .timing,
+.contenedor-audio .agenda-cultural .reproductor .playlist .peak,
+.contenedor-audio .sintesis-informativa .reproductor .playlist .sm2-filelink,
+.contenedor-audio .sintesis-informativa .reproductor .playlist .timing,
+.contenedor-audio .sintesis-informativa .reproductor .playlist .peak,
 #micros .reproductor .playlist .sm2-filelink,
 #micros .reproductor .playlist .timing,
 #micros .reproductor .playlist .peak,
@@ -527,8 +527,8 @@
 	display: none;
 }
 
-.avance-principal .reproductor a,
-.avance-principal .reproductor ul.playlist li.sm2_paused a.sm2_link {
+.contenedor-audio .avance-principal .reproductor a,
+.contenedor-audio .avance-principal .reproductor ul.playlist li.sm2_paused a.sm2_link {
 	font-size: 0px;
 	background: url("/sites/all/themes/avn/images/background-avance-principal-play.png") no-repeat;
 	color: transparent;
@@ -537,12 +537,12 @@
 	width: 54px;
 }
 
-.avance-principal .reproductor ul.playlist li.sm2_playing a.sm2_link {
+.contenedor-audio .avance-principal .reproductor ul.playlist li.sm2_playing a.sm2_link {
 	background: url("/sites/all/themes/avn/images/background-avance-principal-paused.png") no-repeat;
 }
 
-.avance-principal-2-5 .reproductor a,
-.avance-principal-2-5 .reproductor ul.playlist li.sm2_paused a.sm2_link {
+.contenedor-audio .avance-principal-2-5 .reproductor a,
+.contenedor-audio .avance-principal-2-5 .reproductor ul.playlist li.sm2_paused a.sm2_link {
 	font-size: 0px;
 	background: url("/sites/all/themes/avn/images/background-24x24-play.png") no-repeat;
 	color: transparent;
@@ -551,18 +551,18 @@
 	width: 24px;
 }
 
-.emision-matutina .reproductor a,
-.emision-matutina .reproductor ul.playlist li.sm2_paused a.sm2_link, 
-.emision-meridiana .reproductor a,
-.emision-meridiana .reproductor ul.playlist li.sm2_paused a.sm2_link, 
-.emision-vespertina .reproductor a,
-.emision-vespertina .reproductor ul.playlist li.sm2_paused a.sm2_link,
-.regiones .reproductor a,
-.regiones .reproductor ul.playlist li.sm2_paused a.sm2_link, 
-.agenda-cultural .reproductor a,
-.agenda-cultural .reproductor ul.playlist li.sm2_paused a.sm2_link, 
-.sintesis-informativa .reproductor a,
-.sintesis-informativa .reproductor ul.playlist li.sm2_paused a.sm2_link,
+.contenedor-audio .emision-matutina .reproductor a,
+.contenedor-audio .emision-matutina .reproductor ul.playlist li.sm2_paused a.sm2_link, 
+.contenedor-audio .emision-meridiana .reproductor a,
+.contenedor-audio .emision-meridiana .reproductor ul.playlist li.sm2_paused a.sm2_link, 
+.contenedor-audio .emision-vespertina .reproductor a,
+.contenedor-audio .emision-vespertina .reproductor ul.playlist li.sm2_paused a.sm2_link,
+.contenedor-audio .regiones .reproductor a,
+.contenedor-audio .regiones .reproductor ul.playlist li.sm2_paused a.sm2_link, 
+.contenedor-audio .agenda-cultural .reproductor a,
+.contenedor-audio .agenda-cultural .reproductor ul.playlist li.sm2_paused a.sm2_link, 
+.contenedor-audio .sintesis-informativa .reproductor a,
+.contenedor-audio .sintesis-informativa .reproductor ul.playlist li.sm2_paused a.sm2_link,
 #micros .reproductor a,
 #micros .reproductor ul.playlist li.sm2_paused a.sm2_link,
 #reportajes .reproductor a,
@@ -577,53 +577,53 @@
 	width: 24px;
 }
 
-.avance-principal-2-5 .reproductor ul.playlist li.sm2_playing a.sm2_link {
+.contenedor-audio .avance-principal-2-5 .reproductor ul.playlist li.sm2_playing a.sm2_link {
 	background: url("/sites/all/themes/avn/images/background-24x24-paused.png") no-repeat;
 }
 
-.emision-matutina .reproductor ul.playlist li.sm2_playing a.sm2_link,
-.emision-meridiana .reproductor ul.playlist li.sm2_playing a.sm2_link,
-.emision-vespertina .reproductor ul.playlist li.sm2_playing a.sm2_link,
-.regiones .reproductor ul.playlist li.sm2_playing a.sm2_link,
-.agenda-cultural .reproductor ul.playlist li.sm2_playing a.sm2_link,
-.sintesis-informativa .reproductor ul.playlist li.sm2_playing a.sm2_link,
+.contenedor-audio .emision-matutina .reproductor ul.playlist li.sm2_playing a.sm2_link,
+.contenedor-audio .emision-meridiana .reproductor ul.playlist li.sm2_playing a.sm2_link,
+.contenedor-audio .emision-vespertina .reproductor ul.playlist li.sm2_playing a.sm2_link,
+.contenedor-audio .regiones .reproductor ul.playlist li.sm2_playing a.sm2_link,
+.contenedor-audio .agenda-cultural .reproductor ul.playlist li.sm2_playing a.sm2_link,
+.contenedor-audio .sintesis-informativa .reproductor ul.playlist li.sm2_playing a.sm2_link,
 #micros .reproductor ul.playlist li.sm2_playing a.sm2_link,
 #reportajes .reproductor ul.playlist li.sm2_playing a.sm2_link,
 #en-contexto .reproductor ul.playlist li.sm2_playing a.sm2_link {
 	background: url("/sites/all/themes/avn/images/background-27x24-paused.png") no-repeat;
 }
 
-.emision-matutina .reproductor a:hover,
-.emision-meridiana .reproductor a:hover,
-.emision-vespertina .reproductor a:hover,
-.avance-principal .reproductor a:hover,
-.avance-principal-2-5 .reproductor a:hover,
-.regiones .reproductor a:hover,
-.agenda-cultural .reproductor a:hover,
-.sintesis-informativa .reproductor a:hover {
+.contenedor-audio .emision-matutina .reproductor a:hover,
+.contenedor-audio .emision-meridiana .reproductor a:hover,
+.contenedor-audio .emision-vespertina .reproductor a:hover,
+.contenedor-audio .avance-principal .reproductor a:hover,
+.contenedor-audio .avance-principal-2-5 .reproductor a:hover,
+.contenedor-audio .regiones .reproductor a:hover,
+.contenedor-audio .agenda-cultural .reproductor a:hover,
+.contenedor-audio .sintesis-informativa .reproductor a:hover {
 	color: transparent;
 }
 
-.emision-matutina .reproductor .controls,
-.emision-meridiana .reproductor .controls,
-.emision-vespertina .reproductor .controls {
+.contenedor-audio .emision-matutina .reproductor .controls,
+.contenedor-audio .emision-meridiana .reproductor .controls,
+.contenedor-audio .emision-vespertina .reproductor .controls {
 	top: 40px;
 	width: 140px;
 	left: 25px;
 }
 
-.avance-principal .reproductor .controls {
+.contenedor-audio .avance-principal .reproductor .controls {
 	width: 480px;
 	left: 70px;
 }
 
-.avance-principal-2-5 .reproductor .controls {
+.contenedor-audio .avance-principal-2-5 .reproductor .controls {
 	display: none !important;
 }
 
-.regiones .reproductor .controls,
-.agenda-cultural .reproductor .controls,
-.sintesis-informativa .reproductor .controls {
+.contenedor-audio .regiones .reproductor .controls,
+.contenedor-audio .agenda-cultural .reproductor .controls,
+.contenedor-audio .sintesis-informativa .reproductor .controls {
 	width: 140px;
 	left: 30px;
 	top: 10px;
@@ -643,49 +643,49 @@
 	border: none !important;
 }
 
-.emision-matutina .reproductor .controls,
-.emision-meridiana .reproductor .controls,
-.emision-vespertina .reproductor .controls,
-.emision-matutina .reproductor .controls .statusbar,
-.emision-meridiana .reproductor .controls .statusbar,
-.emision-vespertina .reproductor .controls .statusbar,
-.emision-matutina .reproductor .controls .statusbar .loading,
-.emision-meridiana .reproductor .controls .statusbar .loading,
-.emision-vespertina .reproductor .controls .statusbar .loading,
-.emision-matutina .reproductor .controls .statusbar .position,
-.emision-meridiana .reproductor .controls .statusbar .position,
-.emision-vespertina .reproductor .controls .statusbar .position,
-.regiones .reproductor .controls,
-.agenda-cultural .reproductor .controls,
-.sintesis-informativa .reproductor .controls,
-.regiones .reproductor .controls .statusbar,
-.agenda-cultural .reproductor .controls .statusbar,
-.sintesis-informativa .reproductor .controls .statusbar,
-.regiones .reproductor .controls .statusbar .loading,
-.agenda-cultural .reproductor .controls .statusbar .loading,
-.sintesis-informativa .reproductor .controls .statusbar .loading,
-.regiones .reproductor .controls .statusbar .position,
-.agenda-cultural .reproductor .controls .statusbar .position,
-.sintesis-informativa .reproductor .controls .statusbar .position {
+.contenedor-audio .emision-matutina .reproductor .controls,
+.contenedor-audio .emision-meridiana .reproductor .controls,
+.contenedor-audio .emision-vespertina .reproductor .controls,
+.contenedor-audio .emision-matutina .reproductor .controls .statusbar,
+.contenedor-audio .emision-meridiana .reproductor .controls .statusbar,
+.contenedor-audio .emision-vespertina .reproductor .controls .statusbar,
+.contenedor-audio .emision-matutina .reproductor .controls .statusbar .loading,
+.contenedor-audio .emision-meridiana .reproductor .controls .statusbar .loading,
+.contenedor-audio .emision-vespertina .reproductor .controls .statusbar .loading,
+.contenedor-audio .emision-matutina .reproductor .controls .statusbar .position,
+.contenedor-audio .emision-meridiana .reproductor .controls .statusbar .position,
+.contenedor-audio .emision-vespertina .reproductor .controls .statusbar .position,
+.contenedor-audio .regiones .reproductor .controls,
+.contenedor-audio .agenda-cultural .reproductor .controls,
+.contenedor-audio .sintesis-informativa .reproductor .controls,
+.contenedor-audio .regiones .reproductor .controls .statusbar,
+.contenedor-audio .agenda-cultural .reproductor .controls .statusbar,
+.contenedor-audio .sintesis-informativa .reproductor .controls .statusbar,
+.contenedor-audio .regiones .reproductor .controls .statusbar .loading,
+.contenedor-audio .agenda-cultural .reproductor .controls .statusbar .loading,
+.contenedor-audio .sintesis-informativa .reproductor .controls .statusbar .loading,
+.contenedor-audio .regiones .reproductor .controls .statusbar .position,
+.contenedor-audio .agenda-cultural .reproductor .controls .statusbar .position,
+.contenedor-audio .sintesis-informativa .reproductor .controls .statusbar .position {
 	height: 5px;
 }
 
-.avance-principal .reproductor .controls,
-.avance-principal .reproductor .controls .statusbar,
-.avance-principal .reproductor .controls .statusbar .loading,
-.avance-principal .reproductor .controls .statusbar .position,
-.avance-principal-2-5 .reproductor .controls,
-.avance-principal-2-5 .reproductor .controls .statusbar,
-.avance-principal-2-5 .reproductor .controls .statusbar .loading,
-.avance-principal-2-5 .reproductor .controls .statusbar .position {
+.contenedor-audio .avance-principal .reproductor .controls,
+.contenedor-audio .avance-principal .reproductor .controls .statusbar,
+.contenedor-audio .avance-principal .reproductor .controls .statusbar .loading,
+.contenedor-audio .avance-principal .reproductor .controls .statusbar .position,
+.contenedor-audio .avance-principal-2-5 .reproductor .controls,
+.contenedor-audio .avance-principal-2-5 .reproductor .controls .statusbar,
+.contenedor-audio .avance-principal-2-5 .reproductor .controls .statusbar .loading,
+.contenedor-audio .avance-principal-2-5 .reproductor .controls .statusbar .position {
 	height: 15px;
 	border: none;
 	border-radius: 10px;
 	z-index: 2;
 }
 
-.avance-principal .reproductor .controls .statusbar .position,
-.avance-principal-2-5 .reproductor .controls .statusbar .position {
+.contenedor-audio .avance-principal .reproductor .controls .statusbar .position,
+.contenedor-audio .avance-principal-2-5 .reproductor .controls .statusbar .position {
 	background-color: #90a4be;
 }
 
@@ -781,38 +781,38 @@
 
 /* Reproductor sin reproducir */
 
-.radio-avances {
+.contenedor-audio .radio-avances {
 	background: #DFDFDF;
 	position: relative;
 }
 
-.radio-archivo .fecha,
-.radio-avances .fecha {
+.contenedor-audio .radio-archivo .fecha,
+.contenedor-audio .radio-avances .fecha {
 	position: absolute;
 	top: 5px;
 	left: 5px;
 }
 
-.radio-avances .fecha-antipodas {
+.contenedor-audio .radio-avances .fecha-antipodas {
 	position: relative !important;
 }
 
-.radio-archivo .fecha,
-.radio-avances .fecha {
+.contenedor-audio .radio-archivo .fecha,
+.contenedor-audio .radio-avances .fecha {
 	color: darkGray;
 	font-family: "Georgia";
 	font-size: 15px;
 	font-weight: bold;
 }
 
-.radio-archivo .player-radio ul li a {
+.contenedor-audio .radio-archivo .player-radio ul li a {
 	background: transparent url("/sites/all/themes/avn/images/background-27x24-play.png") no-repeat;
 	color: #514d4d;
 	margin-left: 35px;
 	padding: 2px 0 2px 35px;
 }
 
-.radio-avances .player-radio ul li a {
+.contenedor-audio .radio-avances .player-radio ul li a {
 	background: transparent url("/sites/all/themes/avn/images/background-27x24-play.png") no-repeat;
 	color: #444;
 	margin-left: 35px;
@@ -822,28 +822,28 @@
 
 /* Reproductor reproduciendo o en pausa */
 
-.radio-archivo,
-.radio-avances {
+.contenedor-audio .radio-archivo,
+.contenedor-audio .radio-avances {
 	border-bottom: 1px solid #B2B2B2;
 	position: relative;
 }
 
-.radio-archivo .player-radio ul li.sm2_paused,
-.radio-archivo .player-radio ul li.sm2_playing {
+.contenedor-audio .radio-archivo .player-radio ul li.sm2_paused,
+.contenedor-audio .radio-archivo .player-radio ul li.sm2_playing {
 	z-index: 1000;
 	margin: 2px 0;
 }
 
-.radio-avances .player-radio ul li.sm2_paused,
-.radio-avances .player-radio ul li.sm2_playing {
+.contenedor-audio .radio-avances .player-radio ul li.sm2_paused,
+.contenedor-audio .radio-avances .player-radio ul li.sm2_playing {
 	width: 322px;
 	height: 65px;
 	z-index: 1000;
 	margin: 2px 0;
 }
 
-.radio-archivo .player-radio ul li.sm2_paused a,
-.radio-avances .player-radio ul li.sm2_paused a {
+.contenedor-audio .radio-archivo .player-radio ul li.sm2_paused a,
+.contenedor-audio .radio-avances .player-radio ul li.sm2_paused a {
 	margin-left: 0px;
 	color: #514d4d;
 	background: transparent url("/sites/all/themes/avn/images/background-27x24-play.png") no-repeat;
@@ -852,31 +852,31 @@
 	padding-left: 30px;
 }
 
-.radio-archivo .player-radio ul li.sm2_paused a.sm2_link,
-.radio-avances .player-radio ul li.sm2_paused a.sm2_link,
-.radio-archivo .player-radio ul li.sm2_playing a.sm2_link,
-.radio-avances .player-radio ul li.sm2_playing a.sm2_link {
+.contenedor-audio .radio-archivo .player-radio ul li.sm2_paused a.sm2_link,
+.contenedor-audio .radio-avances .player-radio ul li.sm2_paused a.sm2_link,
+.contenedor-audio .radio-archivo .player-radio ul li.sm2_playing a.sm2_link,
+.contenedor-audio .radio-avances .player-radio ul li.sm2_playing a.sm2_link {
 	margin-right: 0 !important;
 }
 
-.radio-avances .player-radio ul li.sm2_paused a.sm2_link,
-.radio-avances .player-radio ul li.sm2_playing a.sm2_link {
+.contenedor-audio .radio-avances .player-radio ul li.sm2_paused a.sm2_link,
+.contenedor-audio .radio-avances .player-radio ul li.sm2_playing a.sm2_link {
 	color: #31487E;
 }
 
-.radio-archivo .player-radio ul li.sm2_paused,
-.radio-avances .player-radio ul li.sm2_paused,
-.radio-archivo .player-radio ul li.sm2_playing,
-.radio-avances .player-radio ul li.sm2_playing {
+.contenedor-audio .radio-archivo .player-radio ul li.sm2_paused,
+.contenedor-audio .radio-avances .player-radio ul li.sm2_paused,
+.contenedor-audio .radio-archivo .player-radio ul li.sm2_playing,
+.contenedor-audio .radio-avances .player-radio ul li.sm2_playing {
 	margin: 0 !important;
 }
 
-.radio-avances .player-radio ul li.sm2_paused a {
+.contenedor-audio .radio-avances .player-radio ul li.sm2_paused a {
 	height: 54px;
 }
 
-.radio-archivo .player-radio ul li.sm2_playing a,
-.radio-avances .player-radio ul li.sm2_playing a {
+.contenedor-audio .radio-archivo .player-radio ul li.sm2_playing a,
+.contenedor-audio .radio-avances .player-radio ul li.sm2_playing a {
 	margin-left: 0px;
 	color: #514d4d;
 	background: transparent url("/sites/all/themes/avn/images/background-27x24-paused.png") no-repeat;
@@ -885,82 +885,82 @@
 	padding-left: 30px;
 }
 
-.view-display-id-block_16 .radio-avances .player-radio ul li a,
-.view-display-id-block_16 .radio-avances .player-radio ul li.sm2_playing a,
-.view-display-id-block_16 .radio-avances .player-radio ul li.sm2_paused a  {
+.contenedor-audio .view-display-id-block_16 .radio-avances .player-radio ul li a,
+.contenedor-audio .view-display-id-block_16 .radio-avances .player-radio ul li.sm2_playing a,
+.contenedor-audio .view-display-id-block_16 .radio-avances .player-radio ul li.sm2_paused a  {
 	margin-left: 67px;
 }
 
-.radio-avances .player-radio ul li.sm2_playing a {
+.contenedor-audio .radio-avances .player-radio ul li.sm2_playing a {
 	height: 54px;
 }
 
-.radio-archivo .player-radio li.sm2_playing .controls,
-.radio-archivo .player-radio li.sm2_paused .controls {
+.contenedor-audio .radio-archivo .player-radio li.sm2_playing .controls,
+.contenedor-audio .radio-archivo .player-radio li.sm2_paused .controls {
 	left: 105px;
 }
 
-.radio-avances .player-radio li.sm2_playing .controls,
-.radio-avances .player-radio li.sm2_paused .controls {
+.contenedor-audio .radio-avances .player-radio li.sm2_playing .controls,
+.contenedor-audio .radio-avances .player-radio li.sm2_paused .controls {
 	position: absolute;
 	top: 40px;
 	left: 105px;
 }
 
-.radio-archivo .player-radio li.sm2_playing .controls,
-.radio-archivo .player-radio li.sm2_paused .controls {
+.contenedor-audio .radio-archivo .player-radio li.sm2_playing .controls,
+.contenedor-audio .radio-archivo .player-radio li.sm2_paused .controls {
 	position: absolute;
 }
 
-.radio-archivo .player-radio li.sm2_playing .controls,
-.radio-archivo .player-radio li.sm2_playing .controls .statusbar,
-.radio-archivo .player-radio li.sm2_playing .controls .statusbar .loading,
-.radio-archivo .player-radio li.sm2_playing .controls .statusbar .position,
-.radio-archivo .player-radio li.sm2_paused .controls,
-.radio-archivo .player-radio li.sm2_paused .controls .statusbar,
-.radio-archivo .player-radio li.sm2_paused .controls .statusbar .loading,
-.radio-archivo .player-radio li.sm2_paused .controls .statusbar .position,
-.radio-avances .player-radio li.sm2_playing .controls,
-.radio-avances .player-radio li.sm2_playing .controls .statusbar,
-.radio-avances .player-radio li.sm2_playing .controls .statusbar .loading,
-.radio-avances .player-radio li.sm2_playing .controls .statusbar .position,
-.radio-avances .player-radio li.sm2_paused .controls,
-.radio-avances .player-radio li.sm2_paused .controls .statusbar,
-.radio-avances .player-radio li.sm2_paused .controls .statusbar .loading,
-.radio-avances .player-radio li.sm2_paused .controls .statusbar .position {
+.contenedor-audio .radio-archivo .player-radio li.sm2_playing .controls,
+.contenedor-audio .radio-archivo .player-radio li.sm2_playing .controls .statusbar,
+.contenedor-audio .radio-archivo .player-radio li.sm2_playing .controls .statusbar .loading,
+.contenedor-audio .radio-archivo .player-radio li.sm2_playing .controls .statusbar .position,
+.contenedor-audio .radio-archivo .player-radio li.sm2_paused .controls,
+.contenedor-audio .radio-archivo .player-radio li.sm2_paused .controls .statusbar,
+.contenedor-audio .radio-archivo .player-radio li.sm2_paused .controls .statusbar .loading,
+.contenedor-audio .radio-archivo .player-radio li.sm2_paused .controls .statusbar .position,
+.contenedor-audio .radio-avances .player-radio li.sm2_playing .controls,
+.contenedor-audio .radio-avances .player-radio li.sm2_playing .controls .statusbar,
+.contenedor-audio .radio-avances .player-radio li.sm2_playing .controls .statusbar .loading,
+.contenedor-audio .radio-avances .player-radio li.sm2_playing .controls .statusbar .position,
+.contenedor-audio .radio-avances .player-radio li.sm2_paused .controls,
+.contenedor-audio .radio-avances .player-radio li.sm2_paused .controls .statusbar,
+.contenedor-audio .radio-avances .player-radio li.sm2_paused .controls .statusbar .loading,
+.contenedor-audio .radio-avances .player-radio li.sm2_paused .controls .statusbar .position {
 	height: 10px;
 	width: 200px;
 	z-index: 1000;
 }
 
-.radio-avances .player-radio .controls {
+.contenedor-audio .radio-avances .player-radio .controls {
 	margin-top: 19px;
 }
 
-.radio-archivo .player-radio .timing {
+.contenedor-audio .radio-archivo .player-radio .timing {
 	right: 0em !important;
 }
 
-.radio-avances .player-radio .timing {
+.contenedor-audio .radio-avances .player-radio .timing {
 	margin-top: 48px;
 	right: 0em !important;
 }
 
-.radio-archivo .player-radio .controls .statusbar,
-.radio-avances .player-radio .controls .statusbar {
+.contenedor-audio .radio-archivo .player-radio .controls .statusbar,
+.contenedor-audio .radio-avances .player-radio .controls .statusbar {
 	border: 1px solid #8d8d8d;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
 }
 
-.radio-archivo .player-radio .controls .statusbar .loading,
-.radio-avances .player-radio .controls .statusbar .loading {
+.contenedor-audio .radio-archivo .player-radio .controls .statusbar .loading,
+.contenedor-audio .radio-avances .player-radio .controls .statusbar .loading {
 	background-color: #ccc;
 }
 
-.radio-archivo .player-radio .controls .statusbar .position,
-.radio-avances .player-radio .controls .statusbar .position {
+.contenedor-audio .radio-archivo .player-radio .controls .statusbar .position,
+.contenedor-audio .radio-avances .player-radio .controls .statusbar .position {
 	background-color: #666 !important;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
@@ -968,21 +968,21 @@
 	border-right: 2px solid #666;
 }
 
-.radio-archivo .sm2_paused > div,
-.radio-archivo .sm2_playing > div {
+.contenedor-audio .radio-archivo .sm2_paused > div,
+.contenedor-audio .radio-archivo .sm2_playing > div {
 	position: relative;
 	margin-bottom: 10px;
 }
 
-.radio-archivo .sm2_paused > div + div,
-.radio-archivo .sm2_playing > div + div,
-.radio-avances .sm2_paused > div + div,
-.radio-avances .sm2_playing > div + div {
+.contenedor-audio .radio-archivo .sm2_paused > div + div,
+.contenedor-audio .radio-archivo .sm2_playing > div + div,
+.contenedor-audio .radio-avances .sm2_paused > div + div,
+.contenedor-audio .radio-avances .sm2_playing > div + div {
 	margin-left: 80px;
 
 }
 
-.radio-archivo .timing {
+.contenedor-audio .radio-archivo .timing {
 	background-color: transparent !important;
 	border: none !important;
 	left: 0;
@@ -992,7 +992,7 @@
 	font-size: 0;
 }
 
-.radio-avances .timing {
+.contenedor-audio .radio-avances .timing {
 	background-color: transparent !important;
 	border: none !important;
 	left: 0;
@@ -1002,13 +1002,13 @@
 	font-size: 0;
 }
 
-.radio-archivo .timing .sm2_position,
-.radio-avances .timing .sm2_position {
+.contenedor-audio .radio-archivo .timing .sm2_position,
+.contenedor-audio .radio-avances .timing .sm2_position {
 	float: left;
 }
 
-.radio-archivo .timing span,
-.radio-avances .timing span {
+.contenedor-audio .radio-archivo .timing span,
+.contenedor-audio .radio-avances .timing span {
 	color: #666;
 	font-size: 10px;
 }
@@ -1037,23 +1037,23 @@
 	width: 180px;
 }
 
-.separador hr,
-.separador2 hr {
+.contenedor-audio .separador hr,
+.contenedor-audio .separador2 hr {
 	clear: both;
 	position: relative;
 }
 
-.separador hr {
+.contenedor-audio .separador hr {
 	border: none !important;
 	border-top: 1px dashed #dbdbdb !important;
 	width: 580px;
 }
 
-.separador2 hr {
+.contenedor-audio .separador2 hr {
 	border: none !important;
 }
 
-.view-display-id-block_2 h3 {
+.contenedor-audio .view-display-id-block_2 h3 {
 	background: #DFDFDF;
 	margin: 0;
 	padding: 5px 0 0 10px;
@@ -1088,8 +1088,8 @@
     position: absolute;
 }
 
-.radio-avances-titulo,
-.radio-archivo-titulo {
+.contenedor-audio .radio-avances-titulo,
+.contenedor-audio .radio-archivo-titulo {
 	background: #9C9C9C;
 	height: 31px;
 	line-height: 31px;
@@ -1097,16 +1097,16 @@
 	padding-left: 10px;
 }
 
-.radio-archivo-titulo {
+.contenedor-audio .radio-archivo-titulo {
 	font-weight: bold;
 }
 
-.radio-avances-titulo a.radio {
+.contenedor-audio .radio-avances-titulo a.radio {
 	font-weight: bold;
 }
 
-.radio-avances-titulo a.radio,
-.radio-avances-titulo a.avances {
+.contenedor-audio .radio-avances-titulo a.radio,
+.contenedor-audio .radio-avances-titulo a.avances {
 	color: white;
 	font-family: verdana,sans-serif;
 	font-size: 12px;
@@ -1115,28 +1115,28 @@
 	text-transform: uppercase;
 }
 
-.view-display-id-page_1 {
+.contenedor-audio .view-display-id-page_1 {
 	margin: 0 5px;
 }
 
-.avance-principal-2-5 .inline-exclude {
+.contenedor-audio .avance-principal-2-5 .inline-exclude {
 	position: absolute;
 	right: 0;
 	bottom: 0;
 }
 
 
-.radio-avances-titulo .antipodas {
+.contenedor-audio .radio-avances-titulo .antipodas {
 	color: #514D4D;
 	font-size: 11px;
 	margin-left:30px;
 }
 
-.view-display-id-block_16 .inline-exclude {
+.contenedor-audio .view-display-id-block_16 .inline-exclude {
 	margin-left:104px;
 }
 
-.player-radio-antipodas ul li a,
-.player-radio-especiales ul li a {
+.contenedor-audio .player-radio-antipodas ul li a,
+.contenedor-audio .player-radio-especiales ul li a {
 	margin-left: 0 !important;
 }

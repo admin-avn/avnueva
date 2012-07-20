@@ -46,6 +46,7 @@ stylesheets[all][]   = css/taxonomia.css
 stylesheets[all][]   = css/video.css
 ;stylesheets[all][]   = css/video-front.css
 stylesheets[all][]   = css/radio.css
+stylesheets[all][]   = css/radio2.css
 ;stylesheets[all][]   = css/radio-front.css
 stylesheets[all][]   = css/rss.css
 stylesheets[all][]   = css/fotografia.css

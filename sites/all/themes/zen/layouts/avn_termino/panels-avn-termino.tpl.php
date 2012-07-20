@@ -15,4 +15,9 @@
 		<?php endif; ?>
 		<div class="clear-float"></div>	
 	</div>
+	<?php if($content['abajo']): ?>
+		<div class="abajo">
+			<div class="inside"><?php print $content['abajo']; ?></div>
+		</div>
+	<?php endif; ?>
 </div>

@@ -386,12 +386,14 @@ body.page-video2 #page-wrapper {
 	font-weight: bold;
 	line-height: 66px;
 	padding: 0 0 0 10px;
+	padding-right: 40px;
 	text-transform: uppercase;
+	text-align: right;
 }
 
 .video3 .descripcion-video .titulo {
 	color: #32427a;
-	padding: 10px;
+	padding: 20px 30px 0 30px;
 	font-family: sans-serif;
 	font-size: 17px;
 	font-weight: bold;
@@ -400,7 +402,7 @@ body.page-video2 #page-wrapper {
 
 .video3 .descripcion-video .contenido p {
 	color: black;
-	padding: 0 10px;
+	padding: 0 30px;
 }
 
 .video3-carrusel-categoria {
@@ -429,7 +431,26 @@ body.page-video2 #page-wrapper {
 }
 
 #video2 .abajo {
-	padding-top: 70px;
-	background: url("/sites/all/themes/avn/images/background-audiovisual-horizontal.png") no-repeat;
 	width: 980px;
+}
+
+body.section-videobox {
+	background-image:none;
+}
+
+
+body.section-videobox #content .section {
+	margin: 0 !important;
+}
+
+body.section-olimpiadas-londres-2012 #cboxContent {
+	margin: 0;
+}
+
+body.section-videobox .video3 .descripcion-video .categoria {
+    font-size:17px;
+    padding:0 30px 0 7px;
+}
+body.section-olimpiadas-londres-2012 #colorbox {
+	padding:0;
 }
