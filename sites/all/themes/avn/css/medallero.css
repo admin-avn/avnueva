@@ -1,0 +1,167 @@
+/* Medallero */
+
+body {
+	background: #162749;
+	margin: 0;
+}
+
+.medallero-cabecera {
+	position: absolute;
+	z-index: 1;
+}
+
+.medallero-tabla-colorbox {
+  background: #848EA1;
+  border: 1px solid white;
+  margin: 0 78px;
+  width: 744px;
+	position: absolute;
+	top: 95px;
+}
+
+.medallero-tabla-colorbox .titulo {
+	background: #C0C5CF;
+	color: #162749;
+	font-family: "Arial Bold", Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	height: 70px;
+	line-height: 100px;
+	padding-left: 30px;
+}
+
+ul.medallero-londres-2012-cabecera {
+	background: #E3E3E3;
+	margin: 0 26px;
+	padding: 0;
+	border-bottom: 2px solid #1E2E4E;
+}
+
+ul.medallero-londres-2012-cabecera li {
+	color: #162749;
+	display: table-cell;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	height: 40px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+ul.medallero-londres-2012-cabecera li.posicion,
+ul.medallero-londres-2012-cabecera li.pais,
+ul.medallero-londres-2012-cabecera li.oro,
+ul.medallero-londres-2012-cabecera li.plata,
+ul.medallero-londres-2012-cabecera li.bronce {
+	border-right: 2px solid white;
+}
+
+ul.medallero-londres-2012-cabecera li.posicion {
+	text-align: center;
+	width: 80px;
+}
+
+ul.medallero-londres-2012-cabecera li.pais {
+	padding-left: 10px;
+	width: 285px;
+}
+
+ul.medallero-londres-2012-cabecera li.oro {
+	background: url("/sites/all/themes/avn/images/londres2012-oro.png") 5px 7px no-repeat #E3E3E3;
+	padding-left: 30px;
+	width: 60px;
+}
+
+ul.medallero-londres-2012-cabecera li.plata {
+	background: url("/sites/all/themes/avn/images/londres2012-plata.png") 5px 7px no-repeat #E3E3E3;
+	padding-left: 30px;
+	width: 60px;
+}
+
+ul.medallero-londres-2012-cabecera li.bronce {
+	background: url("/sites/all/themes/avn/images/londres2012-bronce.png") 5px 7px no-repeat #E3E3E3;
+	padding-left: 30px;
+	width: 60px;
+}
+
+ul.medallero-londres-2012-cabecera li.total {
+	text-align: center;
+	width: 60px;
+}
+
+ul.medallero-londres-2012-cuerpo {
+	margin: 0 26px;
+	padding: 0;
+}
+
+ul.medallero-londres-2012-cuerpo li {
+	color: #162749;
+	display: table-cell;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	height: 40px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+ul.medallero-londres-2012-cuerpo li.posicion,
+ul.medallero-londres-2012-cuerpo li.pais,
+ul.medallero-londres-2012-cuerpo li.oro,
+ul.medallero-londres-2012-cuerpo li.plata,
+ul.medallero-londres-2012-cuerpo li.bronce {
+	border-right: 2px solid white;
+}
+
+ul.medallero-londres-2012-cuerpo li.posicion {
+	text-align: center;
+	width: 80px;
+}
+
+ul.medallero-londres-2012-cuerpo li.pais {
+	padding-left: 10px;
+	width: 274px;
+}
+
+
+ul.medallero-londres-2012-cuerpo li.pais img {
+	float:left;
+	margin-right:4px;
+}
+
+ul.medallero-londres-2012-cuerpo li.oro {
+	text-align: center;
+	width: 90px;
+}
+
+ul.medallero-londres-2012-cuerpo li.plata {
+	text-align: center;
+	width: 90px;
+}
+
+ul.medallero-londres-2012-cuerpo li.bronce {
+	text-align: center;
+	width: 90px;
+}
+
+ul.medallero-londres-2012-cuerpo li.total {
+	text-align: center;
+	width: 60px;
+}
+
+ul.medallero-londres-2012-cuerpo.none {
+	background: #f5f5f5;
+}
+
+ul.medallero-londres-2012-cuerpo.pare {
+	background: #e3e3e3;
+}
+
+ul.medallero-londres-2012-cuerpo.none li {
+}
+
+ul.medallero-londres-2012-cuerpo.pare li {
+}
+
+
+
+
