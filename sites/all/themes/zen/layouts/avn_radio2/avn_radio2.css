@@ -1,0 +1,51 @@
+.radio2 {
+	width: 980px;
+}
+
+.radio2 .izquierda {
+	float: left;
+	width: 61.6%;
+}
+
+.radio2 .izquierda .panel-principal {
+	margin-bottom: 10px;
+}
+
+.radio2 .izquierda .contenedor {
+	margin-bottom: 10px;
+}
+
+.radio2 .izquierda .panel-cuatro-reproductores {
+	margin-bottom: 10px;
+}
+
+.radio2 .derecha {
+	float: left;
+	width: 38.5%;
+}
+
+.radio2 .panel-emisiones-y-reporte-regional {
+	float: left;
+	width: 43.3%;
+}
+
+.radio2 .panel-micros {
+	float: left;
+	width: 56.7%;
+}
+
+.radio2 .panel-avances {
+	margin-bottom: 10px;
+}
+
+.radio2 .panel-agenda-cultural-y-efemerides {
+	margin-bottom: 10px;
+}
+
+.radio2 .panel-sintesis-informativa {
+	margin-bottom: 10px;
+}
+
+.radio2 .clear-float {
+	clear: both;
+}
