@@ -975,6 +975,7 @@ table.index3-debates tr.vertodo-titulares td div a {
 	height: 31px;
 	line-height: 31px;
 	padding-left: 10px;
+	margin-top: 10px;
 }
 
 .titulo-debate a {
@@ -1001,8 +1002,8 @@ table.index3-debates tr.vertodo-titulares td div a {
 
 #block-block-23 {
     position:absolute;
-    right:330px;
-    top:0;
+    right:230px;
+    top: 0;
     width:242px;
 }
 
@@ -1037,3 +1038,175 @@ table.index3-debates tr.vertodo-titulares td div a {
     	width:333px;
 }
 
+/* Fotogalerías Olimpiadas */
+
+#block-views-vista_audiovisuales-block_4 .view-vista-audiovisuales {
+	background: #DFDFDF;
+}
+
+.fotogalerias-olimpiadas {
+	background: #31487E;
+	margin: 0;
+	padding: 5px 0 0 5px;
+	height: 31px;
+}
+
+.fotogalerias-olimpiadas .titulo {
+	color: #444;
+	background: #F2F2F2;
+	padding: 0 10px 15px 10px;
+	font-family: verdana,sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* Cintillo Olimpiadas */ 
+
+#block-block-32 {
+	position: absolute;
+	top: 0px;
+	left: 628px
+}
+
+/* iframe olimpiadas */ 
+
+/*
+iframe {
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0A1E44), to(#2A3854));
+}
+*/
+
+#medallero-londres2012 {
+	background: #142649;
+	margin-top: 10px;
+}
+
+#medallero-londres2012 a {
+	display: block;
+	width: 330px;
+	height: 70px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cabecera {
+	background: #e3e3e3;
+	width: 320px;
+	padding: 0;
+	margin: 0 0 0 5px;
+	height: 30px;
+	vertical-align: middle;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cabecera li {
+	color: #162749;
+	display: table-cell;
+	font-family: "Arial", sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	height: 30px;
+	vertical-align: middle;
+	padding-left: 5px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cabecera li.posicion {
+	border-right: 1px solid white;
+	width: 25px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cabecera li.pais {
+	border-right: 1px solid white;
+	width: 136px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cabecera li.oro {
+	border-right: 1px solid white;
+	width: 44px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cabecera li.plata {
+	border-right: 1px solid white;
+	width: 44px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cabecera li.bronce {
+	border-right: 1px solid white;
+	width: 44px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cabecera li.total {
+	width: 44px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cuerpo {
+	margin: 0 0 0 5px;
+	padding: 0;
+	width:320px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cuerpo.none {
+	background: #f5f5f5;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cuerpo.pare {
+	background: #e3e3e3;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cuerpo li {
+	display: table-cell;
+	line-height: 12px;
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+	height: 24px;
+	vertical-align: middle;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cuerpo li.posicion {
+	border-right: 1px solid white;
+	text-align: center;
+	width: 29px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cuerpo li.pais {
+	border-right: 1px solid white;
+	width: 109px;
+	padding: 0 2px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cuerpo li.pais img {
+	float:left;
+	margin-right:2px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cuerpo li.oro {
+	border-right: 1px solid white;
+	text-align: center;
+	width: 44px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cuerpo li.plata {
+	border-right: 1px solid white;
+	text-align: center;
+	width: 45px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cuerpo li.bronce {
+	border-right: 1px solid white;
+	text-align: center;
+	width: 48px;
+}
+
+#medallero-londres2012 ul.medallero-londres-2012-cuerpo li.total {
+	text-align: center;
+	width: 44px;
+}
+#medallero-londres2012 div.ver_mas a{
+	color:white;
+	font-size:15px;
+	font-weight:bold;
+	height:27px;
+	margin-left:12px;
+	margin-top:5px;
+	text-align:left;
+	text-decoration:none;
+}
