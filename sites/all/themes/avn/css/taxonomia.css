@@ -215,3 +215,46 @@
 .views_slideshow_thumbnailhover_pause {
 	display: none;
 }
+
+.views_slideshow_thumbnailhover_controls {
+	position: relative;
+}
+
+div.contenedor-termino div.arriba div.pane-block-33 {
+	margin-top:-18px
+}
+
+div.arriba div.cabezal_calendario {
+	background:none repeat scroll 0 0 #9C9C9C;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+}
+
+ul.calendario-londres-2012 {
+	margin: 0;
+	padding:0 0 0 20px;
+}
+
+ul.calendario-londres-2012 li {
+	display:inline-block;
+	list-style:none outside none;
+	margin:1px 25px 1px 0;
+	font-size:11px;
+	line-height:11px;
+}
+
+ul.calendario-londres-2012 li.disciplina {
+	min-width: 120px;
+}
+ul.calendario-londres-2012 li.hora {
+	min-width: 38px;
+}
+
+div.arriba ul.none {
+	background: none repeat scroll 0 0 #F5F5F5;
+}
+
+div.arriba ul.pare {
+	background: none repeat scroll 0 0 #E3E3E3;
+}

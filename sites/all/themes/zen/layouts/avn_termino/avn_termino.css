@@ -8,6 +8,10 @@
 	margin-bottom: 10px;
 }
 
+.medio {
+	 min-height:630px;
+}
+
 .medio-izquierda {
 	float: left;
 	width: 347px;
