@@ -206,10 +206,6 @@ function jcarousel_jcarousel_skin_info() {
     'title' => t('Video3'),
     'file' => 'skins/video3/jcarousel-video3.css',
   );
-  $skins['video4'] = array(
-    'title' => t('Video4'),
-    'file' => 'skins/video3/jcarousel-video4.css',
-  );
 
   return $skins;
 }
