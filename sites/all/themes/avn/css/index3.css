@@ -69,13 +69,15 @@ body#page-wrapper {
 }
 
 .index3 .index3-slideshow .views-slideshow-controls-bottom {
+	background-image:url("/sites/all/themes/avn/images/fondo-miniaturas-slideshow-front.png");
+/*	margin-bottom: 10px;*/
 }
 
 .index3 .index3-slideshow .views_slideshow_thumbnailhover_div_breakout_teaser {
 	float: left;
 	width: 141px;
-	max-height: 185px;
-	min-height: 185px;
+/*	max-height: 185px;*/
+/*	min-height: 185px;*/
 }
 
 .index3 .index3-slideshow #views_slideshow_thumbnailhover_div_breakout_teaser_vista_contenido-block_11_0 {
@@ -88,7 +90,8 @@ body#page-wrapper {
 }
 
 .index3 .index3-slideshow #views_slideshow_thumbnailhover_div_breakout_teaser_vista_contenido-block_11_3 {
-	padding: 9px 0 0 10px;
+	padding: 9px 0 5px 10px;
+	width: 141px;
 }
 
 .index3 .index3-slideshow #views_slideshow_thumbnailhover_div_breakout_teaser_vista_contenido-block_11_0,
@@ -118,6 +121,7 @@ body#page-wrapper {
 	width: 141px;
 	height: 91px;
 	visibility: hidden;
+	display: none;
 }
 
 .index3 .views-slideshow-controls-bottom .activeSlide {
@@ -128,6 +132,7 @@ body#page-wrapper {
 	position: absolute;
 	top: 0;
 	visibility: visible;
+	display: block;
 }
 
 /* 6 Noticias de la portada principal*/
@@ -840,41 +845,41 @@ table.index3-debates tr.vertodo-titulares td div a {
 /*especial destacado*/
 
 .index3 div.especial-destacado {
-	background-image: url('/sites/default/files/misc/banner_todo11.jpg');
+	background-image: url('/sites/all/themes/avn/images/banner-especial-mercosur-principal.jpg');
 	background-repeat: no-repeat;
-	border-style: solid;
-	border-color: gray;
-	border-width: 1px;
 	width: 628px;
-	height: 150px;
-	margin: 0 0 10px;
+	height: 131px;
+	margin: 0 0 10px 0;
 }
 
-.index3 div.especial-destacado .views-row a {
-	color: #3B3B3B;
-	font-size: 12px;
-	font-weight: bold;
-	text-decoration: none;
-	width: 370px;
-	float: right;
+.index3 div.especial-destacado .noticias {
+	margin-left: 325px;
+}
+
+.index3 div.especial-destacado .noticias .titulo {
+	margin: 5px 0;
+}
+
+.index3 div.especial-destacado .noticias .titulo a {
+	background-image:url("/sites/default/files/misc/vineta-especial-mercosur.png");
+	background-position:left 3px;
+	background-repeat:no-repeat;
+	color:#074A7E;
+	display:block;
+	font-size:11px;
+	font-weight:bold;
+	padding-left:16px;
+	padding-right:10px;
+	text-decoration:none;
 	line-height: 13px;
-	margin-top: 3px;
 }
 
 
 .index3 div.especial-destacado .view-content {
-	margin-left: 13px;
-	width: 416px;
-	float: left;
-	margin-top: -3px;
 }
 
 
 .index3 div.especial-destacado .views-row {
-	border-bottom: 1px solid #B6987A;
-	width: 420px;
-	margin-bottom: 3px;
-	padding-bottom: 5px;
 }
 
 
@@ -1209,4 +1214,15 @@ iframe {
 	margin-top:5px;
 	text-align:left;
 	text-decoration:none;
+}
+
+.banner-especial-mercosur {
+	position: relative;
+}
+
+.horizontal2 .view-header a.banner-especial-destacado {
+	display:block;
+	float:left;
+	height:131px;
+	width:310px;
 }

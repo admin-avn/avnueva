@@ -604,15 +604,12 @@ span {
 }
 
 .front-especiales .especiales a .termino {
-	color: #a00700;
-	font-size: 10px;
-	font-weight: bold;
-	text-transform: uppercase;
-	margin: 0;
-	padding: 5px 0 0 0 !important;
-	width: 205px;
-	border-bottom: 2px solid #a00700;;
-	line-height: 12px;
+    color:#31487E;
+    font-family:sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    text-decoration:none;
+    text-transform:uppercase;
 }
 
 .front-especiales .especiales a .titulo {
@@ -1007,11 +1004,7 @@ table tbody tr .total {
 /*********** Especial Destacado **********/
 
 div.especial-destacado {
-	background-image: url('/sites/default/files/misc/banner_todo11.jpg');
-	background-repeat: no-repeat;
-	border-style:solid;
-	border-color:gray;
-	border-width:1px;
+	border: none;
 	width: 645px;
 	height: 150px;
 	margin: 10px 0 10px 10px;
@@ -1022,11 +1015,6 @@ div.especial-destacado .view-header p {
 }
 
 div.especial-destacado .view-content {
-	margin-left: 5px;
-/*	padding-top: 6px;*/
-	width: 416px;
-	float: left;
-	margin-top: -3px;
 }
 
 div.especial-destacado .views-row {
@@ -1048,14 +1036,6 @@ div.especial-destacado span {
 
 
 div.especial-destacado a {
-	color: #3b3b3b;
-	font-size: 12px;
-	font-weight: bold;
-	text-decoration: none;
-	width: 395px;
-	float:right;
-	line-height: 13px;
-	margin-top: 3px;
 }
 
 div.especial-destacado .banner {
@@ -1242,8 +1222,8 @@ body#page-wrapper {
 .index3 .index3-slideshow .views_slideshow_thumbnailhover_div_breakout_teaser {
 	float: left;
 	width: 141px;
-	max-height: 185px;
-	min-height: 185px;
+/*	max-height: 185px;*/
+/*	min-height: 185px;*/
 }
 
 .index3 .index3-slideshow #views_slideshow_thumbnailhover_div_breakout_teaser_vista_contenido-block_11_0 {
@@ -1256,7 +1236,8 @@ body#page-wrapper {
 }
 
 .index3 .index3-slideshow #views_slideshow_thumbnailhover_div_breakout_teaser_vista_contenido-block_11_3 {
-	padding: 9px 0 0 10px;
+	padding: 9px 0 5px 10px;
+	width: 141px;
 }
 
 .index3 .index3-slideshow #views_slideshow_thumbnailhover_div_breakout_teaser_vista_contenido-block_11_0,
@@ -1299,8 +1280,10 @@ body#page-wrapper {
 }
 
 .index3-slideshow-videos .views-slideshow-controls-bottom .views_slideshow_thumbnailhover_breakout_teasers .views_slideshow_thumbnailhover_div_breakout_teaser {
-	float: left;
-	width: 145px;
+    display:inline-block;
+    float:none;
+    vertical-align:top;
+    width:145px;
 }
 
 /* 6 Noticias de la portada principal*/
@@ -1996,7 +1979,7 @@ table.index3-titulares tr.vertodo-titulares td div a {
 	background-image: url('/sites/default/files/misc/banner_todo11.jpg');
 	background-repeat: no-repeat;
 	border-style: solid;
-	border-color: gray;
+	border-color: #074A7E;
 	border-width: 1px;
 	width: 628px;
 	height: 150px;
@@ -2016,10 +1999,6 @@ table.index3-titulares tr.vertodo-titulares td div a {
 
 
 .index3 div.especial-destacado .view-content {
-	margin-left: 13px;
-	width: 416px;
-	float: left;
-	margin-top: -3px;
 }
 
 

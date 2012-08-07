@@ -20,6 +20,10 @@
 	width: 603px;
 }
 
+.radio2 .reproductor-chico .controls {
+	display: none !important;
+}
+
 /* Avance pincipal */
 
 .radio2 .avance-principal {
@@ -91,8 +95,9 @@
 
 .radio2 .avance-principal .fecha {
 	color: #58595B;
-	font-family: "Arial Bold", sans-serif;
+	font-family: "Arial", sans-serif;
 	font-size: 12px;
+	font-weight: bold;
 	position: absolute;
 	bottom: 32px;
 	right: 15px;
@@ -176,10 +181,6 @@
 	height: 411px;
 }
 
-.panel-antipodas {
-	background: url("/sites/all/themes/avn/images/radio2-background-antipodas.png") no-repeat;
-}
-
 .radio2 .emision-matutina,
 .radio2 .emision-meridiana,
 .radio2 .emision-vespertina,
@@ -252,16 +253,539 @@
 /* Avances */
 
 .radio2 .radio-avances-cabecera {
-	background: #737373;
+	background: #E0E0E0;
 }
 
 .radio2 .radio-avances-cabecera .radio-titulo,
 .radio2 .radio-avances-cabecera .avances-titulo {
+	background: #737373;
+	float: left;
+	line-height: 30px;
+}
+
+.radio2 .radio-avances-cabecera .radio-titulo {
+	padding: 0 10px;
+	margin-right: 5px;
+	width: 46px;
+}
+
+.radio2 .radio-avances-cabecera .avances-titulo {
+	padding: 0 10px;
+	width: 266px;
+}
+
+.radio2 .radio-avances-cabecera .radio-titulo a,
+.radio2 .radio-avances-cabecera .avances-titulo a {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.radio2 .avances {
+	position: relative;
+	background: #E0E0E0;
+	border-bottom: 1px solid #58595B;;
+}
+
+.radio2 .avances .fecha {
+	color: #6d6e71;
+	float: left;
+	font-family: "Arial Black", sans-serif;
+	font-size: 12px;
+	margin: 18px 0 0 10px;
+}
+
+.radio2 .avances .reproductor-avances {
+	float: left;
+	margin: 5px 0;
+}
+
+.radio2 .avances .titulo {
+	color: #3a467c;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	float: left;
+	margin: 10px;
+	width: 233px;
+}
+
+.radio2 .reproductor-avances a {
+	background: url("/sites/all/themes/avn/images/radio2-mediano-play.png") no-repeat;
+	width: 33px;
+	height: 33px;
+}
+
+.radio2 .reproductor-avances .sm2_playing a {
+	background: url("/sites/all/themes/avn/images/radio2-mediano-pausa.png") no-repeat;
+	min-height: 55px;
+}
+
+.radio2 .reproductor-avances .sm2_paused a {
+	background: url("/sites/all/themes/avn/images/radio2-mediano-play.png") no-repeat;
+	min-height: 55px;
+}
+
+.radio2 .panel-avances ul.pager {
+	background: #737373;
+	margin: 0;
+	padding: 0;
+	height: 31px;
+	position: relative;
+}
+
+.radio2 .panel-avances ul.pager li.pager-previous {
+	background: url("/sites/all/themes/avn/images/radio2-avances-previous.png") no-repeat;
+	position: absolute;
+	top: 10px;
+	right: 50px;
+	padding: 0;
+	display: block;
+	width: 13px;
+	height: 9px;
+}
+
+.radio2 .panel-avances ul.pager li.pager-current {
+	display: none;
+}
+
+.radio2 .panel-avances ul.pager li.pager-next {
+	background: url("/sites/all/themes/avn/images/radio2-avances-next.png") no-repeat;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	padding: 0;
+	display: block;
+	width: 13px;
+	height: 9px;
+}
+
+.radio2 .panel-avances ul.pager li.pager-previous a,
+.radio2 .panel-avances ul.pager li.pager-next a {
+	font-size: 0;
+	display: block;
+	width: 13px;
+	height: 9px;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.radio2 .panel-avances ul.pager li.pager-previous a {
+	background: url("/sites/all/themes/avn/images/radio2-avances-previous.png") no-repeat;
+}
+
+.radio2 .panel-avances ul.pager li.pager-next a {
+	background: url("/sites/all/themes/avn/images/radio2-avances-next.png") no-repeat;
+}
+
+/* Antípodas */
+
+.panel-antipodas {
+	background: url("/sites/all/themes/avn/images/radio2-background-antipodas.png") no-repeat;
+	padding-top: 187px;
+}
+
+/* Micros */
+
+.panel-micros {
+	background: url("/sites/all/themes/avn/images/radio2-background-micros.png") no-repeat;
+	padding-top: 50px;
+}
+
+/* Micros y Antípodas */
+
+.radio2 .micros {
+	height: 70px;
+	margin: 10px 0;
+}
+
+.radio2 .antipodas {
+	height: 65px;
+}
+
+.radio2 .reproductor-micros,
+.radio2 .reproductor-antipodas {
 	float: left;
 }
 
-.radio2 .radio-avances-cabecera .radio-titulo a {
+.radio2 .reproductor-micros a,
+.radio2 .reproductor-antipodas a {
+	background: url("/sites/all/themes/avn/images/radio2-mediano-play.png") no-repeat;
+	width: 33px;
+	height: 33px;
 }
 
-.radio2 .radio-avances-cabecera .avances-titulo a {
+.radio2 .reproductor-micros .sm2_playing a,
+.radio2 .reproductor-antipodas .sm2_playing a {
+	background: url("/sites/all/themes/avn/images/radio2-mediano-pausa.png") no-repeat;
+}
+
+.radio2 .reproductor-micros .sm2_paused a,
+.radio2 .reproductor-antipodas .sm2_paused a {
+	background: url("/sites/all/themes/avn/images/radio2-mediano-play.png") no-repeat;
+}
+
+
+.radio2 .micros .titulo {
+	color: #3A467C;
+	font-family: Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	float: left;
+	margin: 10px;
+	width: 230px;
+}
+
+.radio2 .antipodas .titulo {
+	color: #3A467C;
+	font-family: Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	float: left;
+	margin: 10px;
+	width: 283px;
+}
+
+/* Agenda Cultural */
+
+.radio2 .panel-agenda-cultural-hoy-sintesis-informativa {
+	background: url("/sites/all/themes/avn/images/radio2-background-agenda-cultural-hoy-sintesis-informativa.png") no-repeat;
+	height: 78px;
+}
+
+.radio2 .panel-agenda-cultural-hoy-sintesis-informativa .panel-agenda-cultural,
+.radio2 .panel-agenda-cultural-hoy-sintesis-informativa .panel-hoy,
+.radio2 .panel-agenda-cultural-hoy-sintesis-informativa .panel-sintesis-informativa {
+	position: relative;
+	height: 78px;
+}
+
+.radio2 .panel-agenda-cultural-hoy-sintesis-informativa .panel-agenda-cultural ul li {
+	top: 15px;
+	left: 45px;
+}
+
+.radio2 .panel-agenda-cultural-hoy-sintesis-informativa .panel-agenda-cultural .fecha {
+	position: absolute;
+	top: 40px;
+	left: 98px;
+	color: #37477F;
+	font-family: "Arial", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.radio2 .panel-agenda-cultural-hoy-sintesis-informativa .panel-hoy ul li {
+	top: 15px;
+	left: 35px;
+}
+
+.radio2 .panel-agenda-cultural-hoy-sintesis-informativa .panel-sintesis-informativa ul li {
+	top: 15px;
+	left: 25px;
+}
+
+/* Entrevistas */
+
+.radio2 .panel-entrevistas {
+	background: url("/sites/all/themes/avn/images/radio2-background-entrevistas.png") no-repeat;
+	height: 106px;
+	position: relative;
+}
+
+.radio2 .panel-entrevistas .entrevistas {
+	position: relative;
+	float: left;
+}
+	
+.radio2 .panel-entrevistas .views-row-1 .entrevistas {
+	width: 363px;
+	height: 106px;
+	left: 254px;
+}
+
+.radio2 .panel-entrevistas .views-row-2 .entrevistas {
+	width: 363px;
+	height: 106px;
+	left: 258px;
+}
+
+.radio2 .panel-entrevistas .entrevistas .reproductor-mediano li {
+	top: 30px;
+	left: 19px;
+}
+
+.radio2 .panel-entrevistas .entrevistas .titulo {
+	color: white;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	top: 25px;
+	left: 80px;
+	position: absolute;
+	width: 235px;
+}
+
+/* Especiales */
+
+.radio2 .panel-especiales {
+	background: url("/sites/all/themes/avn/images/radio2-background-especiales.png") no-repeat;
+	height: 126px;
+	position: relative;
+}
+
+.radio2 .panel-especiales .especiales {
+	position: relative;
+	float: left;
+}
+	
+.radio2 .panel-especiales .views-row-1 .especiales {
+	width: 245px;
+	height: 126px;
+	left: 246px;
+}
+
+.radio2 .panel-especiales .views-row-2 .especiales {
+	width: 239px;
+	height: 126px;
+	left: 251px;
+}
+
+.radio2 .panel-especiales .views-row-3 .especiales {
+	width: 240px;
+	height: 126px;
+	left: 256px;
+}
+
+.radio2 .panel-especiales .views-row-1 .especiales .reproductor-mediano li {
+	top: 40px;
+	left: 0px;
+}
+
+.radio2 .panel-especiales .views-row-2 .especiales .reproductor-mediano li {
+	top: 40px;
+	left: 0px;
+}
+
+.radio2 .panel-especiales .views-row-3 .especiales .reproductor-mediano li {
+	top: 40px;
+	left: 0px;
+}
+
+.radio2 .panel-especiales .especiales .titulo {
+	color: white;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	position: absolute;
+	left: 45px;
+	top: 40px;
+}
+
+.radio2 .panel-especiales .views-row-1 .especiales .titulo {
+	width: 190px;
+}
+
+.radio2 .panel-especiales .views-row-2 .especiales .titulo {
+	width: 183px;
+}
+
+.radio2 .panel-especiales .views-row-3 .especiales .titulo {
+	width: 185px;
+}
+
+/* Progress Bar */
+
+.radio2 .emision-matutina .reproductor-mediano .controls {
+	top: 61px;
+}
+
+.radio2 .emision-meridiana .reproductor-mediano .controls,
+.radio2 .emision-vespertina .reproductor-mediano .controls {
+	top: 59px;
+}
+
+.radio2 .reporte-regional .reproductor-mediano .controls {
+	top: 53px;
+}
+
+.radio2 .panel-emisiones-y-reporte-regional .reproductor-mediano .controls {
+	background: transparent;
+	position: absolute !important;
+	left: 45px;
+	width: 125px;
+	margin: 0;
+	padding: 0;
+}
+
+.radio2 .entrevistas .reproductor-mediano .controls {
+	background: transparent;
+	position: absolute !important;
+	left: 62px;
+	width: 263px;
+	margin: 0;
+	padding: 0;
+	top: 63px;
+}
+
+.radio2 .panel-emisiones-y-reporte-regional .reproductor-mediano .controls .statusbar,
+.radio2 .entrevistas .reproductor-mediano .controls .statusbar {
+	background: white !important;
+	border: none !important;
+	height: 5px;
+}
+
+.radio2 .panel-emisiones-y-reporte-regional .reproductor-mediano .controls .statusbar .loading,
+.radio2 .entrevistas .reproductor-mediano .controls .statusbar .loading {
+	background: transparent;
+	height: 5px;
+}
+
+.radio2 .panel-emisiones-y-reporte-regional .reproductor-mediano .controls .statusbar .position {
+	background-color: #3553C5 !important;
+	border-color: #3553C5 !important;
+	height: 5px;
+}
+
+.radio2 .entrevistas .reproductor-mediano .controls .statusbar .position {
+	background-color: #37477f !important;
+	border-color: #37477f !important;
+	height: 5px;
+}
+
+.radio2 .reproductor-mediano .controls .statusbar,
+.radio2 .reproductor-mediano .controls .statusbar .loading,
+.radio2 .reproductor-mediano .controls .statusbar .position,
+.radio2 .reproductor-avances .controls .statusbar .position {
+	-webkit-border-radius: 60px;
+	-moz-border-radius: 60px;
+	-o-border-radius: 60px;
+}
+
+.radio2 .agenda-cultural .reproductor-mediano .controls {
+}
+
+.radio2 .hoy .reproductor-mediano .controls {
+	left: 59px !important;
+}
+
+.radio2 .sintesis-informativa .reproductor-mediano .controls {
+}
+
+.radio2 .panel-agenda-cultural-hoy-sintesis-informativa .reproductor-mediano .controls {
+	background: transparent;
+	position: absolute !important;
+	left: 53px;
+	width: 220px;
+	margin: 0;
+	padding: 0;
+	top: 45px;
+}
+
+.radio2 .panel-especiales .reproductor-mediano .controls {
+	background: transparent;
+	position: absolute !important;
+	left: 46px;
+	width: 175px;
+	margin: 0;
+	padding: 0;
+	top: 69px;
+}
+
+.radio2 .panel-micros .reproductor-micros .controls {
+	background: transparent;
+	position: absolute !important;
+	left: 55px;
+	width: 235px;
+	margin: 0;
+	padding: 0;
+	top: 61px;
+}
+
+.radio2 .panel-antipodas .reproductor-antipodas .controls {
+	background: transparent;
+	position: absolute !important;
+	left: 62px;
+	width: 235px;
+	margin: 0;
+	padding: 0;
+	top: 55px;
+}
+
+.radio2 .panel-avances .reproductor-avances .controls {
+	background: transparent;
+	position: absolute !important;
+	left: 62px;
+	width: 235px;
+	margin: 0;
+	padding: 0;
+	top: 59px;
+}
+
+.radio2 .panel-agenda-cultural-hoy-sintesis-informativa .reproductor-mediano .controls .statusbar,
+.radio2 .panel-especiales .reproductor-mediano .controls .statusbar,
+.radio2 .panel-micros .reproductor-micros .controls .statusbar,
+.radio2 .panel-antipodas .reproductor-antipodas .controls .statusbar,
+.radio2 .panel-avances .reproductor-avances .controls .statusbar {
+	border: none !important;
+	height: 7px;
+}
+
+.radio2 .panel-agenda-cultural-hoy-sintesis-informativa .reproductor-mediano .controls .statusbar {
+	background: #bdbdbd !important;
+}
+
+.radio2 .panel-especiales .reproductor-mediano .controls .statusbar,
+.radio2 .panel-avances .reproductor-avances .controls .statusbar {
+	background: white !important;
+}
+
+.radio2 .panel-micros .reproductor-micros .controls .statusbar {
+	background: #919191 !important;
+}
+
+.radio2 .panel-antipodas .reproductor-antipodas .controls .statusbar {
+	background: #d4d4d4 !important;
+}
+
+.radio2 .panel-agenda-cultural-hoy-sintesis-informativa .reproductor-mediano .controls .statusbar .loading,
+.radio2 .panel-especiales .reproductor-mediano .controls .statusbar .loading,
+.radio2 .panel-micros .reproductor-micros .controls .statusbar .loading,
+.radio2 .panel-antipodas .reproductor-antipodas .controls .statusbar .loading,
+.radio2 .panel-avances .reproductor-avances .controls .statusbar .loading {
+	background: transparent;
+	height: 7px;
+}
+
+.radio2 .panel-agenda-cultural-hoy-sintesis-informativa .reproductor-mediano .controls .statusbar .position {
+	background-color: #37477f !important;
+	border-color: #37477f !important;
+	height: 7px;
+}
+
+.radio2 .panel-especiales .reproductor-mediano .controls .statusbar .position {
+	background-color: #abbde1 !important;
+	border-color: #abbde1 !important;
+	height: 7px;
+}
+
+.radio2 .panel-micros .reproductor-micros .controls .statusbar .position {
+	background-color: #3a467c !important;
+	border-color: #3a467c !important;
+	height: 7px;
+}
+
+.radio2 .panel-antipodas .reproductor-antipodas .controls .statusbar .position {
+	background-color: #6b6b6b !important;
+	border-color: #6b6b6b !important;
+	height: 7px;
+}
+
+.radio2 .panel-avances .reproductor-avances .controls .statusbar .position {
+	background-color: #727375 !important;
+	border-color: #727375 !important;
+	height: 7px;
 }

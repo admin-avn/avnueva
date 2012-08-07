@@ -24,11 +24,6 @@
 				</div>
 				<div class="clear-float"></div>
 			</div>
-			<div class="panel-agenda-cultural-y-efemerides">
-				<?php if($content['agenda-cultural-y-efemerides']): ?>
-					<div class="inside"><?php print $content['agenda-cultural-y-efemerides']; ?></div>
-				<?php endif; ?>
-			</div>
 		</div>
 		<div class="derecha">
 			<div class="panel-avances">
@@ -44,14 +39,32 @@
 		</div>
 		<div class="clear-float"></div>
 	</div>
-	<div class="panel-sintesis-informativa">
-		<?php if($content['sintesis-informativa']): ?>
-			<div class="inside"><?php print $content['sintesis-informativa']; ?></div>
-		<?php endif; ?>
+	<div class="panel-agenda-cultural-hoy-sintesis-informativa">
+		<div class="panel-agenda-cultural">
+			<?php if($content['agenda-cultural']): ?>
+				<div class="inside"><?php print $content['agenda-cultural']; ?></div>
+			<?php endif; ?>
+		</div>
+		<div class="panel-hoy">
+			<?php if($content['hoy']): ?>
+				<div class="inside"><?php print $content['hoy']; ?></div>
+			<?php endif; ?>
+		</div>
+		<div class="panel-sintesis-informativa">
+			<?php if($content['sintesis-informativa']): ?>
+				<div class="inside"><?php print $content['sintesis-informativa']; ?></div>
+			<?php endif; ?>
+		</div>
+		<div class="clear-float"></div>
 	</div>
 	<div class="panel-entrevistas">
 		<?php if($content['entrevistas']): ?>
 			<div class="inside"><?php print $content['entrevistas']; ?></div>
+		<?php endif; ?>
+	</div>
+	<div class="panel-especiales">
+		<?php if($content['especiales']): ?>
+			<div class="inside"><?php print $content['especiales']; ?></div>
 		<?php endif; ?>
 	</div>
 </div>
